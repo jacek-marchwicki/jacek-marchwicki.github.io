@@ -284,7 +284,7 @@ During Unit Tests, it&#39;s a usually good pattern to use `TestScheduler` or eve
 
 
 
-<a href="https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/issues/new?title=Solve%20your%20problems%20with%20time%20during%20Android%20Integration%20test" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/jacek-marchwicki/blog/issues/new?title=Solve%20your%20problems%20with%20time%20during%20Android%20Integration%20test" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 </div>
 
@@ -348,7 +348,7 @@ During Unit Tests, it&rsquo;s a usually good pattern to use <code>TestScheduler<
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt">TimeTravelRule</a>, <a href="
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt">TimeTravelRule</a>, <a href="
 
 
 
@@ -356,7 +356,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt">LocaleTestRule</a> rules.
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt">LocaleTestRule</a> rules.
 For a usage look here: <a href="
 
 
@@ -365,7 +365,7 @@ For a usage look here: <a href="
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/MainActivityTest.kt">MainActivityTest</a>.</p>
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/MainActivityTest.kt">MainActivityTest</a>.</p>
 <h1 id="example">Example</h1>
 <p>Let&rsquo;s implement very simple UI that displays the current time as a text view.</p>
 <p>In <code>Activity#onCreate()</code> we have only:</p>
@@ -392,7 +392,7 @@ You can look at <a href="
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/test/java/com/example/timetravel/PresenterTest.kt">PresenterTest.kt</a> class.</p>
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/test/java/com/example/timetravel/PresenterTest.kt">PresenterTest.kt</a> class.</p>
 <h1 id="lets-implement-our-first-ui-test">Let&rsquo;s implement our first UI test</h1>
 <p>The first test starts the activity and checks if time label is displayed.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#000">@RunWith</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">AndroidJUnit4</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#204a87;font-weight:bold">class</span><span style="color:#000;font-weight:bold">)</span>
@@ -503,7 +503,7 @@ We can simply wrap our original scheduler to adjust time and inject it via <code
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt">TimeTravelRule</a>.
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt">TimeTravelRule</a>.
 Now we reuse the code we defined in <code>Idea</code> subtitle:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#000">timeTravelRule</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">timeTravel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dateOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;2005-01-01T13:00:00+0000&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
 
@@ -529,7 +529,7 @@ But what if we want to test booth behaviors at the same test execution?</p>
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt">LocaleTestRule</a>.</p>
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt">LocaleTestRule</a>.</p>
 <p>Then simply use it in your tests via the same test:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#000">@Test</span>
@@ -596,7 +596,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 <ul class="list-inline mb-0">
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
-    <a class="text-white" target="_blank" href="https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either">
+    <a class="text-white" target="_blank" href="https://github.com/jacek-marchwicki/blog">
       <i class="fab fa-github"></i>
     </a>
   </li>

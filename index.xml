@@ -48,7 +48,7 @@ I&amp;rsquo;ll try to explain why it’s wrong to have sleep in test code.&lt;/p
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/MainActivityBetterTest.kt&#34;&gt;MainActivityBetterTest.kt&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/MainActivityBetterTest.kt&#34;&gt;MainActivityBetterTest.kt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -57,7 +57,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRule.kt&#34;&gt;RxIdlingResourcesRule.kt&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRule.kt&#34;&gt;RxIdlingResourcesRule.kt&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;reasons&#34;&gt;Reasons&lt;/h1&gt;
 &lt;p&gt;We have &lt;code&gt;5000L&lt;/code&gt; value, why? Why 5 seconds of delay?&lt;/p&gt;
@@ -196,7 +196,7 @@ So now we need to look at the scheduler implementation and wrap it so that it wi
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/MainActivityBetterTest.kt&#34;&gt;MainActivityBetterTest.kt&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/MainActivityBetterTest.kt&#34;&gt;MainActivityBetterTest.kt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -205,7 +205,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRule.kt&#34;&gt;RxIdlingResourcesRule.kt&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRule.kt&#34;&gt;RxIdlingResourcesRule.kt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -214,7 +214,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRuleTest.kt&#34;&gt;RxIdlingResourcesRuleTest.kt&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRuleTest.kt&#34;&gt;RxIdlingResourcesRuleTest.kt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -223,7 +223,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/main/java/com/example/sleep/MainActivity.kt&#34;&gt;MainActivity, Presenter and Service&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/main/java/com/example/sleep/MainActivity.kt&#34;&gt;MainActivity, Presenter and Service&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -232,7 +232,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/test/java/com/example/sleep/PresenterTest.kt&#34;&gt;PresenterTest&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/test/java/com/example/sleep/PresenterTest.kt&#34;&gt;PresenterTest&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 &lt;ol&gt;
@@ -248,7 +248,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRule.kt&#34;&gt;RxIdlingResourcesRule.kt&lt;/a&gt; provided in the article&lt;/em&gt;.&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kill-the-sleep/src/androidTest/java/com/example/sleep/rules/RxIdlingResourcesRule.kt&#34;&gt;RxIdlingResourcesRule.kt&lt;/a&gt; provided in the article&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;TIP: You can customize timeout for idling resource &lt;code&gt;IdlingPolicies#setIdlingResourceTimeout(long timeout, TimeUnit unit)&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;whats-more&#34;&gt;What&amp;rsquo;s more&lt;/h1&gt;
@@ -281,7 +281,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt&#34;&gt;TimeTravelRule&lt;/a&gt;, &lt;a href=&#34;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt&#34;&gt;TimeTravelRule&lt;/a&gt;, &lt;a href=&#34;
 
 
 
@@ -289,7 +289,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt&#34;&gt;LocaleTestRule&lt;/a&gt; rules.
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt&#34;&gt;LocaleTestRule&lt;/a&gt; rules.
 For a usage look here: &lt;a href=&#34;
 
 
@@ -298,7 +298,7 @@ For a usage look here: &lt;a href=&#34;
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/MainActivityTest.kt&#34;&gt;MainActivityTest&lt;/a&gt;.&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/MainActivityTest.kt&#34;&gt;MainActivityTest&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;example&#34;&gt;Example&lt;/h1&gt;
 &lt;p&gt;Let&amp;rsquo;s implement very simple UI that displays the current time as a text view.&lt;/p&gt;
 &lt;p&gt;In &lt;code&gt;Activity#onCreate()&lt;/code&gt; we have only:&lt;/p&gt;
@@ -325,7 +325,7 @@ You can look at &lt;a href=&#34;
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/test/java/com/example/timetravel/PresenterTest.kt&#34;&gt;PresenterTest.kt&lt;/a&gt; class.&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/test/java/com/example/timetravel/PresenterTest.kt&#34;&gt;PresenterTest.kt&lt;/a&gt; class.&lt;/p&gt;
 &lt;h1 id=&#34;lets-implement-our-first-ui-test&#34;&gt;Let&amp;rsquo;s implement our first UI test&lt;/h1&gt;
 &lt;p&gt;The first test starts the activity and checks if time label is displayed.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;@RunWith&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;AndroidJUnit4&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
@@ -436,7 +436,7 @@ We can simply wrap our original scheduler to adjust time and inject it via &lt;c
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt&#34;&gt;TimeTravelRule&lt;/a&gt;.
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/TimeTravelRule.kt&#34;&gt;TimeTravelRule&lt;/a&gt;.
 Now we reuse the code we defined in &lt;code&gt;Idea&lt;/code&gt; subtitle:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;timeTravelRule&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;timeTravel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;dateOf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2005-01-01T13:00:00+0000&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
 
@@ -462,7 +462,7 @@ But what if we want to test booth behaviors at the same test execution?&lt;/p&gt
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt&#34;&gt;LocaleTestRule&lt;/a&gt;.&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/timetravel/src/androidTest/java/com/example/timetravel/rules/LocaleTestRule.kt&#34;&gt;LocaleTestRule&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Then simply use it in your tests via the same test:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;
 &lt;span style=&#34;color:#000&#34;&gt;@Test&lt;/span&gt;
@@ -576,7 +576,7 @@ that still wants to ensure that the client’s aware of the risk.&lt;/p&gt;
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/error-handling/src/main/java/com/jacekmarchwicki/example/MainActivity.kt&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/error-handling/src/main/java/com/jacekmarchwicki/example/MainActivity.kt&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;idea&#34;&gt;Idea&lt;/h1&gt;
 &lt;p&gt;The idea of error messages is quite simple. They appear and, once the error is resolved, disappear. Sometimes it happens without user’s interaction (like when a user’s device reconnects to WiFi network automatically).
 So, a good way of thinking about errors is that they are a temporary state of an application, which should be displayed to a user. I think the word &lt;em&gt;state&lt;/em&gt; is important while implementing error handling.&lt;/p&gt;
@@ -730,7 +730,7 @@ We also create &lt;code&gt;ErrorManager&amp;lt;in T&amp;gt;&lt;/code&gt; class (
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/error-handling/src/main/java/com/jacekmarchwicki/example/MainActivity.kt&#34;&gt;full code&lt;/a&gt; later):&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/error-handling/src/main/java/com/jacekmarchwicki/example/MainActivity.kt&#34;&gt;full code&lt;/a&gt; later):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ErrorManager&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;T&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;val&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;errorHandlers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ErrorHandler&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;T&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lastError&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Option&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DismissError&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Option&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;None&lt;/span&gt;
 
@@ -1096,7 +1096,7 @@ However, usage of &lt;code&gt;TestScheduler&lt;/code&gt; can be a little annoyin
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/schedulers/src/test/java/com/example/scheduler/InstantTestScheduler.java&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/schedulers/src/test/java/com/example/scheduler/InstantTestScheduler.java&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you use this scheduler in your code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;val&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;uiScheduler&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ImmediateTestScheduler&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;createPresenter&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;PostsPresenter&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;postsDao&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;clickObservable&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;messageObservable&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;uiScheduler&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
@@ -1119,7 +1119,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/schedulers/src/test/java/com/example/scheduler/InstantTestScheduler.java&#34;&gt;InstantTestScheduler&lt;/a&gt;.&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/schedulers/src/test/java/com/example/scheduler/InstantTestScheduler.java&#34;&gt;InstantTestScheduler&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -1128,7 +1128,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/schedulers/src/test/java/com/example/scheduler/InstantTestSchedulerTest.kt&#34;&gt;InstantTestSchedulerTest&lt;/a&gt;.&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/schedulers/src/test/java/com/example/scheduler/InstantTestSchedulerTest.kt&#34;&gt;InstantTestSchedulerTest&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -1137,7 +1137,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/schedulers/src/test/java/com/example/scheduler/PostsPresenterTest.kt&#34;&gt;PostsPresenterTest&lt;/a&gt;.&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/schedulers/src/test/java/com/example/scheduler/PostsPresenterTest.kt&#34;&gt;PostsPresenterTest&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -1146,7 +1146,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/schedulers/src/main/java/com/example/scheduler/PostsPresenter.kt&#34;&gt;PostsPresenter&lt;/a&gt;.&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/schedulers/src/main/java/com/example/scheduler/PostsPresenter.kt&#34;&gt;PostsPresenter&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;used-libraries&#34;&gt;Used libraries&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;compile&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;org.funktionale:funktionale-either:1.0.1&amp;#34;&lt;/span&gt;
@@ -1359,7 +1359,7 @@ Your testing team is very good, so the tester will also attach a video and appli
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/nice-reader-writer-pattern/src/test/java/com/jacekmarchwicki/locking/NewDatabaseTest.kt&#34;&gt;NewDatabaseTest&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/nice-reader-writer-pattern/src/test/java/com/jacekmarchwicki/locking/NewDatabaseTest.kt&#34;&gt;NewDatabaseTest&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -1368,7 +1368,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/nice-reader-writer-pattern/src/main/java/com/jacekmarchwicki/locking/NewDatabase.kt&#34;&gt;NewDatabase&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/nice-reader-writer-pattern/src/main/java/com/jacekmarchwicki/locking/NewDatabase.kt&#34;&gt;NewDatabase&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Compared to an example of bad practice::&lt;/p&gt;
 &lt;ul&gt;
@@ -1380,7 +1380,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/nice-reader-writer-pattern/src/test/java/com/jacekmarchwicki/locking/OldDatabaseTest.kt&#34;&gt;OldDatabaseTest&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/nice-reader-writer-pattern/src/test/java/com/jacekmarchwicki/locking/OldDatabaseTest.kt&#34;&gt;OldDatabaseTest&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;
 
 
@@ -1389,7 +1389,7 @@ https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/nice-reader-writer-pattern/src/main/java/com/jacekmarchwicki/locking/OldDatabase.kt&#34;&gt;OldDatabase&lt;/a&gt;&lt;/li&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/nice-reader-writer-pattern/src/main/java/com/jacekmarchwicki/locking/OldDatabase.kt&#34;&gt;OldDatabase&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;example&#34;&gt;Example&lt;/h1&gt;
 &lt;p&gt;Let’s start with a database which looks like this:&lt;/p&gt;
@@ -1532,7 +1532,7 @@ Let&amp;rsquo;s do it better:&lt;/p&gt;
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kotlin-and-rxjava-with-extensions-functions/src/main/java/com/jacekmarchwicki/examplerxextensions/MainActivity.kt&#34;&gt;The full code is available here&lt;/a&gt;&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kotlin-and-rxjava-with-extensions-functions/src/main/java/com/jacekmarchwicki/examplerxextensions/MainActivity.kt&#34;&gt;The full code is available here&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;used-libraries&#34;&gt;Used libraries&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;TIP:&lt;/strong&gt; In the example, I use RxJava 1.x but almost the same code can be used with RxJava 2.x&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;implementation&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;io.reactivex:rxjava:1.3.0&amp;#34;&lt;/span&gt;
@@ -1679,7 +1679,7 @@ Your business logic is hidden inside of &lt;code&gt;PostsDao&lt;/code&gt;.&lt;/p
 
 
 
-https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/kotlin-and-rxjava-with-extensions-functions/src/main/java/com/jacekmarchwicki/examplerxextensions/MainActivity.kt&#34;&gt;Presenters and UI implementation&lt;/a&gt;&lt;/p&gt;
+https://github.com/jacek-marchwicki/blog/tree/master//examples/kotlin-and-rxjava-with-extensions-functions/src/main/java/com/jacekmarchwicki/examplerxextensions/MainActivity.kt&#34;&gt;Presenters and UI implementation&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;so-what-can-we-do-better&#34;&gt;So what can we do better?&lt;/h1&gt;
 &lt;h2 id=&#34;better-error-handling&#34;&gt;Better error handling&lt;/h2&gt;
 &lt;p&gt;In my opinion, the ugliest code is here:&lt;/p&gt;
