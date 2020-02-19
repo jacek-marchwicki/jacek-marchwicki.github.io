@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.64.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Errors... oh... those errors - coding | Developer Blog - Jacek Marchwicki</title><meta property="og:title" content="Errors... oh... those errors - coding" />
+<meta property="og:description" content="Some time ago, I wrote an article about how important it is to handle errors in a nice way. In the article &#34;Errors... oh... those errors&#34;, I made a promise that there would be a continuation with coding examples. This is it.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/errors...-oh...-those-errors-coding/" />
+<meta property="og:image" content="/blog/errors...-oh...-those-errors-coding/featured-title.jpg"/>
+<meta property="article:published_time" content="2018-02-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-19T12:35:08+01:00" />
+<meta itemprop="name" content="Errors... oh... those errors - coding">
+<meta itemprop="description" content="Some time ago, I wrote an article about how important it is to handle errors in a nice way. In the article &#34;Errors... oh... those errors&#34;, I made a promise that there would be a continuation with coding examples. This is it.
+">
+<meta itemprop="datePublished" content="2018-02-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-19T12:35:08&#43;01:00" />
+<meta itemprop="wordCount" content="1634">
+<meta itemprop="image" content="/blog/errors...-oh...-those-errors-coding/featured-title.jpg">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/blog/errors...-oh...-those-errors-coding/featured-title.jpg"/>
+<meta name="twitter:title" content="Errors... oh... those errors - coding"/>
+<meta name="twitter:description" content="Some time ago, I wrote an article about how important it is to handle errors in a nice way. In the article &#34;Errors... oh... those errors&#34;, I made a promise that there would be a continuation with coding examples. This is it.
+"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.6ca91c1f1fce086842eb1bd80b503b1a623183950b73374882023fde9fdab4ac.css" as="style">
+<link href="/scss/main.min.6ca91c1f1fce086842eb1bd80b503b1a623183950b73374882023fde9fdab4ac.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+    <title>Errors... oh... those errors - coding | Developer Blog - Jacek Marchwicki</title>
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zM197.0804 232.033c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zM197.0804 177.6188c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zM197.5309 286.4723c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zM197.0804 340.5784c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Developer Blog - Jacek Marchwicki</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/blog/" ><span class="active">Blog</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/blog/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Blog</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="blog">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/blog/android/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Android</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="blogandroid">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blogno-sleeping-during-testing-rxjava-app" href="/blog/no-sleeping-during-testing-rxjava-app/">No sleeping during testing RxJava app!</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blogsolve-your-problems-with-time-during-android-integration-test" href="/blog/solve-your-problems-with-time-during-android-integration-test/">Solve your problems with time during Android Integration test</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-blogerrors-oh-those-errors-coding" href="/blog/errors...-oh...-those-errors-coding/">Errors... oh... those errors - coding</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blogusing-schedulers-while-testing-your-code" href="/blog/using-schedulers-while-testing-your-code/">Using schedulers while testing your code</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-bloghow-to-find-stackoverflowerrors" href="/blog/how-to-find-stackoverflowerrors/">How to find StackOverflowError&#39;s</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-bloga-nice-readerwriter-pattern" href="/blog/a-nice-reader/writer-pattern/">A nice reader/writer pattern</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blogkotlin-and-rxjava-with-extension-functions" href="/blog/kotlin-and-rxjava-with-extension-functions/">Kotlin and RxJava with extension functions</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/blog/engineering/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Engineering</a>
+  </li>
+  <ul>
+    <li class="collapse " id="blogengineering">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blogerrors-oh-those-errors" href="/blog/errors...-oh...-those-errors/">Errors... oh... those errors</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/blog/people/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">People</a>
+  </li>
+  <ul>
+    <li class="collapse " id="blogpeople">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-blogmy-storyappunite" href="/blog/my-storyappunite/">My Story@Appunite</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+<a href="https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/issues/new?title=Errors...%20oh...%20those%20errors%20-%20coding" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">TL;DR:</a></li>
+    <li><a href="#idea">Idea</a></li>
+    <li><a href="#testimony">Testimony</a></li>
+    <li><a href="#ugly-way">Ugly way</a></li>
+    <li><a href="#be-stateful">Be stateful</a>
+      <ul>
+        <li><a href="#customizable-solution">Customizable solution</a></li>
+        <li><a href="#advanced-customization">Advanced customization</a>
+          <ul>
+            <li><a href="#animations">Animations</a></li>
+          </ul>
+        </li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#edittext">EditText</a></li>
+      </ul>
+    </li>
+    <li><a href="#error-message-persistence">Error message persistence</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#whats-more">What&rsquo;s more</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
+            <a class="btn btn-lg -bg-orange td-rss-button d-none d-lg-block" href="/blog/android/index.xml" target="_blank">
+              RSS <i class="fa fa-rss ml-2 "></i>
+            </a>
+            
+<div class="td-content">
+	<h1>Errors... oh... those errors - coding</h1>
+	<div class="lead">Some time ago, I wrote an article about how important it is to handle errors in a nice way. In the article &ldquo;Errors&hellip; oh&hellip; those errors&rdquo;, I made a promise that there would be a continuation with coding examples. This is it.</div>
+	<div class="td-byline mb-4">
+		
+		<time datetime="2018-02-27" class="text-muted">Tuesday, February 27, 2018</time>
+	</div>
+	<p>If you haven&rsquo;t read <a href="/blog/errors...-oh...-those-errors/">Errors&hellip; oh&hellip; those errors</a>, please read it first</p>
+<p>Main objectives:</p>
+<ul>
+<li>Almost <code>0 code</code> to use,</li>
+<li>Customizable,</li>
+<li>Extendable.</li>
+</ul>
+<h1 id="tldr">TL;DR:</h1>
+<p>The full exemplary code is available <a href="
+
+
+
+
+
+
+
+https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/error-handling/src/main/java/com/jacekmarchwicki/example/MainActivity.kt">here</a>.</p>
+<h1 id="idea">Idea</h1>
+<p>The idea of error messages is quite simple. They appear and, once the error is resolved, disappear. Sometimes it happens without user’s interaction (like when a user’s device reconnects to WiFi network automatically).
+So, a good way of thinking about errors is that they are a temporary state of an application, which should be displayed to a user. I think the word <em>state</em> is important while implementing error handling.</p>
+<h1 id="testimony">Testimony</h1>
+<p>This article isn’t about how you should make requests to your API, and how you should handle asynchronous calls, so let&rsquo;s assume the following is the perfect way to do API requests and let me use it in further examples.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyActivity</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Activity</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">execute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">success</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">Unit</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">failure</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">Errors</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">Unit</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">Thread</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">runOnUiThread</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">isSuccess</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">success</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ok</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000">failure</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">exception</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">start</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>I’ll say it again. We ignore issues like:</p>
+<ul>
+<li>Multiple requests after re-creating activity (e.g. rotation of the screen).</li>
+<li>Creating multiple threads (neither memory-, nor CPU-efficient).</li>
+<li>Memory leaks caused by unfinished threads.</li>
+<li>Crashes caused by returning value in a wrong activity state (e.g. after <code>onDestory()</code>).</li>
+</ul>
+<p>There are lots of solutions to these problems, but we focus on displaying error messages to the user.</p>
+<h1 id="ugly-way">Ugly way</h1>
+<p>So the simplest solution for error handling would be:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">load</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">execute</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">success</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;OK&#34;</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">failure</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">Toast</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">makeText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Ooopps...&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Toast</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">LENGTH_SHORT</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">show</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>And yes, this way is better than nothing, but it&rsquo;s quite far from good.</p>
+<ol>
+<li>It doesn’t say what’s wrong.</li>
+<li>An error message disappears after a while, so a user may not notice the toast.</li>
+<li>When a user hits the refresh button (execute <code>load()</code> again), data finally loads but the toast of the previous error still lingers on the screen. The user sees simultaneously the  error message and the successfully loaded data.</li>
+<li>It doesn’t support displaying progress.</li>
+</ol>
+<h1 id="be-stateful">Be stateful</h1>
+<p>We use <code>Option&lt;X&gt;</code> from popular <a href="https://github.com/MarioAriasC/funKTionale">funKTionale library</a>.
+This is a simple type that can hold absent value <code>var error = Option.None</code>, or real value <code>var error = Option.Some(IOException())</code>.</p>
+<p>So to handle our error management in a stateful way, we change our code to:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">None</span>
+
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">load</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">execute</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">success</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;OK&#34;</span>
+            <span style="color:#000">error</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">None</span>
+            <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">failure</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">exception</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>
+            <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;&#34;</span>
+            <span style="color:#000">error</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">exception</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">errorTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;Some error...&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p><strong>TIP</strong>: <code>fun &lt;R&gt; Option&lt;T&gt;.fold(ifEmpty: () -&gt; R, some: (T) -&gt; R): R</code> executes and returns the first function if the value’s empty (<code>Option.None</code>), or the other one if the value’s defined (<code>Option.Some(IOException())</code>).</p>
+<p>Ok&hellip; so let&rsquo;s introduce another functional type called <code>Either&lt;L, R&gt;</code>,  also available in <a href="https://github.com/MarioAriasC/funKTionale">funKTionale library</a>.<br>
+<code>Either&lt;L, R&gt;</code> is a type that contains either left or right value. <code>Either.Right</code> is usually used as the correct answer, and <code>Either.Left</code> is used as the wrong answer. <code>var result = Either.right(&quot;Response&quot;)</code> or <code>var result = Either.left(IOException())</code>.
+So our code would now look like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">lateinit</span> <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">result</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span>
+
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">load</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">execute</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">success</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">result</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">left</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;OK&#34;</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">failure</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">exception</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>
+            <span style="color:#000">result</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">right</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">exception</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">errorTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;Some error...&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;Response: $it&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>Now, our code is more stateful but still far from clean. It still doesn’t support displaying progress. Also, this particular lateinit is crash-prone.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">object</span> <span style="color:#000">LoadingException</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">result</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">left</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">LoadingException</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">load</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">result</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">left</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">LoadingException</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">execute</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">success</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">result</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">left</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;OK&#34;</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">failure</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">exception</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span>
+            <span style="color:#000">result</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Either</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">right</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">exception</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">errorTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span> <span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#000">LoadingException</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#4e9a06">&#34;Loading...&#34;</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#4e9a06">&#34;Some error...&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;Response: $it&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>Now our code:</p>
+<ol>
+<li>hides error messages when loading succeeds,</li>
+<li>prevents error messages from disappearing unless the problem is resolved,</li>
+<li>shows the progress indicator.</li>
+</ol>
+<p>Furthermore, we can display more detailed messages</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">errorTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span> <span style="color:#204a87;font-weight:bold">when</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+         <span style="color:#000">LoadingException</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#4e9a06">&#34;Loading...&#34;</span>
+         <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">IOException</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#4e9a06">&#34;Problem with API ${it.errorMessage}&#34;</span>
+         <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#4e9a06">&#34;Unknown error....&#34;</span>
+        <span style="color:#000;font-weight:bold">}</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;Response: $it&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>Now, we can add a common function that will better describe what went wrong:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">Context</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">String</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">when</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">LoadingException</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">getString</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">errors_not_yet_loaded</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">IOException</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">getString</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">errors_no_internet_connection</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">getString</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">errors_unknown_error</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">error</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">errorMessage</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>so our code will change to:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">errorTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span> <span style="color:#000">defaultErrrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;Response: $it&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>This looks pretty good but it doesn’t allow customization like showing nice images or adding fancy animations. It doesn’t even allow showing a spinner instead of <em>Loading&hellip;</em> text.</p>
+<h2 id="customizable-solution">Customizable solution</h2>
+<p>Let&rsquo;s work on the customizable solution, starting with the interface <code>ErrorHandler&lt;T&gt;</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">interface</span> <span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#8f5902;font-style:italic">/**
+</span><span style="color:#8f5902;font-style:italic">     * Return value when error is handled
+</span><span style="color:#8f5902;font-style:italic">     */</span>
+    <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">typealias</span> <span style="color:#000">DismissError</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">Unit</span>
+</code></pre></div><p>This allows handling some types of errors and displaying/dismissing them.
+We also create <code>ErrorManager&lt;in T&gt;</code> class (take a look at <a href="
+
+
+
+
+
+
+
+https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either/tree/master//examples/error-handling/src/main/java/com/jacekmarchwicki/example/MainActivity.kt">full code</a> later):</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorHandlers</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">List</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">lastError</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">None</span>
+
+    <span style="color:#8f5902;font-style:italic">/**
+</span><span style="color:#8f5902;font-style:italic">     * Present error to user
+</span><span style="color:#8f5902;font-style:italic">     */</span>
+    <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">TODO</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Implementation in the source code&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>This class allows adding multiple error handlers. Each error handler supports a different class of errors. As a result, we get one big ErrorManager that supports handling multiple types of errors in multiple ways.
+So now our code looks like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#8f5902;font-style:italic">/** list of error managers **/</span> <span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">errorManager</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">left</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">toOption</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">textView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fold</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;Response: $it&#34;</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>We implement the first error handler that adds a text view to a container with an error message. Error handler removes the view as soon as the error is resolved.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ShowScreenErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">view</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ViewGroup</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">text</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">override</span> <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">text</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000;font-weight:bold">.</span><span style="color:#000">map</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">newView</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">LayoutInflater</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">from</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">view</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">inflate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">layout</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">error_layout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">view</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">)</span>
+                <span style="color:#000">view</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">newView</span><span style="color:#000;font-weight:bold">)</span>
+                <span style="color:#000">newView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">error_layout_text</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">text</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">it</span>
+                <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#a40000">(</span><span style="color:#a40000">)</span><span style="color:#a40000"> </span><span style="color:#a40000">{</span><span style="color:#a40000"> </span><span style="color:#000">view</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">removeView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">newView</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>So now our errorManager looks like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+                <span style="color:#000">ShowScreenErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>I’ve said before that this solution is <em>customizable</em> but nothing has changed yet :/ Let&rsquo;s fix this.
+You decide that instead of <em>Loading..</em>. text you want a fancy spinner everywhere in the app.
+You create a new <code>ErrorHandler</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ProgressErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">view</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">FrameLayout</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">Errors</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">override</span> <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Errors</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span> <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">LoadingException</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">None</span>
+    <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">newView</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">LayoutInflater</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">from</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">view</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">inflate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">layout</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">progress_layout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">view</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">view</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">newView</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">dismiss</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">view</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">removeView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">newView</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dismiss</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>and change your code to:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">ProgressErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">ShowScreenErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>Ok&hellip; But now requirements have changed and one of the requests may return <em>NotFound (404)</em> error. You should display some nice error message to the user.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">ProgressErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">activity_main_content</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">ShowScreenErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">activity_main_content</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">when</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#000">NotFoundException</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#4e9a06">&#34;Page deleted&#34;</span>
+                <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="advanced-customization">Advanced customization</h2>
+<p>Now you might wanna do something fancy :)
+Let&rsquo;s start with a function that simplifies handling just one error:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">inline</span> <span style="color:#204a87;font-weight:bold">fun</span> &lt;reified T : K, K&gt; <span style="color:#000">castErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">crossinline</span> <span style="color:#000">show</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">K</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">object</span> <span style="color:#a40000">:</span><span style="color:#a40000"> </span><span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">K</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">override</span> <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">K</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span> <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">show</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">None</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h3 id="animations">Animations</h3>
+<p>I.e. you have a &ldquo;Like&rdquo; button. After a user clicks it we show progress by slowly animating the button.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">likeErrorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+            <span style="color:#000">castErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">LoadingException</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">animation</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">likeButton</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">animate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0f</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">apply</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">start</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span>
+                <span style="color:#000">likeButton</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">enabled</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">false</span>
+                <span style="color:#204a87;font-weight:bold">fun</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">animation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cancel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+                    <span style="color:#000">likeButton</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">animate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1.0f</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">start</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+                    <span style="color:#000">likeButton</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">enabled</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">true</span>
+                <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">SnackbarErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>And yes&hellip; there is no typo. Instead of using <code>ShowScreenErrorHandler</code>, we can use <code>SnackbarErrorHandler</code> that will show a snack bar:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">SnackbarErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">view</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">View</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">private</span> <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">text</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">ErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">T</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">override</span> <span style="color:#204a87;font-weight:bold">fun</span> <span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">DismissError</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">text</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000;font-weight:bold">.</span><span style="color:#000">map</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">snackbar</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Snackbar</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">make</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">view</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">it</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Snackbar</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">LENGTH_SHORT</span><span style="color:#000;font-weight:bold">)</span>
+                        <span style="color:#000;font-weight:bold">.</span><span style="color:#000">apply</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">show</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span>
+                <span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">dismiss</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">snackbar</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">dismiss</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span>
+                <span style="color:#000">dismiss</span>
+            <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h2 id="images">Images</h2>
+<p>We usually display some kind of a nice image with text when a user doesn’t have messages or contacts on the list:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">ViewWithImageErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">EmptyListException</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">drawable</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">empty_list_image</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">empty_list_string</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">ShowScreenErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>And I think it wouldn&rsquo;t be hard for you to implement <code>ViewWithImageErrorHandler</code> by yourself ;)</p>
+<h2 id="edittext">EditText</h2>
+<p>If you implement a login screen and a user types in a wrong password, you can manage those errors like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+            <span style="color:#000">castErrorHandler</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">WrongPasswordException</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#000">passwordTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Wrong password&#34;</span><span style="color:#000;font-weight:bold">)</span>
+                <span style="color:#204a87;font-weight:bold">fun</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">passwordTextView</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">showHideError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+                <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">SnackbarErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#204a87;font-weight:bold">val</span> <span style="color:#000">errorManager</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">ErrorManager</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">listOf</span><span style="color:#000;font-weight:bold">(</span>
+            <span style="color:#000">EditTextErrorView</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">WrongPasswordException</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">passwordTextView</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">wrong_password</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">EditTextErrorView</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000">WrongEmailException</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Exception</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">emailTextView</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">string</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">wrong_email</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">SnackbarErrorHandler</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">frameLayout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">Option</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Some</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">defaultErrorText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">it</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>You can imagine how <code>EditTextErrorView</code> could be implemented and reused in different contexts of the app.</p>
+<h1 id="error-message-persistence">Error message persistence</h1>
+<p>For actions (e.g. &ldquo;Liking&rdquo;, &ldquo;Sending&rdquo;, &ldquo;Posting&rdquo;, &ldquo;Creating&rdquo;, &ldquo;Commenting&rdquo;, &ldquo;Sharing&rdquo;, &ldquo;Logging in&rdquo;), use non-persistent error handlers like <code>SnackbarErrorHandler</code>, <code>EditTextErrorViewHandler</code>, or others that can be dismissed.
+For stateful data (e.g. &ldquo;List of comments&rdquo;, &ldquo;List of posts&rdquo;, &ldquo;Post view&rdquo;, &ldquo;User details&rdquo;), use persistent error handlers like <code>ShowScreenErrorHandler</code> or <code>ViewWithImageErrorHandler</code> that don’t disappear before the error is resolved.</p>
+<p><a href="/blog/errors...-oh...-those-errors/#errors-persistence">More about error message persistence</a></p>
+<h1 id="summary">Summary</h1>
+<ul>
+<li>Effective error handling shouldn&rsquo;t be hard to implement.</li>
+<li>By using the code that I proposed, you can implement very simple and very powerful error handling in your whole app fairly quickly.</li>
+<li>Begin with the simplest snack bar and error text view, then extend them to a more user-friendly solution.</li>
+<li>Reuse your error handling code as described in this tutorial.</li>
+<li>Implement error handling everywhere, where code-unrelated errors happen, e.g. network issues, wrong http status codes, problems with reading/writing files, no space left on the device issues.</li>
+</ul>
+<h1 id="whats-more">What&rsquo;s more</h1>
+<ul>
+<li><a href="/blog/kotlin-and-rxjava-with-extension-functions/">Kotlin and RxJava with extensions functions</a></li>
+<li><a href="/blog/using-schedulers-while-testing-your-code/">Using schedulers while testing your code</a></li>
+<li><a href="/blog/errors...-oh...-those-errors/">Errors&hellip; oh&hellip; those errors - Part 1</a></li>
+</ul>
+
+	
+
+	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+  <li>
+    <a href="/blog/using-schedulers-while-testing-your-code/" class="btn btn-primary "><span class="mr-1">←</span> Previous</a>
+  </li>
+    <a href="/blog/solve-your-problems-with-time-during-android-integration-test/" class="btn btn-primary ">Next <span class="ml-1">→</span></a>
+  </li>
+</ul>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" href="https://github.com/jacek-marchwicki/example-rx-and-kotlin-and-either">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2020 Jacek Marchwicki All Rights Reserved</small>
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>

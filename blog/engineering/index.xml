@@ -1,0 +1,139 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer Blog - Jacek Marchwicki – Engineering Articles</title>
+    <link>/blog/engineering/</link>
+    <description>Recent content in Engineering Articles on Developer Blog - Jacek Marchwicki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/blog/engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Errors... oh... those errors</title>
+      <link>/blog/errors...-oh...-those-errors/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/errors...-oh...-those-errors/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/errors...-oh...-those-errors/featured-title_hu798a16dc35616af1dc5943ffeca08caa_9962734_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;ul&gt;
+&lt;li&gt;Product owner focuses on happy path, ignoring issues like missing Internet connection.&lt;/li&gt;
+&lt;li&gt;UI/UX designers focus on product owner satisfaction&lt;/li&gt;
+&lt;li&gt;UI/UX designers don&amp;rsquo;t have good technical knowledge.&lt;/li&gt;
+&lt;li&gt;Developers have thousands of tasks to fulfill, and none of them is called &amp;ldquo;error handling&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;And testers&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yes&amp;hellip; sadly, most of the companies lack of error handling becomes a problem, when testers start doing their work or, even worse, upon user’s installation from a store.&lt;/p&gt;
+&lt;h1 id=&#34;frustration&#34;&gt;Frustration&lt;/h1&gt;
+&lt;p&gt;So let&amp;rsquo;s start with an example: Your app is an e-mail application, which will have a list of e-mails and some fields so a user can send a message using a send button.&lt;/p&gt;
+&lt;p&gt;Because everyone did the job of implementing features very well but forgot about error handling, the following might happen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A QA tester rejects the task with a comment &amp;ldquo;I clicked on send and nothing happened&amp;rdquo;.
+Your testing team is very good, so the tester will also attach a video and application&amp;rsquo;s logs.&lt;/li&gt;
+&lt;li&gt;You send the application to the product owner and he/she says: &amp;ldquo;I just got a version without sending e-mails implemented&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;The application is in the store and a user says &amp;ldquo;I can&amp;rsquo;t click on send button&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Users are frustrated because they think that they aren&amp;rsquo;t smart enough to use the application and they don&amp;rsquo;t want to contact you.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now everyone becomes frustrated:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The tester becomes frustrated because the feature doesn’t work as expected.&lt;/li&gt;
+&lt;li&gt;The product owner’s frustrated because the feature’s not delivered but the task status is “completed”.&lt;/li&gt;
+&lt;li&gt;The user’s frustrated because the application that he/she uses doesn&amp;rsquo;t work, or he/she is frustrated because he/she doesn&amp;rsquo;t know how to use the app.&lt;/li&gt;
+&lt;li&gt;The mobile developer is frustrated because he/she doesn&amp;rsquo;t know what happened and he/she doesn&amp;rsquo;t know how to fix it. He/She also needs to spend additional hours resolving the issue that might not be an issue.&lt;/li&gt;
+&lt;li&gt;The back-end developer’s frustrated because the mobile developer imputes that this is server issue.&lt;/li&gt;
+&lt;li&gt;The investor’s very angry because he/she is losing clients, time and money.&lt;/li&gt;
+&lt;li&gt;The UI/UX will be angry because everyone will say that this was his/her fault.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;retrospection&#34;&gt;Retrospection&lt;/h1&gt;
+&lt;p&gt;Now, it&amp;rsquo;s time for retrospection.&lt;/p&gt;
+&lt;p&gt;The scrum master or the project owner starts the discussion about what happened. Developers (mobile/server) didn&amp;rsquo;t change anything and everything started working. The tester, product owner, and users don&amp;rsquo;t see the problem anymore. Problem solved! - But wait&amp;hellip; good PM will continue to push the team to find the solution to the future problems like these.&lt;/p&gt;
+&lt;p&gt;So they will brainstorm to find out what might have happened:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There were temporary problems with the connection to database,&lt;/li&gt;
+&lt;li&gt;The Europe-America fiber had some temporary outage,&lt;/li&gt;
+&lt;li&gt;There was a deploy during that period,&lt;/li&gt;
+&lt;li&gt;There is some ugly bug in production,&lt;/li&gt;
+&lt;li&gt;The mobile app has some bug in the version that is in the store,&lt;/li&gt;
+&lt;li&gt;The device was connected to a network that didn&amp;rsquo;t have Internet access (like public wifi without user’s acceptance of network agreement),&lt;/li&gt;
+&lt;li&gt;A user was disconnected from wifi,&lt;/li&gt;
+&lt;li&gt;The device has some problems with network,&lt;/li&gt;
+&lt;li&gt;etc&amp;hellip;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And guess what?&amp;hellip; No one will know which of these problems occurred. Moreover, no one will know how to address such an issue, now and in the future.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, someone from the team realized that we can show users a message &amp;ldquo;Oops, something went wrong.&amp;rdquo; if an issue occurs.. This is a good starting point but doesn&amp;rsquo;t help to understand which problem we’re dealing with.&lt;/p&gt;
+&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Error handling should consist in distinguishing problems from one another and helping to resolve issues. Errors aren’t only for end users but also for developers.&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If a user sees an error, he/she should know what to do next.&lt;/li&gt;
+&lt;li&gt;If a tester sees an error, he/she should know how to report an issue.&lt;/li&gt;
+&lt;li&gt;If a developer sees an error, he/she should know how to fix it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It’s worth to have error messages that are helpful for the developer not only in the debug version, but also in the final product. In our example, if a user sends a screenshot with &amp;ldquo;Oops, Temporary server outage (502)&amp;rdquo; error and a developer will see it, he/she will instantly know that the problem was related to the deployment of production server - and there we have room for improvement. You can also send back a quick response to the user in which you inform what the problem was and assure that it was only temporary.&lt;/p&gt;
+&lt;h2 id=&#34;error-types&#34;&gt;Error types&lt;/h2&gt;
+&lt;p&gt;So let&amp;rsquo;s start with basic error messages that we implement and why they are important:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Loading&amp;hellip;&lt;/strong&gt; - the most important feedback for a user that something is loading. A user needs to know that there is nothing to worry about, just that the content is being fetched from the Internet. If loading takes too much time, he/she might think about changing his/her network provider :) Without any progress indicator in the e-mail app, when no e-mails are yet displayed to the user due to loading, he might think: “All my e-mails were lost”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No Internet, check your connection&lt;/strong&gt; - this is the second most important feedback for a user. Lack of Internet access is a common situation. On the train, plane, in the tunnel, at the underground station, or even some places in a flat. Without this message, a user might think that an app has broken or he/she doesn&amp;rsquo;t know how to do things. Show a user that it&amp;rsquo;s neither his nor your fault. Show him/her that he/she can fix this problem.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Your password is wrong&lt;/strong&gt;, &lt;strong&gt;Title should be filled&lt;/strong&gt; - It is definitely frustrating to a user if he/she clicks the send button and doesn&amp;rsquo;t know why he/she can&amp;rsquo;t send an e-mail - he/she just forgot to type in recipients. People are imperfect and we tend to forget about things. So if a user forgets to fill something in, you should help him/her out.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Problem with network connection&lt;/strong&gt; - (optional but useful) An app can distinguish missing network reported by the device’s operating system from connection issues while fetching data (like problem accessing your server, broken connection, DNS server issue, etc.). These types of errors do not precisely mean that a root of the problem is a client or server network. The good practice is to distinguish them from “No Internet” error, so a developer can guess what is wrong.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No friends, add them using + icon&lt;/strong&gt;, &lt;strong&gt;No messages, you can create new ones&lt;/strong&gt; - Sometimes when the list is empty, users think that something went wrong. It&amp;rsquo;s a good idea to show a placeholder with a suggestion how he/she should react to change this state.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Temporary server downtime, try again in a couple of minutes&lt;/strong&gt; - Server updates happen from time to time. Even If you usually have updates without downtime, it&amp;rsquo;s a good practice to have an error message that server is currently deploying. Usually, servers tend to return 502 HTTP error code in such situations. Your client is happy because he/she knows that an issue will be resolved within minutes. Developer is happy because the QA team isn’t going to reject his/her task, but ask the back-end team if there is an ongoing deployment. You are happy during development because you know that an app hasn&amp;rsquo;t broken down, just a dev team doing a deployment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Temporary server issue (500)&lt;/strong&gt; - This message should be displayed when you get  a 5xx response code from a server. This should never happen but if it does , your QA team will fill a ticket to the back-end team. If a user  sends a screenshot of the bug, you know better what went wrong. The mobile team’s  happy because they’re not disturbed. The back-end team is  happy because it’s easier for them to diagnose the problem.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unknown application error (422)&lt;/strong&gt; - This message should be displayed when you get a 4xx response code from a server. This  should never happen either.  This time, the QA team  assigns it to the mobile team. Again, you get a better understanding of users&amp;rsquo; problems. The mobile team knows how to handle them and the back-end team stays safe.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Post not found&lt;/strong&gt;, &lt;strong&gt;Not found&lt;/strong&gt; - It&amp;rsquo;s also a good practice to implement this specific error as the user knows how to handle such situations.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;errors-persistence&#34;&gt;Errors persistence&lt;/h2&gt;
+&lt;p&gt;There is one more thing. Apps tend to show &lt;a href=&#34;https://developer.android.com/guide/topics/ui/notifiers/toasts&#34;&gt;toasts/snack&lt;/a&gt; bars with error notification. It&amp;rsquo;s better than no error messages but toasts automatically disappear without solving an issue.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s show this by example:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;you open an e-mail application,&lt;/li&gt;
+&lt;li&gt;there’s a problem with the Internet connection so e-mails can&amp;rsquo;t be downloaded and a snack bar is displayed,&lt;/li&gt;
+&lt;li&gt;you don’t see a snack bar appear because you‘re talking to a friend,&lt;/li&gt;
+&lt;li&gt;the snack bar disappears after 2 seconds,&lt;/li&gt;
+&lt;li&gt;you look at your e-mail application, see nothing and become very angry because you think someone has hacked into your e-mail account and deleted all of your precious e-mails,&lt;/li&gt;
+&lt;li&gt;the screenshot of the empty inbox is sent to the development team along with a complaint.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Wouldn&amp;rsquo;t it be much better to display an error message incessantly until e-mails load? It wouldn&amp;rsquo;t cause such problems.&lt;/p&gt;
+&lt;p&gt;But snack bars aren&amp;rsquo;t always such a wrong solution. If you pull-to-refresh your e-mails, snack bar will be much better than a persistent error message. If refreshing fails, you can still see old e-mails with a small snack bar that will not cover user content.&lt;/p&gt;
+&lt;p&gt;Also, a snack bar’s pretty useful for errors about liking, commenting, creating posts and during logging in; when a user’s aware that an action didn&amp;rsquo;t succeed and when he’s able to retry instantly.&lt;/p&gt;
+&lt;h2 id=&#34;disturbing-errors&#34;&gt;Disturbing errors&lt;/h2&gt;
+&lt;p&gt;Errors shouldn&amp;rsquo;t make user’s work harder.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;content shouldn&amp;rsquo;t be overlapped by errors,&lt;/li&gt;
+&lt;li&gt;a snack bar shouldn&amp;rsquo;t overlap action buttons,&lt;/li&gt;
+&lt;li&gt;you shouldn&amp;rsquo;t use error messages as dialog windows because they disrupt users&amp;rsquo; workflow. Only in a very critical situation, when user’s data might be lost, can you show errors as dialog windows,&lt;/li&gt;
+&lt;li&gt;Error messages shouldn&amp;rsquo;t block other parts of UI. A user should be able to  use other app features during the outage time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn from others&amp;rsquo; mistakes - do error handling TODAY, not tomorrow.&lt;/li&gt;
+&lt;li&gt;Catch as many errors as you can.&lt;/li&gt;
+&lt;li&gt;Weak error handling is better than none.&lt;/li&gt;
+&lt;li&gt;Error handling should be as easy to implement as possible , no matter the feature.&lt;/li&gt;
+&lt;li&gt;If you display an error message that helps your user resolve a problem, you will not have his/her problem on your shoulders.&lt;/li&gt;
+&lt;li&gt;If you display an error message that helps a QA team find a bug, you will spend less time on finding causes of the issues.&lt;/li&gt;
+&lt;li&gt;If you display an error message that helps you, you will spend less time debugging the app.&lt;/li&gt;
+&lt;li&gt;If you display an error message that helps everyone, everyone will be happy.&lt;/li&gt;
+&lt;li&gt;Error handling should distinguish between problems and help resolve issues.&lt;/li&gt;
+&lt;li&gt;Error messages aren’t meant only for end users but also for developers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;whats-more&#34;&gt;What&amp;rsquo;s more&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;An example of how to display error messages using Kotlin on Android is presented in the next article - &lt;a href=&#34;/blog/errors...-oh...-those-errors-coding/&#34;&gt;Errors&amp;hellip; oh&amp;hellip; those errors - coding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/blog/android/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/engineering/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/people/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/no-sleeping-during-testing-rxjava-app/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/solve-your-problems-with-time-during-android-integration-test/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/my-storyappunite/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/errors...-oh...-those-errors-coding/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/using-schedulers-while-testing-your-code/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/how-to-find-stackoverflowerrors/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/errors...-oh...-those-errors/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/a-nice-reader/writer-pattern/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/kotlin-and-rxjava-with-extension-functions/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-02-19T12:35:08+01:00</lastmod>
+  </url>
+  
+</urlset>
