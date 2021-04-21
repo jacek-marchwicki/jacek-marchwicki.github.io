@@ -89,7 +89,7 @@ Your testing team is very good, so the tester will also attach a video and appli
 &lt;li&gt;&lt;strong&gt;No friends, add them using + icon&lt;/strong&gt;, &lt;strong&gt;No messages, you can create new ones&lt;/strong&gt; - Sometimes when the list is empty, users think that something went wrong. It&amp;rsquo;s a good idea to show a placeholder with a suggestion how he/she should react to change this state.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Temporary server downtime, try again in a couple of minutes&lt;/strong&gt; - Server updates happen from time to time. Even If you usually have updates without downtime, it&amp;rsquo;s a good practice to have an error message that server is currently deploying. Usually, servers tend to return 502 HTTP error code in such situations. Your client is happy because he/she knows that an issue will be resolved within minutes. Developer is happy because the QA team isn’t going to reject his/her task, but ask the back-end team if there is an ongoing deployment. You are happy during development because you know that an app hasn&amp;rsquo;t broken down, just a dev team doing a deployment.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Temporary server issue (500)&lt;/strong&gt; - This message should be displayed when you get  a 5xx response code from a server. This should never happen but if it does , your QA team will fill a ticket to the back-end team. If a user  sends a screenshot of the bug, you know better what went wrong. The mobile team’s  happy because they’re not disturbed. The back-end team is  happy because it’s easier for them to diagnose the problem.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unknown application error (422)&lt;/strong&gt; - This message should be displayed when you get a 4xx response code from a server. This  should never happen either.  This time, the QA team  assigns it to the mobile team. Again, you get a better understanding of users&amp;rsquo; problems. The mobile team knows how to handle them and the back-end team stays safe.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unknown application error (422)&lt;/strong&gt; - This message should be displayed when you get a 4xx response code from a server. This  should never happen either.  This time, the QA team  assigns it to the mobile team. Again, you get a better understanding of users&#39; problems. The mobile team knows how to handle them and the back-end team stays safe.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Post not found&lt;/strong&gt;, &lt;strong&gt;Not found&lt;/strong&gt; - It&amp;rsquo;s also a good practice to implement this specific error as the user knows how to handle such situations.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;errors-persistence&#34;&gt;Errors persistence&lt;/h2&gt;
@@ -111,12 +111,12 @@ Your testing team is very good, so the tester will also attach a video and appli
 &lt;ol&gt;
 &lt;li&gt;content shouldn&amp;rsquo;t be overlapped by errors,&lt;/li&gt;
 &lt;li&gt;a snack bar shouldn&amp;rsquo;t overlap action buttons,&lt;/li&gt;
-&lt;li&gt;you shouldn&amp;rsquo;t use error messages as dialog windows because they disrupt users&amp;rsquo; workflow. Only in a very critical situation, when user’s data might be lost, can you show errors as dialog windows,&lt;/li&gt;
+&lt;li&gt;you shouldn&amp;rsquo;t use error messages as dialog windows because they disrupt users&#39; workflow. Only in a very critical situation, when user’s data might be lost, can you show errors as dialog windows,&lt;/li&gt;
 &lt;li&gt;Error messages shouldn&amp;rsquo;t block other parts of UI. A user should be able to  use other app features during the outage time.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Learn from others&amp;rsquo; mistakes - do error handling TODAY, not tomorrow.&lt;/li&gt;
+&lt;li&gt;Learn from others&#39; mistakes - do error handling TODAY, not tomorrow.&lt;/li&gt;
 &lt;li&gt;Catch as many errors as you can.&lt;/li&gt;
 &lt;li&gt;Weak error handling is better than none.&lt;/li&gt;
 &lt;li&gt;Error handling should be as easy to implement as possible , no matter the feature.&lt;/li&gt;
