@@ -15,6 +15,45 @@
     
     
     <item>
+      <title>Blog: Coastline paradox</title>
+      <link>/blog/coastline-paradox/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/coastline-paradox/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/coastline-paradox/featured-title_hub6bed809a18f511baa3e8ed6be2b62ab_3044106_640x0_resize_q75_catmullrom.jpg" width="640" height="480"/>]]>
+        
+        &lt;p&gt;The coastline paradox was first observed by Lewis Fry Richardson and later expanded upon by &lt;a href=&#34;https://science.sciencemag.org/content/156/3775/636.abstract&#34;&gt;Benoit Mandelbrot in Science Magazine in 1967&lt;/a&gt;. It shows that measuring the coastline length is not as straightforward as it might seem.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 410px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/coastline-paradox/featured-title_hub6bed809a18f511baa3e8ed6be2b62ab_3044106_600x300_fit_q75_catmullrom.jpg&#34; width=&#34;400&#34; height=&#34;300&#34; alt=&#34;Image shows coastline around a peninsula&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;Image shows coastline around a peninsula&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo by &lt;a href=&#34;https://unsplash.com/@maxboettinger?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Max Böttinger&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+&lt;p&gt;If you measure it using a very rough satellite image, you’ll get a much smaller value than in the case of very precise images. This is because the latter will provide you with more details to be taken into account.
+But let’s skip the theoretical considerations regarding this dilemma and focus on practical reasons for measuring the coastline length. These may include a road trip along the coast or sailing from one port to another. What we would find useful and practical in such circumstances are the measurements done by 14th-century cartographers, rather than subatomic-level surveys that would inevitably give much larger values.&lt;/p&gt;
+&lt;p&gt;You’re probably wondering why I’m deliberating about coastlines at all. This is a software engineering blog, after all. But I have my well-grounded reasons, I assure you. Just keep on reading!&lt;/p&gt;
+&lt;p&gt;The same principles apply to software development. When you’re working on a problem, you should look at it from the user’s perspective.
+If you look too closely, you might waste time and effort on details that are irrelevant to your users and that might even cause new problems. For instance, you can have a button which is pixel-perfect in design and implementation. But its placement is completely wrong and users won’t notice the button and will miss on some important features. You might ask: “But isn’t it our ultimate goal to create perfect features?” Sure! However, attention to detail without looking at the whole picture entails certain risks. You might spend so much time refining your feature that your competitors will deliver it sooner. Delving into irrelevant details might cost you missing the opportunity to launch the product at the best possible moment.&lt;/p&gt;
+&lt;p&gt;So if we, software engineers, can learn something from the coastline paradox, it’s this: never lose sight of the bigger picture, as it really helps you make the right decisions.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Errors... oh... those errors</title>
       <link>/blog/errors...-oh...-those-errors/</link>
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
