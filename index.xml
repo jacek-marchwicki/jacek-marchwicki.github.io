@@ -14,6 +14,62 @@
     
     
     <item>
+      <title>Blog: When a requirement is not worth implementing</title>
+      <link>/blog/when-a-requirement-is-not-worth-implementing/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/when-a-requirement-is-not-worth-implementing/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/when-a-requirement-is-not-worth-implementing/featured-title_hu1b827487bae0e0d5d951dad5a862a0a4_3469508_640x0_resize_q75_catmullrom.jpg" width="640" height="960"/>]]>
+        
+        &lt;p&gt;Life is full of compromises. So is software development. Decisions about features and the related requirements are based on the amount of time and money necessary to deliver good user experience.
+When designing software, a team doesn’t always have full knowledge of what is possible and how much time and effort will be necessary to accomplish the goal.
+This sometimes leads to under-estimating certain features. The results can be as insignificant as a one-hour fix of a button text, or as serious as a multi-year delay in the delivery of the entire app to the client. Some delays might be acceptable, but to some, you need to say “STOP!”.&lt;/p&gt;
+&lt;p&gt;Every team member needs to be able to raise the alarm if something is taking more time than it should, or if they notice that implementing a given requirement becomes too expensive or too time-consuming. But how do we enable everyone to make such decisions or alert others so that the decision can be made jointly by the entire team?
+I’d like to point out a few things that should be taken into account. But first, let’s have an example for illustration purposes:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Your team is working on a social app. The new requirement is to allow users to upload their profile images. The implementation of a part of the feature was initially estimated as ~2 work-days. But the developer responsible for this task spent 2 days on it and said that it was too hard to fulfil the requirement of the profile image upload limit of at least 5 MB while having a 512 kB limit set on the whole system.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;how-important-is-the-featurerequirement-for-the-final-product&#34;&gt;How important is the feature/requirement for the final product?&lt;/h1&gt;
+&lt;p&gt;First of all, the team member needs to establish how valuable the feature is for the product. In our example, the importance of sharing profile pictures would be completely different for an app that allows for choosing the right male or female model for your project, where the image is crucial, and completely different for a forum of coffee-lovers, where it would only provide users with a way of expressing themselves.&lt;/p&gt;
+&lt;h1 id=&#34;how-much-effort-is-necessary-to-build-the-feature--meet-the-requirement&#34;&gt;How much effort is necessary to build the feature / meet the requirement?&lt;/h1&gt;
+&lt;p&gt;Another important aspect of the decision-making process is estimating how much effort would be necessary to develop the feature. In the beginning, a rough estimate is enough. I.e. one sprint of one person or 6 sprints of the entire team. This helps to make the right decision.&lt;/p&gt;
+&lt;h1 id=&#34;can-we-achieve-this-in-a-simpler-way&#34;&gt;Can we achieve this in a simpler way?&lt;/h1&gt;
+&lt;p&gt;Sometimes, there are simpler ways of developing a certain feature using non-standard solutions. In our example, the team could:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement a frontend tool that shrinks any image to the desired size,&lt;/li&gt;
+&lt;li&gt;Use some external solution for storing these images.&lt;/li&gt;
+&lt;li&gt;Generate random color images for users, so that you don’t see their faces, but you’re able to distinguish them based on colors.&lt;/li&gt;
+&lt;li&gt;Use images provided by a third-party login, i.e., Facebook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sometimes developers, even very experienced ones, are only able to think about the problem in one particular way. It’s good to consult with your colleagues, as they may bring to the table a simpler solution that you would never think of.&lt;/p&gt;
+&lt;h1 id=&#34;will-solving-this-problem-solve-other-problems-too&#34;&gt;Will solving this problem solve other problems too?&lt;/h1&gt;
+&lt;p&gt;Usually, our problem is more deeply rooted in different areas of our product than the superficial issue we are initially trying to resolve. I.e. in our example, if we accept the limitation of the API, we might also limit uploading of all other data to the server - data that is even more important than that processed by the developed feature. The issue we’re dealing with might be worth fixing, if there’s a chance of it resurfacing later, in the planned features.&lt;/p&gt;
+&lt;h1 id=&#34;is-it-beneficial-to-do-without-the-full-fledged-functionality-in-the-beginning&#34;&gt;Is it beneficial to do without the full-fledged functionality in the beginning?&lt;/h1&gt;
+&lt;p&gt;Ask yourself: is it not more productive in the project phase to release a version that is limited? Might it be a good idea to release something and ask users for feedback? You can also try to measure how the feature is used to see if your problem is the user’s problem too. Fixing the issue can be planned later.&lt;/p&gt;
+&lt;h1 id=&#34;how-much-effort-does-the-change-in-the-plan-require&#34;&gt;How much effort does the change in the plan require?&lt;/h1&gt;
+&lt;p&gt;It’s very important to understand that changing plans/requirements has some implications. You need to be aware that discussing the problem with the rest of the team might prove more time-consuming in the end, than actually fixing the issue, so you should always consider whether it’s worth it.
+Remember that changing the requirements affects also other people involved in the process.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Designers might need to be informed that they need to provide a UI for a message saying that the image size is limited.&lt;/li&gt;
+&lt;li&gt;The message needs to be translated into different languages by translators.&lt;/li&gt;
+&lt;li&gt;The documentation needs to be updated to reflect the change.&lt;/li&gt;
+&lt;li&gt;Stakeholders need to be taken into account, and their time is the most expensive.&lt;/li&gt;
+&lt;li&gt;The problem should be presented to your QA team.&lt;/li&gt;
+&lt;li&gt;Some end-user guides might need to be updated so that they describe the limitation.&lt;/li&gt;
+&lt;li&gt;Your help desk staff needs to be informed about the limitation.&lt;/li&gt;
+&lt;li&gt;All the people that join the team might face the same problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;final-decision&#34;&gt;Final decision&lt;/h1&gt;
+&lt;p&gt;Taking into account these factors should help the product team make the right decisions. It is a known fact that any decision-making, if not based on knowledge, is a lottery. If everyone in the team is able to quickly answer the questions listed above, then the decisions will simply be better.
+And if your team is able to react swiftly to problems that they are likely to have, the final product is more likely to be a success.
+With that in mind, in the upcoming article, we will focus on how to lower the necessary effort due to changes of plans.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Coastline paradox</title>
       <link>/blog/coastline-paradox/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
