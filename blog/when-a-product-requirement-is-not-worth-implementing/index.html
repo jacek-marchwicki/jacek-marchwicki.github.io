@@ -17,22 +17,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>When a requirement is not worth implementing | Developer Blog - Jacek Marchwicki</title><meta property="og:title" content="When a requirement is not worth implementing" />
+<title>When a product requirement is not worth implementing | Developer Blog - Jacek Marchwicki</title><meta property="og:title" content="When a product requirement is not worth implementing" />
 <meta property="og:description" content="Life is full of compromises, so is software development - this article will help you make good decisions when an unforeseen problem occurs.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/when-a-requirement-is-not-worth-implementing/" /><meta property="og:image" content="/blog/when-a-requirement-is-not-worth-implementing/featured-title.jpg"/><meta property="article:section" content="blog" />
+<meta property="og:url" content="/blog/when-a-product-requirement-is-not-worth-implementing/" /><meta property="og:image" content="/blog/when-a-product-requirement-is-not-worth-implementing/featured-title.jpg"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-08-23T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-23T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-23T13:28:16&#43;02:00" />
 
-<meta itemprop="name" content="When a requirement is not worth implementing">
+<meta itemprop="name" content="When a product requirement is not worth implementing">
 <meta itemprop="description" content="Life is full of compromises, so is software development - this article will help you make good decisions when an unforeseen problem occurs.
 "><meta itemprop="datePublished" content="2021-08-23T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="969"><meta itemprop="image" content="/blog/when-a-requirement-is-not-worth-implementing/featured-title.jpg">
+<meta itemprop="dateModified" content="2021-08-23T13:28:16&#43;02:00" />
+<meta itemprop="wordCount" content="969"><meta itemprop="image" content="/blog/when-a-product-requirement-is-not-worth-implementing/featured-title.jpg">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/blog/when-a-requirement-is-not-worth-implementing/featured-title.jpg"/>
-<meta name="twitter:title" content="When a requirement is not worth implementing"/>
+<meta name="twitter:image" content="/blog/when-a-product-requirement-is-not-worth-implementing/featured-title.jpg"/>
+<meta name="twitter:title" content="When a product requirement is not worth implementing"/>
 <meta name="twitter:description" content="Life is full of compromises, so is software development - this article will help you make good decisions when an unforeseen problem occurs.
 "/>
 
@@ -398,8 +398,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blogwhen-a-requirement-is-not-worth-implementing-li">
-    <a href="/blog/when-a-requirement-is-not-worth-implementing/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-blogwhen-a-requirement-is-not-worth-implementing"><span class="td-sidebar-nav-active-item">When a requirement is not worth implementing</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blogwhen-a-product-requirement-is-not-worth-implementing-li">
+    <a href="/blog/when-a-product-requirement-is-not-worth-implementing/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-blogwhen-a-product-requirement-is-not-worth-implementing"><span class="td-sidebar-nav-active-item">When a product requirement is not worth implementing</span></a>
     
   </li>
 
@@ -574,7 +574,7 @@ if (!doNotTrack) {
     
 
     
-    <a href="https://github.com/jacek-marchwicki/blog/issues/new?title=When%20a%20requirement%20is%20not%20worth%20implementing" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+    <a href="https://github.com/jacek-marchwicki/blog/issues/new?title=When%20a%20product%20requirement%20is%20not%20worth%20implementing" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
     
 
   
@@ -606,7 +606,7 @@ if (!doNotTrack) {
             </a>
             
 <div class="td-content">
-	<h1>When a requirement is not worth implementing</h1>
+	<h1>When a product requirement is not worth implementing</h1>
 	<div class="lead">Life is full of compromises, so is software development - this article will help you make good decisions when an unforeseen problem occurs.</div>
 	<div class="td-byline mb-4">
 		By <b>Jacek Marchwicki</b> |
@@ -618,7 +618,7 @@ When designing software, a team doesn’t always have full knowledge of what is 
 This sometimes leads to under-estimating certain features. The results can be as insignificant as a one-hour fix of a button text, or as serious as a multi-year delay in the delivery of the entire app to the client. Some delays might be acceptable, but to some, you need to say “STOP!”.</p>
 <p>Every team member needs to be able to raise the alarm if something is taking more time than it should, or if they notice that implementing a given requirement becomes too expensive or too time-consuming. But how do we enable everyone to make such decisions or alert others so that the decision can be made jointly by the entire team?
 I’d like to point out a few things that should be taken into account. But first, let’s have an example for illustration purposes:</p>
-<p><em>Your team is working on a social app. The new requirement is to allow users to upload their profile images. The implementation of a part of the feature was initially estimated as ~2 work-days. But the developer responsible for this task spent 2 days on it and said that it was too hard to fulfil the requirement of the profile image upload limit of at least 5 MB while having a 512 kB limit set on the whole system.</em></p>
+<p><em>Your team is working on a social app. The new requirement is to allow users to upload their profile images. The implementation of a part of the feature was initially estimated as ~2 work-days. But the developer responsible for this task spent 2 days on it and said that it was too hard to fulfill the requirement of the profile image upload limit of at least 5 MB while having a 512 kB limit set on the whole system.</em></p>
 <h1 id="how-important-is-the-featurerequirement-for-the-final-product">How important is the feature/requirement for the final product?</h1>
 <p>First of all, the team member needs to establish how valuable the feature is for the product. In our example, the importance of sharing profile pictures would be completely different for an app that allows for choosing the right male or female model for your project, where the image is crucial, and completely different for a forum of coffee-lovers, where it would only provide users with a way of expressing themselves.</p>
 <h1 id="how-much-effort-is-necessary-to-build-the-feature--meet-the-requirement">How much effort is necessary to build the feature / meet the requirement?</h1>
