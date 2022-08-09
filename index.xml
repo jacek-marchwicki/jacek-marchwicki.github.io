@@ -14,6 +14,99 @@
     
     
     <item>
+      <title>Blog: When QA slows down your team</title>
+      <link>/blog/when-qa-slows-down-your-team/</link>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/when-qa-slows-down-your-team/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/when-qa-slows-down-your-team/featured-title_hu159c2c1c9c3349a610f6f2d32bec148e_533867_640x0_resize_q75_catmullrom.jpg" width="640" height="800"/>]]>
+        
+        &lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;When a team wants a QA specialist to work on their project, it’s worth considering what this process is supposed to bring.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improvement of app stability.&lt;/li&gt;
+&lt;li&gt;Faster feature delivery.&lt;/li&gt;
+&lt;li&gt;Increase of team work efficiency.&lt;/li&gt;
+&lt;li&gt;Support in testing the app in different environments.&lt;/li&gt;
+&lt;li&gt;Ensuring the app has good quality before release.&lt;/li&gt;
+&lt;li&gt;Ensuring the app works with different environments.&lt;/li&gt;
+&lt;li&gt;Ensuring the app UI is well implemented.&lt;/li&gt;
+&lt;li&gt;Ensuring the app UX is well designed.
+Getting to know which of those responsibilities are important for your team is very useful, especially because the first four will speed up your team, whereas the remaining four will slow it down.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;why-may-the-qa-team-slow-down-your-team&#34;&gt;Why may the QA team slow down your team?&lt;/h1&gt;
+&lt;p&gt;Let’s consider two cases: one with the participation of a QA team, the other without it.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Without a QA team&lt;/th&gt;
+&lt;th&gt;With a QA team&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Developers implement feature 1&lt;/td&gt;
+&lt;td&gt;Developers implement feature 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Developers release feature 1&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Developers send their release to the QA team&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Users start using the app&lt;/td&gt;
+&lt;td&gt;QAs test the app and find bugs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;The team decides which bugs need fixing&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Developers prepare a fix&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;QAs test the app and find no bugs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Developers release feature 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Users start using the app&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This very simple table shows that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Even if you engage a QA member, your developers need to perform additional tasks that weren’t needed before (3 highlighted cells).&lt;/li&gt;
+&lt;li&gt;Without a QA member, you gain additional time, which you can use to further improve your app (5 empty cells).&lt;/li&gt;
+&lt;li&gt;Without a QA member, you could deliver the app sooner.&lt;/li&gt;
+&lt;li&gt;Without a QA member, you might obtain user feedback sooner.
+It’s also worth mentioning that employing a QA specialist might fit into your budget better than employing a developer who could deliver the/a feature.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;qa-gains-and-losses&#34;&gt;QA gains and losses&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;There might be less bugs in your app, but will your users be happy with less features?&lt;/li&gt;
+&lt;li&gt;Your QA might pick up some inefficient UX, but your users might provide you with better feedback sooner, saving/making up for those lost cycles.&lt;/li&gt;
+&lt;li&gt;Your QA might find bugs, but the dev team might have no time to fix them.&lt;/li&gt;
+&lt;li&gt;Thanks to QA, your devs might be able to ship bug-free code. However, they might be tempted not to test the app, considering testing QA team&amp;rsquo;s responsibility, not theirs.&lt;/li&gt;
+&lt;li&gt;The QA team might find some nonspecific bugs that are hard to discern, but such bugs might only hit a fraction of the app users so they don’t require fixing.&lt;/li&gt;
+&lt;li&gt;The QA team might efficiently cooperate with devs in finding bugs, but they might also  lower the devs&#39; morale, constantly proving that they are creating crappy software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Reading what you agree with is easy, the trick is to question your own views.&lt;/em&gt;
+This is the end of this provocative article. Personally, I think QA could deliver great value in projects in which quality is key. However, it&amp;rsquo;s good to be aware of the problems I have mentioned and find ways to mitigate them. Hopefully this article will help you re-think the role of QA in your organization and make this process even more indispensable.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Don&#39;t be fooled by knowledge shared in this self-development article</title>
       <link>/blog/dont-be-fooled-by-knowledge-shared-in-this-self-development-article/</link>
       <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
