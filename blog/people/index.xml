@@ -15,6 +15,70 @@
     
     
     <item>
+      <title>Blog: Proposing architectural changes</title>
+      <link>/blog/proposing-architectural-changes/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/proposing-architectural-changes/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/proposing-architectural-changes/featured-title_hu9971227f742e035beb96d5a7bf213881_4759552_640x0_resize_q75_catmullrom.jpg" width="640" height="929"/>]]>
+        
+        &lt;p&gt;We all know that introducing a change in a team that numbers more than several developers is always challenging. However, if you follow the advice I present below, you can make things much easier for yourself. You should ensure that everyone understands what is going to be changed, why and how. You need to ensure that the change won’t be a burden for others. And, last but not least, you’d like everyone to be excited about the change. I’m going to explain our process for introducing architectural both minor and major changes.&lt;/p&gt;
+&lt;p&gt;What kind of changes are we talking about? Here are some examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refactoring the app from MVC to MVVM,&lt;/li&gt;
+&lt;li&gt;Finding a better library for displaying maps,&lt;/li&gt;
+&lt;li&gt;Changing the database,&lt;/li&gt;
+&lt;li&gt;Changing the file structure in git,&lt;/li&gt;
+&lt;li&gt;Improving test coverage,&lt;/li&gt;
+&lt;li&gt;Finding if a given framework feature is going to be a solution to the problems your team is facing,&lt;/li&gt;
+&lt;li&gt;Checking if an innovative idea can be implemented,&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;before-you-start&#34;&gt;Before you start&lt;/h1&gt;
+&lt;p&gt;Before you start researching a subject, you should take around 15 minutes to go over your reasons for the change and the expected result of the research. Creating documentation would be the essential output of your work, but you may also consider creating a Proof of Concept to ensure that the proposed solution is doable.&lt;/p&gt;
+&lt;h1 id=&#34;planning&#34;&gt;Planning&lt;/h1&gt;
+&lt;p&gt;The next stage of preparation is where your team takes over and schedules appropriate research. Your task is to describe the reasons for researching your idea and the expected results of such groundwork.&lt;/p&gt;
+&lt;p&gt;You should also estimate the amount of time necessary to complete the research.&lt;/p&gt;
+&lt;p&gt;What we do is this: we create tickets in our task management software that we call “SPIKEs“. We estimate and schedule them during sprint planning - the same way as with every other feature. The difference is that what we get at the end of such a SPIKE is documentation rather than a feature. Bear in mind that we’re talking about ideas, and those can be wrong. The output may be a document that describes why something was a bad idea.&lt;/p&gt;
+&lt;h1 id=&#34;where-to-document&#34;&gt;Where to document&lt;/h1&gt;
+&lt;p&gt;We document our proposals as RFC (Request For Comments) documents in the git repository of the project, but it’s not the only way. You can use Google Docs, Notion, Confluence, Git Repository or a different place, just keep in mind the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Review&lt;/strong&gt; - the tool that you are going to use should allow all team members to review the change. This means commenting, adding suggestions and opinions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collaboration&lt;/strong&gt; - it is common that a SPIKE needs to be carried out by more than one person. It’s great if your tool supports that.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Archiving&lt;/strong&gt; - even after the change is accepted, it’s good to keep the document as a reference for the current team and for future employees. Such an accepted document is frequently called Architecture Decision Record (ADR).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Possibility of creating templates&lt;/strong&gt; - it will be easier for the team to propose changes, if they have a template for suggesting them. That way, people can raise and solve any important issues. It’s good if your tool allows for creating such a template.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;what-to-document&#34;&gt;What to document&lt;/h1&gt;
+&lt;p&gt;When creating an RFC document, you should consider documenting the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Start date&lt;/strong&gt; - information when you have started working on the documentation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Motive&lt;/strong&gt; - you need to think about the benefit from the product perspective; if there are no such benefits, then the changes are unnecessary.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Description of the proposed solution&lt;/strong&gt; - even though the main goal of the task is to create documentation, consider developing a PoC (Proof of concept), so the document is not only theoretical, but implementable. If the scope of the RFC is very limited, you can include in it the change itself.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drawbacks&lt;/strong&gt; - try to find as many problems with the solution as you can, then list them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drawbacks of alternative ideas&lt;/strong&gt; - try to find alternative solutions, then list them together with their drawbacks, too. Also, consider what will happen if you keep things as they are (without introducing the change).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links to external documentation&lt;/strong&gt; - usually, your team is not as familiar with the solution as you are. Consider adding links to useful documentation to help your colleagues understand what you are proposing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Can it be implemented in small steps?&lt;/strong&gt; - consider whether you can migrate in steps rather than in one giant leap. Introducing a change should not disrupt product development, that’s counter-productive. Substantial changes can be tricky in terms of resolving conflicts. It is almost always safer to introduce them step by step, unless they are truly minor fixes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Effort necessary to implement the change&lt;/strong&gt; - consider how much time you’ll need to introduce the change, to maintain it and to train the team as appropriate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Needless to say, it’s best if the template is accessible for everyone, so that anyone can take initiative.&lt;/p&gt;
+&lt;h1 id=&#34;reviewing&#34;&gt;Reviewing&lt;/h1&gt;
+&lt;p&gt;Once we have the document clarifying why and how we’re going to introduce the change, it’s important to share it and collect feedback.&lt;/p&gt;
+&lt;p&gt;It’s entirely up to you whether you share the document asynchronously or hold a conference to present it. What’s important is to get feedback.
+You might not like what others have to say about your idea, but try to be open to suggestions and even people rejecting it. Be humble. Everyone has a different background and expertise - that’s why each of us brings something valuable to the table.&lt;/p&gt;
+&lt;p&gt;Product/business team should usually be informed about the benefits and be included in the decision-making process.&lt;/p&gt;
+&lt;p&gt;After you get initial feedback, your team needs to decide whether the change is worth introducing. You might postpone the decision because, for example, now is not the right time to implement the solution. The team doesn&amp;rsquo;t have to be unanimous, but if the majority decides that the approach in question is worthwhile, you ultimately need to get everyone on board. Some people might have to compromise. After all, you are a team, ‘each to their own’ attitude won’t cut it. Once the document is approved, everyone needs to follow the decision.&lt;/p&gt;
+&lt;h1 id=&#34;introducing-the-change&#34;&gt;Introducing the change&lt;/h1&gt;
+&lt;p&gt;Once everyone is on board, you should plan the implementation. After the documentation is created, people can make use of it and introduce the change following the usual process: split, prioritize, implement.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/proposing-architectural-changes&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: The Problem of Knowledge Sharing</title>
       <link>/blog/the-problem-of-knowledge-sharing/</link>
       <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
