@@ -15,6 +15,58 @@
     
     
     <item>
+      <title>Blog: Focusing external teams’ members to resolve business needs</title>
+      <link>/blog/focusing-external-teams-members-to-resolve-business-needs/</link>
+      <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/focusing-external-teams-members-to-resolve-business-needs/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/focusing-external-teams-members-to-resolve-business-needs/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_942701_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;h1 id=&#34;cooperation-with-external-teams-is-good&#34;&gt;Cooperation with external teams is good&lt;/h1&gt;
+&lt;p&gt;As we work with various companies to address their business needs, we often collaborate with their internal engineering teams or other external teams to help their business grow. While such collaborations can provide great opportunities for the final business, we must be aware that they are not always as smooth as we would like. Some teams or individuals may lack experience, which can make achieving business needs more difficult. Rather than complaining, we are committed to taking action.&lt;/p&gt;
+&lt;h1 id=&#34;focus-on-business-needs&#34;&gt;Focus on business needs&lt;/h1&gt;
+&lt;p&gt;At AppUnite, we hire new engineers for our company. However, we often encounter situations where these engineers become so focused on engineering and perfecting their code that they forget why they were hired in the first place. Every engineer is employed to meet business needs of our clients. We constantly need to remind, convince and communicate with our engineers that resolving business problems is the most important part of their work. We acknowledge that even though many years have passed, we are still at the beginning of the journey. When we collaborate with external teams, we recognize that many of the external teams are far behind our knowledge.&lt;/p&gt;
+&lt;h1 id=&#34;focus-misalignment-of-the-external-engineer&#34;&gt;Focus misalignment of the external engineer&lt;/h1&gt;
+&lt;p&gt;A while back, I joined a fairly large team of engineers (50+) working on a platform. My objective was to quickly complete a small experimental product for the team&amp;rsquo;s larger software project. Naturally, in such a large team, it&amp;rsquo;s not reasonable to expect everyone to fully understand that their goal is only to resolve business needs. The problem arose primarily with one person who joined the company later and who persistently hindered my work, preventing me from completing the project. Let&amp;rsquo;s call him Tom.&lt;/p&gt;
+&lt;p&gt;Code review is the process of examining and evaluating code changes made by a developer to ensure they meet quality standards and best practices. During this review process, only Tom constantly requested very small and unimportant improvements in the code that he claimed would lead to &amp;ldquo;better code.&amp;rdquo; These improvements were mainly subjective and never added any value to the product. Moreover, striving for perfect code in this specific case did not make sense because the product was only an experiment that needed to be validated in the upcoming months. All of these improvements might be for naught if the experiment results are not good enough. What is most problematic is that every such &amp;ldquo;improvement&amp;rdquo; caused potential financial losses due to delays.&lt;/p&gt;
+&lt;p&gt;Of course, I could go to Tom&amp;rsquo;s team leader to ask for help in fixing the problem. However, transferring problems to others is not how we prefer to cooperate. We also want to maintain good relationships between team members.&lt;/p&gt;
+&lt;h1 id=&#34;how-did-we-focus-external-team-members-to-resolve-business-needs&#34;&gt;How did we focus external team members to resolve business needs?&lt;/h1&gt;
+&lt;h2 id=&#34;step-1&#34;&gt;Step #1&lt;/h2&gt;
+&lt;p&gt;I started a one-on-one conversation with Tom to ask why he thought a given change should be made and what value the change brought to the product. Mostly, I heard that the code would be &amp;ldquo;cleaner&amp;rdquo;, which is a very subjective metric. Tom also shared why a given change might be better, giving examples from such books as &amp;ldquo;Clean Code&amp;rdquo; by Robert C. Martin, which is, by the way, a great book about coding. However, these books that focus on improving coding skills only talk about tools and not what we should do to deliver business needs. Books about coding skills don’t provide guidance on which solution to choose in specific business situations.&lt;/p&gt;
+&lt;p&gt;I attempted to distill the benefits of the proposed &amp;ldquo;better code&amp;rdquo; in terms of meeting business needs. I asked Tom several clarifying questions, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Me: &amp;ldquo;Why do you think it is worth changing this?&amp;rdquo; Tom: &amp;ldquo;Because it will improve the code.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Me: &amp;ldquo;Why do you think the proposed solution is better for the business?&amp;rdquo; Tom: &amp;ldquo;Because it would be easier to maintain.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In some circumstances, the answer &amp;ldquo;it would be easier to maintain&amp;rdquo; could be reasonable. However, it does not make sense for a four-month experiment that may be scrapped after validation.&lt;/p&gt;
+&lt;p&gt;I even asked Tom, &amp;ldquo;When do you stop improving your code?&amp;rdquo; and he answered, &amp;ldquo;When neither I nor my reviewers can see any potential improvements to be made.&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;At first, I had a humorous thought: &amp;ldquo;You don&amp;rsquo;t want me to find potential improvements in your code, because I&amp;rsquo;ll comment on every line and make suggestions that will take weeks to implement. And once you&amp;rsquo;ve finished implementing them, I&amp;rsquo;ll find even more potential improvements.&amp;rdquo; Of course, I didn&amp;rsquo;t share this joke. After chatting with Tom for a while, I realized that he was committed to Software Craftsmanship and striving for perfection. I suggested that not all of his suggestions needed to be implemented, and why it was so.&lt;/p&gt;
+&lt;h2 id=&#34;step-2&#34;&gt;Step #2&lt;/h2&gt;
+&lt;p&gt;Although explaining things during 1-on-1 sessions helped a little, it wasn&amp;rsquo;t enough. Tom was a skilled coder and could be valuable for the team, but I needed to invest more in helping him understand that coding wasn&amp;rsquo;t the only important aspect of software engineering. Our goal is to have great engineers, not just good coders. At AppUnite, we challenge our engineers to be aware of the business impact of their work. To that end, I prepared a document with advice to help Tom understand the business aspect of code reviews. This approach also helped to some extent.&lt;/p&gt;
+&lt;h2 id=&#34;step-3&#34;&gt;Step #3&lt;/h2&gt;
+&lt;p&gt;The next step was to meet as a team and discuss the issue of everyone not being on the same page when it comes to performing a great Code Review. I shared the document that I prepared for Tom with advice for the rest of the team, so we could have a base for discussion. Based on this document, we identified what needed to be fixed and what was excessive in our Code Review process. During the meeting, we prepared a document of Team Agreements on how to approach the Code Review process and what values should be taken into account.&lt;/p&gt;
+&lt;p&gt;To avoid causing arguments among employees, I refrained everyone from blaming anyone personally. Instead, I focused on identifying the team&amp;rsquo;s problems and finding solutions. Our AppUnite value is &amp;ldquo;Be a team player. We succeed and fail as a team&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;step-4&#34;&gt;Step #4&lt;/h2&gt;
+&lt;p&gt;In the end, the actions taken helped the person become a better software engineer. I also spoke with his leader about setting personal goals to help him improve on a daily basis.&lt;/p&gt;
+&lt;h1 id=&#34;outcome&#34;&gt;Outcome&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The product was delivered more quickly.&lt;/li&gt;
+&lt;li&gt;The whole team improved their behavior by better focusing on business problems.&lt;/li&gt;
+&lt;li&gt;The relationship between team members was kept in the best shape.&lt;/li&gt;
+&lt;li&gt;The guy developed his skills.&lt;/li&gt;
+&lt;li&gt;The guidelines for how engineers should approach code review became an article on our website titled &lt;a href=&#34;/blog/code-review-team-agreements/&#34;&gt;Code Review - Team Agreements&lt;/a&gt;. This allows us to teach engineers how to be more business-aware.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are looking for a team that can work well with your team, resolve problems and meet business needs, please feel free to &lt;a href=&#34;https://appunite.com/briefs&#34;&gt;contact us&lt;/a&gt;. We will do our best to help!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/focusing-external-teams-members-to-resolve-business-needs&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Improving App Stability: A Proactive Approach to Overcoming External Constraints</title>
       <link>/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
@@ -59,6 +111,221 @@
 &lt;/ul&gt;
 &lt;p&gt;By following these steps, you&amp;rsquo;ll be able to deliver results that meet your business needs. If you&amp;rsquo;re looking for a team that resolves problems instead of merely complaining, &lt;a href=&#34;https://appunite.com/briefs&#34;&gt;feel free to contact us&lt;/a&gt;. We&amp;rsquo;ll do our best to help!&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Code Review - Team Agreements</title>
+      <link>/blog/code-review-team-agreements/</link>
+      <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/code-review-team-agreements/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/code-review-team-agreements/featured-title_hub6f1959e67645bdac8866f17e477a22e_2009595_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;p&gt;I’d like your team to work as efficiently as possible and review can be of great help in this. It allows you to find errors and potential problems at the very early stage of the development. What’s more, it enables developers to share knowledge. On the other hand, it can be a real pain when it slows down the development process. What’s most important, however, is the impact code review has on business, as business is what allows us to do what we do best - create great software.&lt;/p&gt;
+&lt;p&gt;Therefore, I’d like to take a closer look at the business benefits of correcting code (after review):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the code is flawed, we won’t introduce the bug into the system - we eliminate potential business loss.&lt;/li&gt;
+&lt;li&gt;If we improve the readability of very bad code, we can be sure that after someone else (or the same person) takes it over, they won’t introduce more bugs and will apply the change quicker - we minimize the costs of labor and eliminate potential business loss.&lt;/li&gt;
+&lt;li&gt;We get the chance to look for bugs and fix them sooner, when it is easier than after, let’s say, a month - we minimize labor costs.&lt;/li&gt;
+&lt;li&gt;Developers learn new approaches to software development, which may lead to faster delivery - beneficial for the business in the long term.&lt;/li&gt;
+&lt;li&gt;Mitigating so-called Bus Factor - minimizes business risks.&lt;/li&gt;
+&lt;li&gt;We can avoid making the same mistakes over and over - we eliminate potential business loss.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On the other hand, negative business consequences of correcting code could be as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The developer that creates new code needs to switch to bug fixing - certain added labor costs.&lt;/li&gt;
+&lt;li&gt;The developer that creates the code needs to implement the fix. Applying the change alone takes some time and the fix itself might not necessarily bring any material benefits - added costs of the fix.&lt;/li&gt;
+&lt;li&gt;The developer, when implementing a fix, needs to rerun the app and perform regression tests. This can be time-consuming - possible business losses.&lt;/li&gt;
+&lt;li&gt;New bugs might be introduced while fixing the existing ones - possible business losses.&lt;/li&gt;
+&lt;li&gt;The developer needs to run CI build, wait for the results and, in the case of unstable development environments, it may turn out that they need to wait for the server to respond - added costs of labor and running CI.&lt;/li&gt;
+&lt;li&gt;The reviewers must take another look at the fix, even if it’s a minor change - they need to switch the context from the current task to review proofing and back - added labor costs.&lt;/li&gt;
+&lt;li&gt;Delay in delivery - risk of delay in implementing the change.&lt;/li&gt;
+&lt;li&gt;We might get stuck in a vicious circle of constant fixing - there’s a business risk that the product will never be launched.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These negative consequences are not as trivial as they may seem. A tiny fix, e.g. “changing the name of the method” does not take 5 minutes, as many tend to think, but even hours of work (switching the context, the need for retesting and regression, waiting for CI, waiting for review, reviewer needing to take yet another look at the code etc.).&lt;/p&gt;
+&lt;p&gt;Our obligation as employees is taking into account what’s most beneficial from the business perspective and optimizing the review process is no exception.&lt;/p&gt;
+&lt;p&gt;This is why I’d like to share with you a list of things that your team might find worth implementing in the code review process:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;When you prepare a PR, make sure that the reviewer gets to know the business requirements behind your change. When you do review, make sure that you understand the business requirements behind the changes you&amp;rsquo;re reviewing.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reject a change only if the PR contains a major bug or something else that may cause serious problems in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Minor inconsistencies within the PR should be tagged as “suggestion” so that the owner knows that they can, but don’t have to apply a given change (&lt;a href=&#34;https://conventionalcomments.org/&#34;&gt;conventional comments&lt;/a&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Own opinions regarding the code should be tagged as “opinion” - this way, you can share your thoughts without forcing their implementation, respecting the right of others to have their own views.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If we only add suggestions to a given PR, we need to approve it, so that the PR owner can decide whether it’s worth applying the changes from the business perspective.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Suggestions that do not get implemented are still valuable as learning material - they make us pay more attention to our mistakes going forward.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It’s important to understand that not implementing a suggestion is not a bad thing. It may make sense from a business standpoint, if it eliminates some of the negative consequences of code review mentioned above.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keep in mind that we don’t have to agree with every little note. Bugs should have the highest priority.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;During code review, assume good intentions of the PR author and comment author. However, if there is a major disagreement, remember that ultimately, the code is not owned by the PR author or comment author - it is owned by the team. And that’s precisely why you should discuss such differences of opinion as a team - in order not to waste time on this specific matter in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learn from your colleagues’ experience. If a colleague makes a comment about your work, make use of their experience and try to understand their suggestions and opinions, even if they don’t match your own. This is particularly important if you’re still learning, and the colleague already has a lot of experience. If you’re a newbie and you still don’t understand many things, it’s worth getting on board with the suggestions and opinions of the experienced colleague.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A bug does not have to be a blocker. The product team may understand and accept it as a temporary or permanent limitation. I’d like to add that such limitations should be documented. And if they are supposed to be fixed in the future, it should be scheduled.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;During review, ask questions tagged as “questions”. It’s better to ask “Did you test this or that?” instead of having a bug pop up in production. If you get a basic question like that, do not get offended. It might be obvious to you, but it’s probably better that the asker makes sure that everything is covered. Even the best of us sometimes forget things.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The quality of the code is important - no doubts about that - but do not strive for perfection. Ultimately, the app user wants the code to work, not look beautiful. What’s crucial is just for the code not to slow down development in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The fact that the author of the change has approval for merging it does not mean that they have to merge it. They can still make improvements - bear in mind, however, their negative consequences mentioned above.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If your PR is not completed or needs to be revisited for some reason or another, mark it, so that others know what is ready for review and what is not. You can do it by changing the PR into a draft.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you create a pull request, you should have confidence in your change. It should be tested and working. If you’re dealing with a new subject area or you’re not sure how exactly to test something, mark it in the PR to get help.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you think that your solution is shaky or you need help, prepare a draft PR as soon as possible and ask someone for an initial review to get assistance right away. You can also treat the PR as an asynchronous version of pair programming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Code review can also be used for proposing changes, like I described in Proposing architectural changes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I hope that the above tips will help you and your team establish the best possible rules for code review. It’s best to put them down as Team Agreements/Working Agreements. You can also link this article directly in your Team Agreements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check out these AppUnite’s articles on review too:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://appunite.com/blog/is-code-review-harmful&#34;&gt;Is code review harfmul?&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://appunite.com/blog/code-review-best-practices&#34;&gt;Code review best practices.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/code-review-team-agreements&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Optimizing Cooperation</title>
+      <link>/blog/optimizing-cooperation/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/optimizing-cooperation/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/optimizing-cooperation/featured-title_hub0191c4dc973570f3b55c37836574ab6_1642638_640x0_resize_q75_catmullrom.jpg" width="640" height="853"/>]]>
+        
+        &lt;p&gt;As developers, we often get frustrated with non-coding factors such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The fact that we have to wait for others to finish their tasks before we can move on with ours.&lt;/li&gt;
+&lt;li&gt;The fact that Business keeps asking questions about what has been done or what is delivered to our clients.&lt;/li&gt;
+&lt;li&gt;QAs reporting bugs, but not providing enough information for their successful location and resolution,&lt;/li&gt;
+&lt;li&gt;External services being poorly designed and faulty, which causes our app to behave incorrectly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As developers, we tend to focus on improving our coding skills to finish tasks and deliver our share of the work as quickly as possible. But once we go higher than the intern level, coding becomes only a small part of our job, which is why we should focus on finding solutions to the problems related to cooperation with others.&lt;/p&gt;
+&lt;p&gt;We ourselves should be able and willing to fix our problems, managers surely have their own. If you feel frustrated by something, it’s a sign that you should take action. I’d like to show you that you have the power to make your company more efficient.&lt;/p&gt;
+&lt;h1 id=&#34;lets-take-a-look-at-some-examples&#34;&gt;Let’s take a look at some examples&lt;/h1&gt;
+&lt;p&gt;You don’t need to go through all of the following case studies. They just go to show that there is always a way for you to improve teamwork:&lt;/p&gt;
+&lt;p&gt;** You’re frustrated that the QA reports bugs, but doesn’t provide enough information for them to be found and resolved.**&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You can simply ask the QA to provide more information every time they fill a ticket. Explain to them that video recording of the reproduction will save your time and answer the questions you tend to ask them over and over. Suggest a video recording solution that is easy to use. This is a win-win - they won’t be bombarded with questions and you’ll get the information you need right away. But don’t be greedy, don’t overwhelm them.&lt;/li&gt;
+&lt;li&gt;Help QAs learn how to use a proxy that records requests and responses so they can share the log with back-end developers without bothering the front end.&lt;/li&gt;
+&lt;li&gt;Provide a tool within your app that can make reporting bugs by QAs easier while ensuring that all the information needed (logs, request history, information on the logged-in user, current settings, etc.) is there.&lt;/li&gt;
+&lt;li&gt;Improve logging mechanism to enable extracting back-end logs related to a given crash by user ID that is always provided by a QA in a bug ticket.&lt;/li&gt;
+&lt;li&gt;You can also create a bug report template.&lt;/li&gt;
+&lt;li&gt;You might want to consider putting more effort in testing the app in the early stages so that it becomes more stable.&lt;/li&gt;
+&lt;li&gt;Take into account using your analytics events and getting analytics traces for a given bug session.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;** Business keeps asking questions about what has been done or what is delivered to our clients.**&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First of all, you can ask yourself and them what they need such information for.&lt;/li&gt;
+&lt;li&gt;If, for example, JIRA is out of sync and tasks are not well described, Business might not be able to understand what is going on. Maybe it’s time to improve task management.&lt;/li&gt;
+&lt;li&gt;Maybe it’s time for you to prepare release notes for Business.&lt;/li&gt;
+&lt;li&gt;Organize a weekly demo meeting for the client to show them what has been done. If you prefer more async work, you can record videos and post them on Slack.&lt;/li&gt;
+&lt;li&gt;It might be worth automating something. There are great tools out there to help you with this (e.g. &lt;a href=&#34;https://github.com/marketplace/actions/jira-release-notes&#34;&gt;jira-release-notes&lt;/a&gt;, &lt;a href=&#34;https://github.com/marketplace/actions/jira-changelog&#34;&gt;jira-changelog&lt;/a&gt;, &lt;a href=&#34;https://github.com/marketplace/actions/slack-notify&#34;&gt;slack-notify&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;It might be worth walking the Business team through JIRA and teaching them how to get the necessary information by themselves.&lt;/li&gt;
+&lt;li&gt;The Business team may be unfamiliar with the technical stuff. In such a case, you should take time to describe the technical part of the process to them.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Code review takes a lot of time.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Consider creating smaller PRs so that the reviewers’ work is easier.&lt;/li&gt;
+&lt;li&gt;Try to describe your PR better so that the reviewer needs less time to understand what you’ve done.&lt;/li&gt;
+&lt;li&gt;Ask for teammates’ review directly.&lt;/li&gt;
+&lt;li&gt;Help others create notifications for incoming reviews.&lt;/li&gt;
+&lt;li&gt;Help your teammates understand why it’s important to review the code quickly.&lt;/li&gt;
+&lt;li&gt;Give positive feedback when someone reviews your code.&lt;/li&gt;
+&lt;li&gt;Create a small script that counts reviews during the retro and recognizes people who do review.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;We keep getting requirements that are very hard to meet.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ask for changing the requirements.&lt;/li&gt;
+&lt;li&gt;Take some of the time assigned to the current tasks and devote it to cooperation with Business/UX/UI teams that work on future projects. This way, you might convince them to adjust the requirements to what&amp;rsquo;s faster and easier to deliver.&lt;/li&gt;
+&lt;li&gt;Ask if you can join the conceptual process of the Business team.&lt;/li&gt;
+&lt;li&gt;Implement a good test suite so that changes are easier to implement.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;The back-end team implemented an API that is hard to use (a.k.a. the front-end team keeps asking for changes in the already implemented API)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Always have front- and back-end developers working together on designing the API. Enforce the rule that API needs to be discussed with all the API consumers at the same time (e.g. front-end, mobile Android, mobile iOS, etc.).&lt;/li&gt;
+&lt;li&gt;Document the new API (or API change) somewhere and get sign-off from the back- and front-end teams before implementing it.&lt;/li&gt;
+&lt;li&gt;Start working on the point of contact (API documentation) before implementing your own code. Fence your garden before planting the trees.&lt;/li&gt;
+&lt;li&gt;Document the API in Swagger, store it on Git, and do cross-platform PRs whenever you change something.&lt;/li&gt;
+&lt;li&gt;If the API was implemented incorrectly, organize a retro to understand what has been done wrong and what can be improved next time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;The analytics team keeps asking what clicking a certain button triggers.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create good documentation together with the analytics team, so they won’t need to bother you.&lt;/li&gt;
+&lt;li&gt;Set the rules for who is responsible for creating and updating the analytics document - the person in charge can be either a developer or an analyst.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Front-end developers keep asking how endpoints work and make incorrect queries.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create documentation for the API.&lt;/li&gt;
+&lt;li&gt;Validate requests: instead of returning 5xx error, provide descriptive information on what has gone wrong.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Our teammates constantly forget about the localization.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a checklist to be followed before filling a PR.&lt;/li&gt;
+&lt;li&gt;Ensure that the QA verifies the localization.&lt;/li&gt;
+&lt;li&gt;Add a &lt;a href=&#34;https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository&#34;&gt;pull-request github template&lt;/a&gt; with the checklist mentioned above (&lt;a href=&#34;https://github.com/flutter/flutter/blob/master/.github/PULL_REQUEST_TEMPLATE.md&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Use a github action that verifies if the checklist points are checked (e.g. &lt;a href=&#34;https://github.com/marketplace/actions/require-checklist&#34;&gt;Require Checklist · Actions · GitHub Marketplace&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Set up a lint rule that will verify whether everything’s translated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;The front-end team can’t start their work because the back end hasn’t finished their part.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you can do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start by documenting the API with the back- and front-end teams so that the front end can begin their work. Focus also on example responses. &lt;a href=&#34;https://swagger.io/&#34;&gt;Swagger&lt;/a&gt; is a good starting point for API documentation.&lt;/li&gt;
+&lt;li&gt;Ask the back-end team for fake responses instead of real-life ones.&lt;/li&gt;
+&lt;li&gt;You yourself can create fakes for the front-end team using a proxy (e.g., mitmproxy) or create mocks in the code.&lt;/li&gt;
+&lt;li&gt;Do TDD (test-driven development) and implement tests using mock API.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;Those are not invented examples, those are things that I’ve dealt with in the past when I was employed as a developer. We usually assume that we can’t change something. I hope that my case studies made you realize that you can always take initiative and change your project for the better.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/optimizing-cooperation&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
       </description>
     </item>
