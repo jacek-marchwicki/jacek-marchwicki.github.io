@@ -98,7 +98,7 @@ It’s also worth mentioning that employing a QA specialist might fit into your 
 &lt;li&gt;Your QA might find bugs, but the dev team might have no time to fix them.&lt;/li&gt;
 &lt;li&gt;Thanks to QA, your devs might be able to ship bug-free code. However, they might be tempted not to test the app, considering testing QA team&amp;rsquo;s responsibility, not theirs.&lt;/li&gt;
 &lt;li&gt;The QA team might find some nonspecific bugs that are hard to discern, but such bugs might only hit a fraction of the app users so they don’t require fixing.&lt;/li&gt;
-&lt;li&gt;The QA team might efficiently cooperate with devs in finding bugs, but they might also  lower the devs&#39; morale, constantly proving that they are creating crappy software.&lt;/li&gt;
+&lt;li&gt;The QA team might efficiently cooperate with devs in finding bugs, but they might also  lower the devs&amp;rsquo; morale, constantly proving that they are creating crappy software.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Reading what you agree with is easy, the trick is to question your own views.&lt;/em&gt;
@@ -176,21 +176,15 @@ With that in mind, in the upcoming article, we will focus on how to lower the ne
         <![CDATA[<img src="/blog/coastline-paradox/featured-title_hub6bed809a18f511baa3e8ed6be2b62ab_3044106_640x0_resize_q75_catmullrom.jpg" width="640" height="480"/>]]>
         
         &lt;p&gt;The coastline paradox was first observed by Lewis Fry Richardson and later expanded upon by &lt;a href=&#34;https://science.sciencemag.org/content/156/3775/636.abstract&#34;&gt;Benoit Mandelbrot in Science Magazine in 1967&lt;/a&gt;. It shows that measuring the coastline length is not as straightforward as it might seem.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 410px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/coastline-paradox/featured-title_hub6bed809a18f511baa3e8ed6be2b62ab_3044106_600x300_fit_q75_catmullrom.jpg&#34; width=&#34;400&#34; height=&#34;300&#34;  alt=&#34;Image shows coastline around a peninsula&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
 
-
-
-
-
-
-
-&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 410px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/coastline-paradox/featured-title_hub6bed809a18f511baa3e8ed6be2b62ab_3044106_600x300_fit_q75_catmullrom.jpg&#34; width=&#34;400&#34; height=&#34;300&#34; alt=&#34;Image shows coastline around a peninsula&#34;&gt;
-	
-	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;Image shows coastline around a peninsula&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo by &lt;a href=&#34;https://unsplash.com/@maxboettinger?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Max Böttinger&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
-	&lt;/div&gt;
-	
-&lt;/div&gt;
+Image shows coastline around a peninsula&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo by [Max Böttinger](https://unsplash.com/@maxboettinger?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;If you measure it using a very rough satellite image, you’ll get a much smaller value than in the case of very precise images. This is because the latter will provide you with more details to be taken into account.
 But let’s skip the theoretical considerations regarding this dilemma and focus on practical reasons for measuring the coastline length. These may include a road trip along the coast or sailing from one port to another. What we would find useful and practical in such circumstances are the measurements done by 14th-century cartographers, rather than subatomic-level surveys that would inevitably give much larger values.&lt;/p&gt;
@@ -277,7 +271,7 @@ Your testing team is very good, so the tester will also attach a video and appli
 &lt;li&gt;&lt;strong&gt;No friends, add them using + icon&lt;/strong&gt;, &lt;strong&gt;No messages, you can create new ones&lt;/strong&gt; - Sometimes when the list is empty, users think that something went wrong. It&amp;rsquo;s a good idea to show a placeholder with a suggestion how he/she should react to change this state.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Temporary server downtime, try again in a couple of minutes&lt;/strong&gt; - Server updates happen from time to time. Even If you usually have updates without downtime, it&amp;rsquo;s a good practice to have an error message that server is currently deploying. Usually, servers tend to return 502 HTTP error code in such situations. Your client is happy because he/she knows that an issue will be resolved within minutes. Developer is happy because the QA team isn’t going to reject his/her task, but ask the back-end team if there is an ongoing deployment. You are happy during development because you know that an app hasn&amp;rsquo;t broken down, just a dev team doing a deployment.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Temporary server issue (500)&lt;/strong&gt; - This message should be displayed when you get  a 5xx response code from a server. This should never happen but if it does , your QA team will fill a ticket to the back-end team. If a user  sends a screenshot of the bug, you know better what went wrong. The mobile team’s  happy because they’re not disturbed. The back-end team is  happy because it’s easier for them to diagnose the problem.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unknown application error (422)&lt;/strong&gt; - This message should be displayed when you get a 4xx response code from a server. This  should never happen either.  This time, the QA team  assigns it to the mobile team. Again, you get a better understanding of users&#39; problems. The mobile team knows how to handle them and the back-end team stays safe.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unknown application error (422)&lt;/strong&gt; - This message should be displayed when you get a 4xx response code from a server. This  should never happen either.  This time, the QA team  assigns it to the mobile team. Again, you get a better understanding of users&amp;rsquo; problems. The mobile team knows how to handle them and the back-end team stays safe.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Post not found&lt;/strong&gt;, &lt;strong&gt;Not found&lt;/strong&gt; - It&amp;rsquo;s also a good practice to implement this specific error as the user knows how to handle such situations.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;errors-persistence&#34;&gt;Errors persistence&lt;/h2&gt;
@@ -299,12 +293,12 @@ Your testing team is very good, so the tester will also attach a video and appli
 &lt;ol&gt;
 &lt;li&gt;content shouldn&amp;rsquo;t be overlapped by errors,&lt;/li&gt;
 &lt;li&gt;a snack bar shouldn&amp;rsquo;t overlap action buttons,&lt;/li&gt;
-&lt;li&gt;you shouldn&amp;rsquo;t use error messages as dialog windows because they disrupt users&#39; workflow. Only in a very critical situation, when user’s data might be lost, can you show errors as dialog windows,&lt;/li&gt;
+&lt;li&gt;you shouldn&amp;rsquo;t use error messages as dialog windows because they disrupt users&amp;rsquo; workflow. Only in a very critical situation, when user’s data might be lost, can you show errors as dialog windows,&lt;/li&gt;
 &lt;li&gt;Error messages shouldn&amp;rsquo;t block other parts of UI. A user should be able to  use other app features during the outage time.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Learn from others&#39; mistakes - do error handling TODAY, not tomorrow.&lt;/li&gt;
+&lt;li&gt;Learn from others&amp;rsquo; mistakes - do error handling TODAY, not tomorrow.&lt;/li&gt;
 &lt;li&gt;Catch as many errors as you can.&lt;/li&gt;
 &lt;li&gt;Weak error handling is better than none.&lt;/li&gt;
 &lt;li&gt;Error handling should be as easy to implement as possible , no matter the feature.&lt;/li&gt;
@@ -444,76 +438,70 @@ Now you can do this:&lt;/li&gt;
 In our &lt;a href=&#34;https://appunite.com&#34;&gt;development team&lt;/a&gt; we use git a lot, but git not solve every problem - it&amp;rsquo;s only a source control software. We need more, we employe new people who at an start point often make mistakes - and write ugly code. We decided to make code review, and for this propose we choose gerrit.&lt;/p&gt;
 &lt;p&gt;Gerrit is nothing more then git repository and tool that can approve and comment commits.
 Whole workflow involves of create commit, push it to gist, wait for approval - and boom - everything work. But because we often make mistakes and everyone in company work (or should work) asynchronous - this workflow is a little more complicated. Grate picture I found on Android developers site that present workflow on gerrit:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 199px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/working-with-gerrit-very-old-article/workflow_hu022306b1649cae84c470f4eef6df285f_99006_600x300_fit_catmullrom_3.png&#34; width=&#34;189&#34; height=&#34;300&#34;  alt=&#34;Workflow on gerrit (from [Android site](http://source.android.com/images/workflow-0.png))&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
 
-
-
-
-
-
-
-&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 199px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/working-with-gerrit-very-old-article/workflow_hu022306b1649cae84c470f4eef6df285f_99006_600x300_fit_catmullrom_2.png&#34; width=&#34;189&#34; height=&#34;300&#34; alt=&#34;Workflow on gerrit (from [Android site](http://source.android.com/images/workflow-0.png))&#34;&gt;
-	
-	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;Workflow on gerrit (from [Android site](http://source.android.com/images/workflow-0.png))&lt;/p&gt;
-	&lt;/div&gt;
-	
-&lt;/div&gt;
+Workflow on gerrit (from [Android site](http://source.android.com/images/workflow-0.png))
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;You&amp;rsquo;d better look at this diagram before continue for better understanding of commands bellow.&lt;/p&gt;
 &lt;h1 id=&#34;lets-starts&#34;&gt;Lets starts&lt;/h1&gt;
 &lt;p&gt;When using gerrit your repo usually looks like: &lt;code&gt;ssh://&amp;lt;username&amp;gt;@review.&amp;lt;your-domain&amp;gt;:29418/&amp;lt;your project&amp;gt;.git&lt;/code&gt;. Part that can create problems is &lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt;, especially when you are using submodules because you will have to put: git submodule add &lt;code&gt;ssh://&amp;lt;username&amp;gt;@review.&amp;lt;your-domain&amp;gt;:29418/&amp;lt;your project&amp;gt;.git &amp;lt;your directory&amp;gt;&lt;/code&gt;, and everyone who download your repo will have to replace &lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt; with his/her username. Instead I suggest to add two lines to your &lt;code&gt;~/.ssh/config&lt;/code&gt; file:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Host review.assembla.com
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host review.assembla.com
   User jacek.marchwicki
   Port 29418
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and use &lt;code&gt;clone&lt;/code&gt;, &lt;code&gt;submodule add&lt;/code&gt;, &lt;code&gt;remote add&lt;/code&gt; omitting the &lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt; part.
 For testing proposes I suggest to use &lt;a href=&#34;http://assembla.com/&#34;&gt;assembla.com&lt;/a&gt; with gerrit - but if you rather want to use some other tool you are free to go. I assume you already have gerrit repo url, in my case: &lt;code&gt;ssh://review.assembla.com/gerrit-example.git&lt;/code&gt;
 than create project:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir gerrit-example
-git init
-touch README.md
-git add -A
-git commit
-git remote add origin ssh://review.assembla.com/gerrit-example.git
-git push origin HEAD:refs/heads/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your project should be on gerrit repo, now everyone can pull it as usual:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone ssh://rgit.assembla.com/gerrit-example.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;And what is most important you have to install hook for commits after clone and import:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;scp review.assembla.com:hooks/commit-msg .git/hooks/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;To avoid screwing something up is better to remove master on your local repository and use origin/master instead&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git remote update
-git checkout origin/master
-git brach -d master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;making-changes&#34;&gt;Making changes&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir gerrit-example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add -A
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add origin ssh://review.assembla.com/gerrit-example.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin HEAD:refs/heads/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your project should be on gerrit repo, now everyone can pull it as usual:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone ssh://rgit.assembla.com/gerrit-example.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;And what is most important you have to install hook for commits after clone and import:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;scp review.assembla.com:hooks/commit-msg .git/hooks/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;To avoid screwing something up is better to remove master on your local repository and use origin/master instead&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout origin/master
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git brach -d master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;making-changes&#34;&gt;Making changes&lt;/h1&gt;
 &lt;p&gt;Before making some changes, lets do it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &amp;gt; file1.txt &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt; EOF
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;some text of file1
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;and mre text of file1
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;EOF&lt;/span&gt;
-&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &amp;gt; file2.txt &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt; EOF
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;some text of file2
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;and more text of file2
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;EOF&lt;/span&gt;
-git add file1.txt
-git commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;this time I specially forgot of &lt;code&gt;file2.txt&lt;/code&gt; in commit and done a typo in &lt;code&gt;file1.txt&lt;/code&gt; for learning propose.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &amp;gt; file1.txt &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt; EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;some text of file1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;and mre text of file1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &amp;gt; file2.txt &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt; EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;some text of file2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;and more text of file2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add file1.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;this time I specially forgot of &lt;code&gt;file2.txt&lt;/code&gt; in commit and done a typo in &lt;code&gt;file1.txt&lt;/code&gt; for learning propose.
 You can ensure that in your last commit was &lt;code&gt;&amp;quot;Change-Id: ***&amp;quot;&lt;/code&gt; looking in &lt;code&gt;git log&lt;/code&gt;. If not you did not installed commit-msg hook, so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;scp review.assembla.com:hooks/commit-msg .git/hooks/
-git add file1.txt
-git commit --amend
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command append fixes tu current commit.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;scp review.assembla.com:hooks/commit-msg .git/hooks/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add file1.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit --amend
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command append fixes tu current commit.
 If &lt;code&gt;&amp;quot;Change-Id&amp;quot;&lt;/code&gt; now appears in log you can submit your commit for review:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git push origin HEAD:refs/for/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;reviewing-code&#34;&gt;Reviewing code&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin HEAD:refs/for/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;reviewing-code&#34;&gt;Reviewing code&lt;/h1&gt;
 &lt;p&gt;Now you have too look on your gerrit site: i.e.: &lt;code&gt;https://review.assembla.com/&lt;/code&gt; and in &lt;em&gt;&amp;ldquo;All-&amp;gt;Open&amp;rdquo;&lt;/em&gt; section you should see a your commit to approve. Normally you wouldn&amp;rsquo;t do yourself, but for test proposes we you can ;). One code reviewer should checkout this code and test it, and two of code reviewers should only check for changes that you made i.e.:
 Two of your friends look in to code on commit site, commenting your code and click one button on &amp;ldquo;Code review&amp;rdquo; +1 if is look ok, -1 if its not look ok - i.e. some bug.
 Third friend download code and verify it.&lt;/p&gt;
 &lt;h2 id=&#34;verifying&#34;&gt;Verifying&lt;/h2&gt;
 &lt;p&gt;Let become third friend. Clone your project to some other directory to simulate third friend:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone ssh://review.assembla.com:/gerrit-example.git gerrit-example2
-&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; gerrit-example2
-scp review.assembla.com:hooks/commit-msg .git/hooks/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ok.. look for some commits to verify on &amp;ldquo;All-&amp;gt;Open&amp;rdquo; get some and copy url from its page and type it in command line:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone ssh://review.assembla.com:/gerrit-example.git gerrit-example2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; gerrit-example2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;scp review.assembla.com:hooks/commit-msg .git/hooks/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ok.. look for some commits to verify on &amp;ldquo;All-&amp;gt;Open&amp;rdquo; get some and copy url from its page and type it in command line:
 git fetch ssh://review.assembla.com:/gerrit-example refs/changes/73/6673/1 &amp;amp;&amp;amp; git checkout -b c6673 FETCH_HEAD
 Compile it and test it - I know it is hard do compile text files but you can imagine it ;)
 Now you should use &amp;ldquo;Review&amp;rdquo; button on commit site and type your vote in &amp;ldquo;Verified&amp;rdquo; section and fill a comment if needed.&lt;/p&gt;
@@ -521,47 +509,47 @@ Now you should use &amp;ldquo;Review&amp;rdquo; button on commit site and type y
 &lt;p&gt;Let become one of your first and second friend. They no need to download code, they only need to check your code on the web site. They check code, comment it if they find something to comment, and approve or not (+1, -1 or 0). Suppose that first friend looked at your code and +1 LGTM (Look good to me), but second noticed that you filled a typo in file1.txt. He should give -1 and fill a comment.&lt;/p&gt;
 &lt;h2 id=&#34;repairing&#34;&gt;Repairing&lt;/h2&gt;
 &lt;p&gt;No you return and look for reviews and you see that your code was not approved, now you should fix it.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ../gerrit-example
-git fetch ssh://review.assembla.com/gerrit-example refs/changes/73/6673/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git checkout -b c6673 FETCH_HEAD
-sed -i &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;s/mre/more/&amp;#34;&lt;/span&gt; file1.txt
-git add file1.txt
-git commit --amend
-git push origin HEAD:refs/for/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your code is corrected an sendend second time to code review&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ../gerrit-example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git fetch ssh://review.assembla.com/gerrit-example refs/changes/73/6673/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git checkout -b c6673 FETCH_HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sed -i &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;s/mre/more/&amp;#34;&lt;/span&gt; file1.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add file1.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit --amend
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin HEAD:refs/for/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your code is corrected an sendend second time to code review&lt;/p&gt;
 &lt;h2 id=&#34;merging&#34;&gt;Merging&lt;/h2&gt;
 &lt;p&gt;Now everyone of your friend approved you commit but you have bad luck - some other commit was approved before and there are conflict.
 You have to resolve you commit and sand changes back go gerrit.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git checkout master
-git pull
-ssh://review.assembla.com/gerrit-example refs/changes/73/6673/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git checkout -b c6673 FETCH_HEAD
-git remote update
-git rebase origin/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;resolve conflicts&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git add -A
-git rebase --commit
-git push origin HEAD:refs/for/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you code with fresh base was sent to review. And this time your friends approved and verified your code - your code will be automatically merged.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout master
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git pull
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh://review.assembla.com/gerrit-example refs/changes/73/6673/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git checkout -b c6673 FETCH_HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase origin/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;resolve conflicts&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add -A
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase --commit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin HEAD:refs/for/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you code with fresh base was sent to review. And this time your friends approved and verified your code - your code will be automatically merged.&lt;/p&gt;
 &lt;h2 id=&#34;fixing-order&#34;&gt;Fixing order&lt;/h2&gt;
 &lt;p&gt;Sometimes you can observer that you commit have OUTDATED dependency. This mean that commit which was parent from your have never version. Now you have to get rid of outdated commit. You will use cherry-pick which inserts you commit at top of another commit. You have to choose a commit which you would like to be the parent of your commit. Usually is a newer version of outdated commit.
 You have to check it out:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh://review.assembla.com/gerrit-example refs/changes/73/6673/3 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git checkout FETCH_HEAD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and cherry pick your commit to remove outdated dependency:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh://review.assembla.com/gerrit-example refs/changes/74/234/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git cherry-pick FETCH_HEAD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;resolve conflicts&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git add -A
-git commit
-git push origin HEAD:refs/for/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you should observer that on gerrit you do not have OUTDATED reference.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh://review.assembla.com/gerrit-example refs/changes/73/6673/3 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git checkout FETCH_HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and cherry pick your commit to remove outdated dependency:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh://review.assembla.com/gerrit-example refs/changes/74/234/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git cherry-pick FETCH_HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;resolve conflicts&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add -A
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin HEAD:refs/for/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you should observer that on gerrit you do not have OUTDATED reference.&lt;/p&gt;
 &lt;h2 id=&#34;abandoned&#34;&gt;Abandoned&lt;/h2&gt;
 &lt;p&gt;If your commit is abandoned it means it will never be merged to repository. But if you have dependency from ABANDONED you have to get rid of this dependency. You have to choose some commit as a parent of your commit - usually origin/master and cherry-pick your commit:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git remote update
-git checkout origin/master
-ssh://review.assembla.com/gerrit-example refs/changes/74/234/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git cherry-pick FETCH_HEAD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;resolve conflicts&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git add -A
-git commit
-git push origin HEAD:refs/for/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you should observe that in gerrit you do not have dependency from ABANDONED commit.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout origin/master
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh://review.assembla.com/gerrit-example refs/changes/74/234/1 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git cherry-pick FETCH_HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;resolve conflicts&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add -A
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin HEAD:refs/for/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you should observe that in gerrit you do not have dependency from ABANDONED commit.&lt;/p&gt;
 
       </description>
     </item>
