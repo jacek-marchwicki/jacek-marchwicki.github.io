@@ -1,0 +1,435 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer Blog - Jacek Marchwicki – Articles about testing</title>
+    <link>/blog/testing/</link>
+    <description>Recent content in Articles about testing on Developer Blog - Jacek Marchwicki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/blog/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Avoid using IDs in Espresso tests</title>
+      <link>/blog/avoid-using-ids-in-espresso-tests/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/avoid-using-ids-in-espresso-tests/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/avoid-using-ids-in-espresso-tests/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_757616_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;p&gt;&lt;strong&gt;Introduction:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Espresso is a powerful testing framework for Android apps. It allows you to write tests that interact with your app&amp;rsquo;s UI in a natural way. However, there are some best practices you should follow to write effective Espresso tests.&lt;/p&gt;
+&lt;p&gt;In this blog post, I&amp;rsquo;ll discuss why you should avoid using IDs in Espresso tests. I&amp;rsquo;ll also provide some positive and negative examples to illustrate my point.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why avoid using IDs in Espresso tests?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are a few reasons why you should avoid using IDs in Espresso tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tests are easier to understand.&lt;/strong&gt; When you use IDs in your tests, you&amp;rsquo;re essentially hardcoding the structure of your app&amp;rsquo;s UI. This can make your tests more difficult to understand, especially for non-technical stakeholders.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tests are more flexible.&lt;/strong&gt; When you don&amp;rsquo;t use IDs, your tests are more flexible to changes in your app&amp;rsquo;s UI. This is because you&amp;rsquo;re testing the content of your UI elements, not their IDs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tests are more maintainable.&lt;/strong&gt; When you don&amp;rsquo;t use IDs, your tests are easier to maintain as your app&amp;rsquo;s UI changes. This is because you don&amp;rsquo;t have to update your tests every time you change an ID.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Positive examples:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here are some positive examples of avoiding IDs in Espresso tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Testing the title of a text view:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;onView(withText(&amp;#34;My title&amp;#34;))
+  .check(matches(isDisplayed()))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This test will pass if the text view with the text &amp;ldquo;My title&amp;rdquo; is displayed on the screen. This test is easy to understand and doesn&amp;rsquo;t require any knowledge of the app&amp;rsquo;s internal structure.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Testing the presence of a button:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;onView(withText(&amp;#34;My button&amp;#34;))
+  .check(matches(isDisplayed()))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This test will pass if the button with the text &amp;ldquo;My button&amp;rdquo; is displayed on the screen. This test is also easy to understand and doesn&amp;rsquo;t require any knowledge of the app&amp;rsquo;s internal structure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Negative examples:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here are some negative examples of using IDs in Espresso tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Testing the title of a text view:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;onView(withId(R.id.my_title_text_view))
+  .check(matches(isDisplayed()))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This test will only pass if the text view with the ID R.id.my_title_text_view is displayed on the screen. This test is more difficult to understand because it requires knowledge of the app&amp;rsquo;s internal structure.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Testing the presence of a button:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;onView(withId(R.id.my_button))
+  .check(matches(isDisplayed()))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This test is also more difficult to understand because it requires knowledge of the app&amp;rsquo;s internal structure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Avoiding IDs in Espresso tests is a best practice that can make your tests easier to understand, more flexible, and more maintainable. By following this best practice, you can write tests that are more valuable to your business.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Beware of UI test abstractions</title>
+      <link>/blog/beware-of-ui-test-abstractions/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/beware-of-ui-test-abstractions/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/beware-of-ui-test-abstractions/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_4717210_640x0_resize_q75_catmullrom.jpg" width="640" height="641"/>]]>
+        
+        &lt;p&gt;As an experienced Android developer and tech leader, I&amp;rsquo;m often asked about the best way to write UI tests. One of the most common recommendations is to use an abstraction library, such as Kakao. These libraries can make it easier to write tests by providing a higher-level API that hides the details of interacting with the UI.&lt;/p&gt;
+&lt;p&gt;However, I believe that abstractions can be a double-edged sword. While they can make it easier to write tests, they can also make them harder to understand and maintain. In this blog post, I&amp;rsquo;ll argue that abstractions should be used sparingly in UI testing, and I&amp;rsquo;ll explain why.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem-with-abstractions&#34;&gt;The problem with abstractions&lt;/h2&gt;
+&lt;p&gt;One of the biggest problems with abstractions is that they can make tests harder to understand. When you use an abstraction library, you&amp;rsquo;re essentially hiding the details of how your test interacts with the UI. This can make it difficult to debug tests or to understand why they&amp;rsquo;re failing.&lt;/p&gt;
+&lt;p&gt;Another problem with abstractions is that they can make tests harder to maintain. As your app changes, you may need to update your abstractions to keep them up-to-date. If you don&amp;rsquo;t do this, your tests may start to fail even though your app is still working correctly.&lt;/p&gt;
+&lt;h2 id=&#34;the-benefits-of-simplicity&#34;&gt;The benefits of simplicity&lt;/h2&gt;
+&lt;p&gt;In my experience, simple tests are always better than complex tests. Simple tests are easier to write, understand, and maintain. They&amp;rsquo;re also less likely to be flaky.&lt;/p&gt;
+&lt;p&gt;When it comes to UI testing, I recommend using the simplest possible approach that will still get the job done. This usually means writing tests that directly interact with the UI elements.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;p&gt;Here are some examples of how to write simple UI tests:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;onView&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withId&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;R&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;price_item&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;check&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;matches&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;isDisplayed&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;onView&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withText&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Standard Rate&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;check&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;matches&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;isDisplayed&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These tests are simple and easy to understand. They&amp;rsquo;re also less likely to be flaky than tests that use an abstraction library.&lt;/p&gt;
+&lt;h2 id=&#34;business-perspective&#34;&gt;Business perspective&lt;/h2&gt;
+&lt;p&gt;From a business perspective, there are several benefits to using simple UI tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Increased confidence:&lt;/strong&gt; Simple tests give you more confidence that your app will work correctly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced maintenance costs:&lt;/strong&gt; Simple tests are easier to maintain, which can save you time and money.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved developer productivity:&lt;/strong&gt; Simple tests make it easier for developers to write and debug tests, which can improve their productivity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I believe that abstractions should be used sparingly in UI testing. Simple tests are always better than complex tests, and they offer several business benefits.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re considering using an abstraction library for UI testing, I urge you to carefully weigh the pros and cons. In most cases, you&amp;rsquo;ll be better off sticking with simple tests.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: How to improve integration tests by using mock APIs to avoid scrolling</title>
+      <link>/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_4891984_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;p&gt;As an Android developer, I&amp;rsquo;ve spent a lot of time writing integration tests. Integration tests are important for ensuring that our code works as expected when it&amp;rsquo;s integrated with other parts of our app, such as the backend API or a third-party library.&lt;/p&gt;
+&lt;p&gt;One of the challenges of writing integration tests is that they can be difficult to write when they need to scroll through a list of items. For example, let&amp;rsquo;s say we have an app that shows a list of posts. We want to write a test that clicks on the fifth post in the list.&lt;/p&gt;
+&lt;p&gt;One way to do this is to use the RecyclerView.scrollToPosition() method to scroll to the fifth post. However, this can be a bit tricky, and it can also make our test more flaky.&lt;/p&gt;
+&lt;p&gt;A better way to do this is to use a mock API to return a list of posts that already has the fifth post at the top of the list. This will make our test much easier to write and maintain, and it will also make it less flaky.&lt;/p&gt;
+&lt;p&gt;In addition to making our tests easier to write, using mock APIs to avoid scrolling can also have a positive business impact. Here are a few reasons why:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Improved test coverage:&lt;/strong&gt; By making it easier to write tests, we can improve our test coverage, which can help us to catch bugs earlier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced development time:&lt;/strong&gt; By making our tests faster to run, we can reduce the amount of time that developers spend running tests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved quality:&lt;/strong&gt; By making our tests more reliable, we can improve the quality of our apps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you&amp;rsquo;re writing integration tests that need to scroll through a list of items, I encourage you to try using a mock API to avoid scrolling. It&amp;rsquo;s a simple change that can make a big difference in the quality and efficiency of your tests.&lt;/p&gt;
+&lt;h3 id=&#34;here-are-some-additional-tips-for-using-mock-apis-to-avoid-scrolling&#34;&gt;Here are some additional tips for using mock APIs to avoid scrolling:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Use a mock API that allows you to specify the order of the items in the list. This will make it easier to ensure that your test is clicking on the correct item.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a mock API that allows you to specify the state of the items in the list. This will allow you to test different scenarios, such as a post that is already liked or a post that is collapsed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By following these tips, you can make your integration tests more reliable and efficient.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Improve your Android tests with better assertions</title>
+      <link>/blog/improve-your-android-tests-with-better-assertions/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/improve-your-android-tests-with-better-assertions/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/improve-your-android-tests-with-better-assertions/featured-title_hub657b9cf981c0ef5f7b6a80495cd1d4f_802653_640x0_resize_q75_catmullrom.jpg" width="640" height="460"/>]]>
+        
+        &lt;p&gt;As an Android developer, you know how important it is to write good tests. Tests help you to ensure that your code works as expected and that it is free of bugs.&lt;/p&gt;
+&lt;p&gt;One of the most common types of tests are assertions. Assertions check whether a condition is true or false. For example, you might use an assertion to check whether a variable has a certain value.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The problem with standard assertions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Standard assertions can be helpful, but they can also be a bit lacking. When an assertion fails, the only information you get is that the assertion failed. This can be frustrating, especially if you don&amp;rsquo;t know why the assertion failed.&lt;/p&gt;
+&lt;p&gt;For example, let&amp;rsquo;s say you have a test that checks whether a view model is in a loading state. The standard way to write this test is as follows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;assert(viewModel.state.isLoading == true);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If this assertion fails, you will get the following error message:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Assertion failed
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This error message doesn&amp;rsquo;t tell you much. It doesn&amp;rsquo;t tell you why the assertion failed, or what the current value of &lt;code&gt;viewModel.state.isLoading&lt;/code&gt; is.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The solution: Use a better assertion library&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are many assertion libraries available that provide more helpful error messages. One such library is strikt: &lt;a href=&#34;https://strikt.io/&#34;&gt;https://strikt.io/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using strikt, you can write the same test as above as follows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;expectThat(viewModel.state)
+    .get(FeedbackState::isLoading)
+    .isTrue();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If this assertion fails, you will get the following error message:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;▼ Expect that FeedbackState(recommendationAnswer=com.app.silentusApp.presentation.feedback.RecommendationAnswer$Likely@2fd72332, favouriteFeatureAnswer=com.app.silentusApp.presentation.feedback.FavouriteFeatureAnswer$AppBlock@51f18e31, rating=5, prevRating=0, feedback=correct review, isLoading=false, closeScreen=null, dialogInfo=null):
+  ▼ value of property isLoading:
+    ✗ is true
+      found false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This error message is much more helpful than the standard error message. It tells you exactly why the assertion failed, and it also shows you the current value of &lt;code&gt;viewModel.state.isLoading&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The business perspective&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Better assertions can help you to improve the quality of your code. They can also help you to save time and money by making it easier to find and fix bugs.&lt;/p&gt;
+&lt;p&gt;Here are some specific examples of how better assertions can benefit your business:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Improved product quality:&lt;/strong&gt; Better assertions can help you to ensure that your products are free of bugs. This can lead to a better user experience and increased customer satisfaction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced development time:&lt;/strong&gt; Better assertions can help you to find and fix bugs more quickly. This can free up your time to focus on other tasks, such as developing new features.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced maintenance costs:&lt;/strong&gt; Better assertions can help you to prevent bugs from being introduced into your code. This can save you money on maintenance costs in the long run.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you are an Android developer, I encourage you to use a better assertion library. Better assertions can help you to improve the quality of your code, save time and money, and make your life easier.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Making Espresso Tests More Understandable and Reusable</title>
+      <link>/blog/making-espresso-tests-more-understandable-and-reusable/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/making-espresso-tests-more-understandable-and-reusable/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/making-espresso-tests-more-understandable-and-reusable/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_2709339_640x0_resize_q75_catmullrom.jpg" width="640" height="964"/>]]>
+        
+        &lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Espresso is a powerful tool for testing Android applications. However, it can be difficult to write Espresso tests that are both understandable and reusable. In this blog post, we will discuss a best practice for making Espresso tests more understandable and reusable: &lt;strong&gt;encapsulating complex matchers in functions&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Espresso matchers can be complex, making it difficult to understand what a test is trying to do. For example, the following matcher checks to see if a view with the text &amp;ldquo;Link preview title&amp;rdquo; is displayed inside a conversation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;onView&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;allOf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withText&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Link preview title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;isDescendantOfA&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withId&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;R&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;chat_recycler_view&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;check&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;matches&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;isDisplayed&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This matcher is difficult to understand because it requires the reader to understand two separate concepts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;withText()&lt;/code&gt; matcher checks to see if a view has a specific text.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;isDescendantOfA(withId(R.id.chat_recycler_view))&lt;/code&gt; matcher checks to see if a view is a descendant of a specific view.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To make this matcher more understandable, we can encapsulate the &lt;code&gt;isDescendantOfA(withId(R.id.chat_recycler_view))&lt;/code&gt; matcher in a function:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;insideConversation&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;():&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ViewMatcher&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;View&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;isDescendantOfA&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withId&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;R&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;chat_recycler_view&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;onView&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;allOf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;withText&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Link preview title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;insideConversation&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;check&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;matches&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;isDisplayed&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This makes the matcher much easier to understand because it only requires the reader to understand one concept:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;withText()&lt;/code&gt; matcher checks to see if a view has a specific text.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Benefits&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are two main benefits to encapsulating complex matchers in functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Understandability:&lt;/strong&gt; Encapsulating complex matchers in functions makes it easier for readers to understand what a test is trying to do.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusability:&lt;/strong&gt; Encapsulated matchers can be reused in multiple tests, which can save time and effort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Business Perspective&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;From a business perspective, making Espresso tests more understandable and reusable can lead to the following benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Increased developer productivity:&lt;/strong&gt; Easier-to-understand tests can be written and maintained more quickly, which can lead to increased developer productivity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced bug count:&lt;/strong&gt; Reusable matchers can help developers write more comprehensive and robust tests, which can lead to a reduced bug count.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved test coverage:&lt;/strong&gt; Easier-to-understand tests are more likely to be run, which can lead to improved test coverage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Encapsulating complex matchers in functions is a simple best practice that can make Espresso tests more understandable and reusable. This can lead to a number of benefits, including increased developer productivity, reduced bug count, and improved test coverage.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: When to skip end-to-end testing</title>
+      <link>/blog/when-to-skip-end-to-end-testing/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/when-to-skip-end-to-end-testing/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/when-to-skip-end-to-end-testing/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_2069149_640x0_resize_q75_catmullrom.jpg" width="640" height="428"/>]]>
+        
+        &lt;p&gt;As an experienced Android developer and tech leader, I&amp;rsquo;ve learned a lot about the importance of testing. However, I&amp;rsquo;ve also learned that there are times when it&amp;rsquo;s simply not worth the effort to write end-to-end (E2E) tests.&lt;/p&gt;
+&lt;p&gt;E2E tests are designed to verify that a complete system works as expected. This means that they typically involve interacting with multiple components, such as the user interface, the backend, and even third-party services.&lt;/p&gt;
+&lt;p&gt;In some cases, writing E2E tests can be very challenging. For example, if you need to test a feature that requires user input, such as signing up for a service, you&amp;rsquo;ll need to find a way to simulate that input in your tests. This can be difficult and time-consuming.&lt;/p&gt;
+&lt;p&gt;In other cases, the cost of writing E2E tests may simply be too high. For example, if you need to test a feature that requires access to a third-party service, you may need to pay for that service.&lt;/p&gt;
+&lt;p&gt;So, when should you skip E2E testing? Here are a few tips:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;If the feature is relatively simple, you may be able to get away with unit or integration testing.&lt;/strong&gt; These types of tests are typically easier to write and maintain than E2E tests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If the feature is unlikely to change, you may be able to get away with manual testing.&lt;/strong&gt; This is a good option if you have the resources to dedicate to manual testing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If the cost of writing E2E tests is too high, you may need to find a workaround.&lt;/strong&gt; For example, you could write a test that only verifies the initial state of the feature.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Of course, there are also benefits to writing E2E tests.&lt;/strong&gt; For example, they can help you to catch bugs that would otherwise go undetected. However, it&amp;rsquo;s important to weigh the benefits against the costs before deciding whether or not to write E2E tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;positive-business-perspective&#34;&gt;Positive business perspective&lt;/h1&gt;
+&lt;p&gt;There are several positive business perspectives of skipping E2E testing. First, it can save time and money. E2E tests can be time-consuming to write and maintain, and they can also be expensive to run. By skipping E2E testing, you can free up resources to focus on other areas of your business.&lt;/p&gt;
+&lt;p&gt;Second, skipping E2E testing can help you to ship products faster. E2E tests can add a significant amount of time to the development process. By skipping E2E testing, you can get your products to market sooner.&lt;/p&gt;
+&lt;p&gt;Third, skipping E2E testing can reduce the risk of overtesting. E2E tests can be very thorough, but they can also be overkill. By skipping E2E testing, you can focus on testing the most important aspects of your products.&lt;/p&gt;
+&lt;p&gt;Of course, there are also some risks associated with skipping E2E testing. For example, you may miss some bugs that would otherwise be caught by E2E tests. However, by following the tips above, you can minimize these risks.&lt;/p&gt;
+&lt;p&gt;Ultimately, the decision of whether or not to skip E2E testing is a judgment call. However, by carefully considering the pros and cons, you can make the best decision for your business.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Why you should always run UI tests on PRs before merging</title>
+      <link>/blog/why-you-should-always-run-ui-tests-on-prs-before-merging/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/why-you-should-always-run-ui-tests-on-prs-before-merging/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/why-you-should-always-run-ui-tests-on-prs-before-merging/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_5277804_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;p&gt;As an experienced Android developer and tech leader, I&amp;rsquo;ve seen many teams struggle to adopt integration tests (End-to-End tests with mocked API). There&amp;rsquo;s one key reason for this: tests that break, aren&amp;rsquo;t maintained, become outdated after changes, or only detect bugs at release time. This can be incredibly frustrating for developers, who often feel like they&amp;rsquo;re constantly fighting with their tests.&lt;/p&gt;
+&lt;p&gt;The simple solution is to require all changes to pass tests before they can be merged. There are a few exceptions, such as End-to-End tests that are difficult to maintain or if a dedicated team is responsible for test maintenance. However, even in these cases, it&amp;rsquo;s important to run tests as early as possible in the development process.&lt;/p&gt;
+&lt;p&gt;Here are a few reasons why running UI tests on PRs is so important:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tests are free labor.&lt;/strong&gt; They can catch bugs that developers would otherwise miss, saving you time and money in the long run.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;It&amp;rsquo;s easier to fix bugs before they&amp;rsquo;re merged.&lt;/strong&gt; Once a change is merged, it can be difficult to isolate and fix a bug without impacting other parts of the codebase.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;It improves the quality of your app.&lt;/strong&gt; By catching bugs early, you can ensure that your app is stable and meets the needs of your users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From a business perspective, running UI tests on PRs can help you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reduce the number of bugs in your app.&lt;/strong&gt; This can lead to increased customer satisfaction and retention.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Save time and money.&lt;/strong&gt; You won&amp;rsquo;t have to spend time fixing bugs that could have been caught earlier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improve the quality of your development process.&lt;/strong&gt; By making it easier to catch bugs, you can create a more efficient and productive development environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you&amp;rsquo;re not already running UI tests on PRs, I encourage you to start today. It&amp;rsquo;s a simple change that can have a big impact on the quality of your app and your business.&lt;/p&gt;
+&lt;p&gt;Here are a few tips for making UI testing on PRs a success:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Start small.&lt;/strong&gt; Don&amp;rsquo;t try to test your entire app at once. Start with a few key features or flows and gradually add more as you get more comfortable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automate your tests.&lt;/strong&gt; Manual testing can be time-consuming and error-prone. Automating your tests will make it easier to run them regularly and catch bugs early.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use a continuous integration (CI) server.&lt;/strong&gt; A CI server will automatically run your tests when you submit a PR. This will help you ensure that your changes are always tested before they&amp;rsquo;re merged.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By following these tips, you can make UI testing on PRs a part of your regular development process. This will help you improve the quality of your app and your business.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Why you should start with one device for Android integration testing</title>
+      <link>/blog/why-you-should-start-with-one-device-for-android-integration-testing/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/why-you-should-start-with-one-device-for-android-integration-testing/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/why-you-should-start-with-one-device-for-android-integration-testing/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_6903522_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
+        
+        &lt;h1 id=&#34;introduction&#34;&gt;Introduction:&lt;/h1&gt;
+&lt;p&gt;As an experienced Android developer and tech leader, I&amp;rsquo;ve seen many teams make the same mistake when getting started with integration testing: they try to test their apps on too many devices. This is a mistake because it can be time-consuming and frustrating, and it can lead to teams giving up on automated testing altogether.&lt;/p&gt;
+&lt;p&gt;The problem with testing on multiple devices:&lt;/p&gt;
+&lt;p&gt;There are a few reasons why testing on multiple devices can be a problem. First, it can be difficult to ensure that your tests are compatible with all of the different devices and configurations that your app will be running on. Second, it can be hard to debug tests that fail on a specific device, because you may not have access to that device to investigate the issue. Finally, testing on multiple devices can be time-consuming and expensive, especially if you need to purchase or rent devices for testing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;In the case of a smaller screen, the text that we are verifying may be outside of the screen.&lt;/strong&gt; For example, if we are testing a layout that contains a button, the button may be too small to be seen on a smaller screen. This could cause the test to fail because the button is not clickable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In the case of a tablet, the layout may be slightly different.&lt;/strong&gt; For example, a layout that is designed for a phone may not be scaled correctly for a tablet. This could cause the test to fail because the layout is not displayed correctly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In the case of a change in language, some controls may be automatically translated.&lt;/strong&gt; For example, a button that is labeled &amp;ldquo;Submit&amp;rdquo; in English may be translated to &amp;ldquo;Submit&amp;rdquo; in Spanish. This could cause the test to fail because the test is expecting the button to be labeled &amp;ldquo;Submit&amp;rdquo; in English.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In a different version of Android, something may be displayed differently.&lt;/strong&gt; For example, a new feature may be introduced in a newer version of Android. This could cause the test to fail because the test is not expecting the feature to be present.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are just a few examples, and there are many other ways that tests can fail on different devices.&lt;/p&gt;
+&lt;h1 id=&#34;the-solution&#34;&gt;The solution:&lt;/h1&gt;
+&lt;p&gt;The solution is to start with one device, and then expand your testing as you gain experience and confidence. This will help you to focus on writing high-quality tests that are more likely to catch regressions.&lt;/p&gt;
+&lt;h1 id=&#34;the-benefits-of-using-one-device&#34;&gt;The benefits of using one device:&lt;/h1&gt;
+&lt;p&gt;There are several benefits to using one device for integration testing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s easier to ensure that your tests are compatible with the device.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s easier to debug tests that fail.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s less time-consuming and expensive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;the-business-perspective&#34;&gt;The business perspective:&lt;/h1&gt;
+&lt;p&gt;From a business perspective, there are several reasons why using one device for integration testing is a good idea:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It can help you to release more stable and reliable apps.&lt;/li&gt;
+&lt;li&gt;It can help you to save time and money.&lt;/li&gt;
+&lt;li&gt;It can help you to improve your team&amp;rsquo;s productivity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h1&gt;
+&lt;p&gt;If you&amp;rsquo;re new to integration testing, I recommend starting with one device. This will help you to get started quickly and easily, and it will help you to build a solid foundation for your testing efforts.&lt;/p&gt;
+&lt;h1 id=&#34;additional-tips&#34;&gt;Additional tips:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose a device that is representative of the devices that your app will be running on.&lt;/li&gt;
+&lt;li&gt;Use a simulator or emulator if possible.&lt;/li&gt;
+&lt;li&gt;Write tests that are specific to your app&amp;rsquo;s functionality, rather than trying to test everything.&lt;/li&gt;
+&lt;li&gt;Use a test automation tool that helps you to debug tests that fail. This will make it easier to find the cause of the failure and fix it.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Why you shouldn&#39;t rely only on end-to-end tests</title>
+      <link>/blog/why-you-shouldnt-rely-only-on-end-to-end-tests/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/why-you-shouldnt-rely-only-on-end-to-end-tests/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/why-you-shouldnt-rely-only-on-end-to-end-tests/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_3944623_640x0_resize_q75_catmullrom.jpg" width="640" height="800"/>]]>
+        
+        &lt;p&gt;As an experienced Android developer and tech leader, I&amp;rsquo;ve seen many teams try to solve stability and testing time problems by relying solely on end-to-end (end-to-end) tests. While end-to-end tests can be a valuable tool, they&amp;rsquo;re not a silver bullet. In fact, they can actually make things worse if they&amp;rsquo;re not used in conjunction with other types of tests.&lt;/p&gt;
+&lt;p&gt;The testing pyramid is a well-established model that recommends a balanced approach to testing. The pyramid has four layers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Unit tests:&lt;/strong&gt; These tests are the most granular and should be written for every unit of code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integration tests:&lt;/strong&gt; These tests combine multiple units of code to test how they interact with each other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;End-to-end tests:&lt;/strong&gt; These tests simulate the user experience of the entire application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manual tests:&lt;/strong&gt; These tests are performed by humans and can be used to verify the application&amp;rsquo;s functionality in a real-world environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-problem-with-relying-solely-on-end-to-end-tests&#34;&gt;The problem with relying solely on end-to-end tests&lt;/h2&gt;
+&lt;p&gt;End-to-end tests are the slowest and most expensive type of test to run. They can also be difficult to debug, especially if the failure is caused by a problem with the backend or another external service.&lt;/p&gt;
+&lt;p&gt;If you rely solely on end-to-end tests, you&amp;rsquo;ll likely encounter one of two problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Your tests will fail for the wrong reason.&lt;/strong&gt; This can happen if the backend is down or if there&amp;rsquo;s a problem with another external service. In these cases, it can be difficult to determine the root cause of the failure, which can lead to wasted time and resources.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;You&amp;rsquo;ll have to wait a long time to get feedback on your changes.&lt;/strong&gt; End-to-end tests can take hours or even days to run, which means you&amp;rsquo;ll have to wait a long time to find out if your changes broke anything.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;a-better-approach&#34;&gt;A better approach&lt;/h2&gt;
+&lt;p&gt;A better approach is to use a combination of tests from all four layers of the testing pyramid. This will help you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Catch bugs early.&lt;/strong&gt; Unit and integration tests can catch bugs early, before they have a chance to cause problems in end-to-end tests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Get faster feedback.&lt;/strong&gt; Unit and integration tests can run quickly, which means you&amp;rsquo;ll get feedback on your changes sooner.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Determine the root cause of failures.&lt;/strong&gt; If a test fails, it&amp;rsquo;s usually easier to determine the root cause if you have a combination of tests from different layers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;a-specific-solution&#34;&gt;A specific solution&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a specific solution that you can use to combine unit, integration, and end-to-end tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Run unit and integration tests before merging changes to the main branch.&lt;/strong&gt; This will help to ensure that your changes don&amp;rsquo;t introduce any new bugs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Run end-to-end tests after merging changes to the main branch.&lt;/strong&gt; This will help to verify the functionality of the entire application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write some tests that can be run in both unit and integration mode.&lt;/strong&gt; This will help you to save time and effort by only having to write the test once.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;positive-business-perspective&#34;&gt;Positive business perspective&lt;/h2&gt;
+&lt;p&gt;By using a combination of tests from all four layers of the testing pyramid, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Increase the stability of your application.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduce the time it takes to find and fix bugs.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improve the quality of your application.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This can lead to a number of positive business outcomes, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Increased customer satisfaction.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced support costs.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Increased sales.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So if you&amp;rsquo;re looking for a way to improve the quality of your application and reduce the risk of bugs, consider using a combination of tests from all four layers of the testing pyramid.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

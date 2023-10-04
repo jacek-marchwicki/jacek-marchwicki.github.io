@@ -143,6 +143,29 @@ if (!doNotTrack) {
   <a href="/blog/my-story@appunite/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogmy-storyappunite"><span class="">My Story@Appunite</span></a>
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogtesting-li">
+  <a href="/blog/testing/" title="Articles about testing" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogtesting"><span class="">Testing</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogavoid-using-ids-in-espresso-tests-li">
+  <a href="/blog/avoid-using-ids-in-espresso-tests/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogavoid-using-ids-in-espresso-tests"><span class="">Avoid using IDs in Espresso tests</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogbeware-of-ui-test-abstractions-li">
+  <a href="/blog/beware-of-ui-test-abstractions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogbeware-of-ui-test-abstractions"><span class="">Beware of UI test abstractions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-bloghow-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling-li">
+  <a href="/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-bloghow-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling"><span class="">How to improve integration tests by using mock APIs to avoid scrolling</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogimprove-your-android-tests-with-better-assertions-li">
+  <a href="/blog/improve-your-android-tests-with-better-assertions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogimprove-your-android-tests-with-better-assertions"><span class="">Improve your Android tests with better assertions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogmaking-espresso-tests-more-understandable-and-reusable-li">
+  <a href="/blog/making-espresso-tests-more-understandable-and-reusable/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogmaking-espresso-tests-more-understandable-and-reusable"><span class="">Making Espresso Tests More Understandable and Reusable</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhen-to-skip-end-to-end-testing-li">
+  <a href="/blog/when-to-skip-end-to-end-testing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhen-to-skip-end-to-end-testing"><span class="">When to skip end-to-end testing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhy-you-should-always-run-ui-tests-on-prs-before-merging-li">
+  <a href="/blog/why-you-should-always-run-ui-tests-on-prs-before-merging/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhy-you-should-always-run-ui-tests-on-prs-before-merging"><span class="">Why you should always run UI tests on PRs before merging</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhy-you-should-start-with-one-device-for-android-integration-testing-li">
+  <a href="/blog/why-you-should-start-with-one-device-for-android-integration-testing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhy-you-should-start-with-one-device-for-android-integration-testing"><span class="">Why you should start with one device for Android integration testing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhy-you-shouldnt-rely-only-on-end-to-end-tests-li">
+  <a href="/blog/why-you-shouldnt-rely-only-on-end-to-end-tests/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhy-you-shouldnt-rely-only-on-end-to-end-tests"><span class="">Why you shouldn&#39;t rely only on end-to-end tests</span></a>
+</li>
+  </ul>
 </li>
   </ul>
 </li>
@@ -169,7 +192,235 @@ if (!doNotTrack) {
             </a>
             
 <div class="td-blog-posts">
-  <div class="h2">Posts in 2012</div>
+  <div class="h2">Posts in 2018</div>
+    <ul class="td-blog-posts-list">
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/no-sleeping-during-testing-rxjava-app/">No sleeping during testing RxJava app!</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Monday, November 26, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/no-sleeping-during-testing-rxjava-app/featured-title_hu168ac2c6a892d45cf45334b50255955b_4453943_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for No sleeping during testing RxJava app!" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com/">unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">During development of Android tests you&rsquo;ve probably used <code>Thread.sleep()</code>.  This seems reasonable solution at the first place, but after a while you get to a very wired issues.</p>
+          <p class="pt-0"><a href="/blog/no-sleeping-during-testing-rxjava-app/" aria-label="Read more - No sleeping during testing RxJava app!">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/solve-your-problems-with-time-during-android-integration-test/">Solve your problems with time during Android Integration test</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Tuesday, November 06, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/solve-your-problems-with-time-during-android-integration-test/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_2563536_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for Solve your problems with time during Android Integration test" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com/photos/iiRQxPCDQ_Y">unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">When you develop a real-life app with integrations tests you probably faced a problem that time is moving :) It doesn&rsquo;t matter if you develop an alarm clock or a feed app that is less related to time, I&rsquo;m almost 100% sure that app is more or less time-related.</p>
+          <p class="pt-0"><a href="/blog/solve-your-problems-with-time-during-android-integration-test/" aria-label="Read more - Solve your problems with time during Android Integration test">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/my-story@appunite/">My Story@Appunite</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Monday, June 11, 2018 in People</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/my-story@appunite/featured-title_hu7ed633ecbc6f3836647882676bf782ff_4857484_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for My Story@Appunite" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://www.eso.org/public/images/eso0932a/">European Southern Observatory</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">It was some time ago (2011), a year after I joined AppUnite as the first employee. At the time, I’ve just developed third iOS app (yes, this is no typo — iOS app :) ).</p>
+          <p class="pt-0"><a href="/blog/my-story@appunite/" aria-label="Read more - My Story@Appunite">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/using-schedulers-while-testing-your-code/">Using schedulers while testing your code</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Tuesday, February 27, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/using-schedulers-while-testing-your-code/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_2525907_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for Using schedulers while testing your code" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com/">unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">While testing RxJava code it&rsquo;s very important to choose a correct Scheduler class so your tests are reliable and fast. I&rsquo;d like to present a few use cases.</p>
+          <p class="pt-0"><a href="/blog/using-schedulers-while-testing-your-code/" aria-label="Read more - Using schedulers while testing your code">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/errors...-oh...-those-errors-coding/">Errors... oh... those errors - coding</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Tuesday, February 27, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/errors...-oh...-those-errors-coding/featured-title_hu806bde7cd103cdf173247ea8107f0950_2473833_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for Errors... oh... those errors - coding" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com">Unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">Some time ago, I wrote an article about how important it is to handle errors in a nice way. In the article &ldquo;Errors&hellip; oh&hellip; those errors&rdquo;, I made a promise that there would be a continuation with coding examples. This is it.</p>
+          <p class="pt-0"><a href="/blog/errors...-oh...-those-errors-coding/" aria-label="Read more - Errors... oh... those errors - coding">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/how-to-find-stackoverflowerrors/">How to find StackOverflowError&#39;s</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Wednesday, February 07, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/how-to-find-stackoverflowerrors/featured-title_hu832f767384c05a79c171684d2d10c9cb_667638_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for How to find StackOverflowError&#39;s" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com/">unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">Sometimes in your crash reporting tool you see StackOverflowErrors breaks down the app on some device models.  Some of them don’t occur on your device or the issues come about in unexpected non-reproducible circumstances.  I’ll give you some tips that allow finding the errors more easily.</p>
+          <p class="pt-0"><a href="/blog/how-to-find-stackoverflowerrors/" aria-label="Read more - How to find StackOverflowError&#39;s">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/errors...-oh...-those-errors/">Errors... oh... those errors</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Monday, February 05, 2018 in Engineering</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/errors...-oh...-those-errors/featured-title_hu798a16dc35616af1dc5943ffeca08caa_9962734_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for Errors... oh... those errors" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com/">unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">In my opinion, good error handling is one of the most important features of an application.  But most people in development process ignore them.</p>
+          <p class="pt-0"><a href="/blog/errors...-oh...-those-errors/" aria-label="Read more - Errors... oh... those errors">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/a-nice-reader/writer-pattern/">A nice reader/writer pattern</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Monday, January 15, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/a-nice-reader/writer-pattern/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_2794499_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for A nice reader/writer pattern" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Photo by <a href="https://unsplash.com/@heapdump">Patrick Lindenberg</a> on <a href="https://unsplash.com/photos/1iVKwElWrPA">Unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">During the development of a chat app, I had to implement some kind of lock logic. Usually, locking/unlocking code is hard to follow. If complex business logic uses complicated locking, your code becomes unreadable and unmaintainable. However, there is a pattern that can help you writing readable locking/unlocking code.</p>
+          <p class="pt-0"><a href="/blog/a-nice-reader/writer-pattern/" aria-label="Read more - A nice reader/writer pattern">Read more</a></p>
+        </div>
+      </li>
+      <li class="td-blog-posts-list__item">
+        <div class="td-blog-posts-list__body">
+          <h5 class="mt-0 mb-1"><a href="/blog/kotlin-and-rxjava-with-extension-functions/">Kotlin and RxJava with extension functions</a></h5>
+          <p class="mb-2 mb-md-3"><small class="text-muted">Sunday, January 07, 2018 in Android</small></p>
+          <header class="article-meta">
+            
+</header>
+          
+
+
+
+
+
+
+<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
+<img src="/blog/kotlin-and-rxjava-with-extension-functions/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_3368874_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for Kotlin and RxJava with extension functions" width="250" height="125">
+
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">Image from <a href="https://unsplash.com/photos/L94dWXNKwrY">unsplash</a></small></figcaption>
+
+</figure>
+
+<p class="pt-0 mt-0">This is an introduction to some patterns that can be helpful during an implementation of Android applications that operate on any structured data, especially downloaded from APIs.</p>
+          <p class="pt-0"><a href="/blog/kotlin-and-rxjava-with-extension-functions/" aria-label="Read more - Kotlin and RxJava with extension functions">Read more</a></p>
+        </div>
+      </li>
+      </ul>
+    <div class="h2">Posts in 2012</div>
     <ul class="td-blog-posts-list">
       <li class="td-blog-posts-list__item">
         <div class="td-blog-posts-list__body">
@@ -186,31 +437,6 @@ if (!doNotTrack) {
 
 <p class="pt-0 mt-0">Working with submodules looks tricki at the beginning but it is an elegant way to share your project code and DRY (Don&rsquo;t Repeat Yourself). We started to use submodules a lot in appunite.com, but there is not much said in WWW about how to use git submodules in real projects.</p>
           <p class="pt-0"><a href="/blog/working-with-git-submodules-very-old-article/" aria-label="Read more - Working with git submodules (very old article)">Read more</a></p>
-        </div>
-      </li>
-      <li class="td-blog-posts-list__item">
-        <div class="td-blog-posts-list__body">
-          <h5 class="mt-0 mb-1"><a href="/blog/working-with-gerrit-very-old-article/">Working with gerrit (very old article)</a></h5>
-          <p class="mb-2 mb-md-3"><small class="text-muted">Wednesday, May 02, 2012 in Engineering</small></p>
-          <header class="article-meta">
-            
-</header>
-          
-
-
-
-
-
-
-<figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/working-with-gerrit-very-old-article/featured-title_hu44d917ee2faef8a5b72a0e8af10b6799_2586287_250x125_fill_q75_catmullrom_smart1.jpg" alt="Featured Image for Working with gerrit (very old article)" width="250" height="125">
-
- <figcaption class="mt-2 mt-md-0"><small class="text-muted">Photo by <a href="https://unsplash.com/@wx1993?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Raychan</a> on <a href="https://unsplash.com/s/photos/tree?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small></figcaption>
-
-</figure>
-
-<p class="pt-0 mt-0">As software engineers we want to improve our selves, we want to learn from mistakes of others, and we would like to improve our coding skills. This is why we&rsquo;have decided to introduce a code review process, and for this we&rsquo;ve chosen Gerrit tool.</p>
-          <p class="pt-0"><a href="/blog/working-with-gerrit-very-old-article/" aria-label="Read more - Working with gerrit (very old article)">Read more</a></p>
         </div>
       </li>
       </ul>
@@ -234,11 +460,14 @@ if (!doNotTrack) {
       <li class="page-item active">
         <a aria-current="page" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      <li class="page-item">
+        <a href="/blog/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item">
+        <a href="/blog/page/4/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/blog/page/4/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 

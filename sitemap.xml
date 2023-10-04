@@ -11,6 +11,36 @@
     <loc>/blog/people/</loc>
     <lastmod>2020-02-19T12:35:08+01:00</lastmod>
   </url><url>
+    <loc>/blog/testing/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/avoid-using-ids-in-espresso-tests/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/beware-of-ui-test-abstractions/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/improve-your-android-tests-with-better-assertions/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/making-espresso-tests-more-understandable-and-reusable/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/when-to-skip-end-to-end-testing/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/why-you-should-always-run-ui-tests-on-prs-before-merging/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/why-you-should-start-with-one-device-for-android-integration-testing/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
+    <loc>/blog/why-you-shouldnt-rely-only-on-end-to-end-tests/</loc>
+    <lastmod>2023-10-04T13:20:44+02:00</lastmod>
+  </url><url>
     <loc>/blog/focusing-external-teams-members-to-resolve-business-needs/</loc>
     <lastmod>2023-06-12T14:18:52+02:00</lastmod>
   </url><url>

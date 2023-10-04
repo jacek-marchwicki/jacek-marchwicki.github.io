@@ -1,0 +1,336 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.114.1">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Beware of UI test abstractions | Developer Blog - Jacek Marchwicki</title>
+<meta name="description" content="**Are your UI tests complex and difficult to maintain?**
+If so, you&#39;re not alone. Many developers use abstraction libraries to make UI testing easier, but these libraries can also make tests harder to understand and debug.
+In this article, I&#39;ll explain why you should use abstractions sparingly in UI testing. I&#39;ll also show you how to write simple UI tests that are easy to understand, maintain, and debug.
+If you&#39;re serious about improving the quality of your UI tests, then you need to read this article.
+">
+<meta property="og:title" content="Beware of UI test abstractions" />
+<meta property="og:description" content="**Are your UI tests complex and difficult to maintain?**
+If so, you&#39;re not alone. Many developers use abstraction libraries to make UI testing easier, but these libraries can also make tests harder to understand and debug.
+In this article, I&#39;ll explain why you should use abstractions sparingly in UI testing. I&#39;ll also show you how to write simple UI tests that are easy to understand, maintain, and debug.
+If you&#39;re serious about improving the quality of your UI tests, then you need to read this article.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/beware-of-ui-test-abstractions/" /><meta property="og:image" content="/blog/beware-of-ui-test-abstractions/featured-title.jpg"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-10-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-04T13:20:44+02:00" />
+<meta itemprop="name" content="Beware of UI test abstractions">
+<meta itemprop="description" content="**Are your UI tests complex and difficult to maintain?**
+If so, you&#39;re not alone. Many developers use abstraction libraries to make UI testing easier, but these libraries can also make tests harder to understand and debug.
+In this article, I&#39;ll explain why you should use abstractions sparingly in UI testing. I&#39;ll also show you how to write simple UI tests that are easy to understand, maintain, and debug.
+If you&#39;re serious about improving the quality of your UI tests, then you need to read this article.
+"><meta itemprop="datePublished" content="2023-10-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-10-04T13:20:44+02:00" />
+<meta itemprop="wordCount" content="429"><meta itemprop="image" content="/blog/beware-of-ui-test-abstractions/featured-title.jpg">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/blog/beware-of-ui-test-abstractions/featured-title.jpg"/>
+<meta name="twitter:title" content="Beware of UI test abstractions"/>
+<meta name="twitter:description" content="**Are your UI tests complex and difficult to maintain?**
+If so, you&#39;re not alone. Many developers use abstraction libraries to make UI testing easier, but these libraries can also make tests harder to understand and debug.
+In this article, I&#39;ll explain why you should use abstractions sparingly in UI testing. I&#39;ll also show you how to write simple UI tests that are easy to understand, maintain, and debug.
+If you&#39;re serious about improving the quality of your UI tests, then you need to read this article.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.e07bdca28a16343adf180f2e8852cb717eebee565cdb82ac26bf61f6d52ef95c.css" as="style">
+<link href="/scss/main.min.e07bdca28a16343adf180f2e8852cb717eebee565cdb82ac26bf61f6d52ef95c.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-5T5HWGFD70"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5T5HWGFD70');
+}
+</script>
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">Developer Blog - Jacek Marchwicki</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/blog/"><span>Blog</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-blog-li">
+  <a href="/blog/" title="Jacek Marchwicki - Blog" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-blog"><span class="">Blog</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogandroid-li">
+  <a href="/blog/android/" title="Android Related Articles" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogandroid"><span class="">Android</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogno-sleeping-during-testing-rxjava-app-li">
+  <a href="/blog/no-sleeping-during-testing-rxjava-app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogno-sleeping-during-testing-rxjava-app"><span class="">No sleeping during testing RxJava app!</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogsolve-your-problems-with-time-during-android-integration-test-li">
+  <a href="/blog/solve-your-problems-with-time-during-android-integration-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogsolve-your-problems-with-time-during-android-integration-test"><span class="">Solve your problems with time during Android Integration test</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogerrors-oh-those-errors-coding-li">
+  <a href="/blog/errors...-oh...-those-errors-coding/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogerrors-oh-those-errors-coding"><span class="">Errors... oh... those errors - coding</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogusing-schedulers-while-testing-your-code-li">
+  <a href="/blog/using-schedulers-while-testing-your-code/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogusing-schedulers-while-testing-your-code"><span class="">Using schedulers while testing your code</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-bloghow-to-find-stackoverflowerrors-li">
+  <a href="/blog/how-to-find-stackoverflowerrors/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-bloghow-to-find-stackoverflowerrors"><span class="">How to find StackOverflowError&#39;s</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-bloga-nice-readerwriter-pattern-li">
+  <a href="/blog/a-nice-reader/writer-pattern/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-bloga-nice-readerwriter-pattern"><span class="">A nice reader/writer pattern</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogkotlin-and-rxjava-with-extension-functions-li">
+  <a href="/blog/kotlin-and-rxjava-with-extension-functions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogkotlin-and-rxjava-with-extension-functions"><span class="">Kotlin and RxJava with extension functions</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogengineering-li">
+  <a href="/blog/engineering/" title="Engineering Articles" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogengineering"><span class="">Engineering</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhen-qa-slows-down-your-team-li">
+  <a href="/blog/when-qa-slows-down-your-team/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhen-qa-slows-down-your-team"><span class="">When QA slows down your team</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhen-a-product-requirement-is-not-worth-implementing-li">
+  <a href="/blog/when-a-product-requirement-is-not-worth-implementing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhen-a-product-requirement-is-not-worth-implementing"><span class="">When a product requirement is not worth implementing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogcoastline-paradox-li">
+  <a href="/blog/coastline-paradox/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogcoastline-paradox"><span class="">Coastline paradox</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogerrors-oh-those-errors-li">
+  <a href="/blog/errors...-oh...-those-errors/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogerrors-oh-those-errors"><span class="">Errors... oh... those errors</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogworking-with-git-submodules-very-old-article-li">
+  <a href="/blog/working-with-git-submodules-very-old-article/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogworking-with-git-submodules-very-old-article"><span class="">Working with git submodules (very old article)</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogworking-with-gerrit-very-old-article-li">
+  <a href="/blog/working-with-gerrit-very-old-article/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogworking-with-gerrit-very-old-article"><span class="">Working with gerrit (very old article)</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogpeople-li">
+  <a href="/blog/people/" title="People Related Articles" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogpeople"><span class="">People</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogfocusing-external-teams-members-to-resolve-business-needs-li">
+  <a href="/blog/focusing-external-teams-members-to-resolve-business-needs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogfocusing-external-teams-members-to-resolve-business-needs"><span class="">Focusing external teams’ members to resolve business needs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogimproving-app-stability-a-proactive-approach-to-overcoming-external-constraints-li">
+  <a href="/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogimproving-app-stability-a-proactive-approach-to-overcoming-external-constraints"><span class="">Improving App Stability: A Proactive Approach to Overcoming External Constraints</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogcode-review-team-agreements-li">
+  <a href="/blog/code-review-team-agreements/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogcode-review-team-agreements"><span class="">Code Review - Team Agreements</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogoptimizing-cooperation-li">
+  <a href="/blog/optimizing-cooperation/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogoptimizing-cooperation"><span class="">Optimizing Cooperation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogproposing-architectural-changes-li">
+  <a href="/blog/proposing-architectural-changes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogproposing-architectural-changes"><span class="">Proposing architectural changes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogthe-problem-of-knowledge-sharing-li">
+  <a href="/blog/the-problem-of-knowledge-sharing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogthe-problem-of-knowledge-sharing"><span class="">The Problem of Knowledge Sharing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogdont-be-fooled-by-knowledge-shared-in-this-self-development-article-li">
+  <a href="/blog/dont-be-fooled-by-knowledge-shared-in-this-self-development-article/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogdont-be-fooled-by-knowledge-shared-in-this-self-development-article"><span class="">Don&#39;t be fooled by knowledge shared in this self-development article</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-bloghow-to-introduce-yourself-to-a-new-team-li">
+  <a href="/blog/how-to-introduce-yourself-to-a-new-team/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-bloghow-to-introduce-yourself-to-a-new-team"><span class="">How to introduce yourself to a new team</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogmy-storyappunite-li">
+  <a href="/blog/my-story@appunite/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogmy-storyappunite"><span class="">My Story@Appunite</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-blogtesting-li">
+  <a href="/blog/testing/" title="Articles about testing" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogtesting"><span class="">Testing</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogavoid-using-ids-in-espresso-tests-li">
+  <a href="/blog/avoid-using-ids-in-espresso-tests/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogavoid-using-ids-in-espresso-tests"><span class="">Avoid using IDs in Espresso tests</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blogbeware-of-ui-test-abstractions-li">
+  <a href="/blog/beware-of-ui-test-abstractions/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-blogbeware-of-ui-test-abstractions"><span class="td-sidebar-nav-active-item">Beware of UI test abstractions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-bloghow-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling-li">
+  <a href="/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-bloghow-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling"><span class="">How to improve integration tests by using mock APIs to avoid scrolling</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogimprove-your-android-tests-with-better-assertions-li">
+  <a href="/blog/improve-your-android-tests-with-better-assertions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogimprove-your-android-tests-with-better-assertions"><span class="">Improve your Android tests with better assertions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogmaking-espresso-tests-more-understandable-and-reusable-li">
+  <a href="/blog/making-espresso-tests-more-understandable-and-reusable/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogmaking-espresso-tests-more-understandable-and-reusable"><span class="">Making Espresso Tests More Understandable and Reusable</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhen-to-skip-end-to-end-testing-li">
+  <a href="/blog/when-to-skip-end-to-end-testing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhen-to-skip-end-to-end-testing"><span class="">When to skip end-to-end testing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhy-you-should-always-run-ui-tests-on-prs-before-merging-li">
+  <a href="/blog/why-you-should-always-run-ui-tests-on-prs-before-merging/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhy-you-should-always-run-ui-tests-on-prs-before-merging"><span class="">Why you should always run UI tests on PRs before merging</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhy-you-should-start-with-one-device-for-android-integration-testing-li">
+  <a href="/blog/why-you-should-start-with-one-device-for-android-integration-testing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhy-you-should-start-with-one-device-for-android-integration-testing"><span class="">Why you should start with one device for Android integration testing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogwhy-you-shouldnt-rely-only-on-end-to-end-tests-li">
+  <a href="/blog/why-you-shouldnt-rely-only-on-end-to-end-tests/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blogwhy-you-shouldnt-rely-only-on-end-to-end-tests"><span class="">Why you shouldn&#39;t rely only on end-to-end tests</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+  <a href="https://github.com/jacek-marchwicki/blog/issues/new?title=Beware%20of%20UI%20test%20abstractions" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-problem-with-abstractions">The problem with abstractions</a></li>
+        <li><a href="#the-benefits-of-simplicity">The benefits of simplicity</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#business-perspective">Business perspective</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+            <a class="td-rss-button" title="RSS" href="/blog/testing/index.xml" target="_blank" rel="noopener">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+            
+<div class="td-content">
+	<h1>Beware of UI test abstractions</h1>
+	<div class="lead"><strong>Are your UI tests complex and difficult to maintain?</strong>
+If so, you&rsquo;re not alone. Many developers use abstraction libraries to make UI testing easier, but these libraries can also make tests harder to understand and debug.
+In this article, I&rsquo;ll explain why you should use abstractions sparingly in UI testing. I&rsquo;ll also show you how to write simple UI tests that are easy to understand, maintain, and debug.
+If you&rsquo;re serious about improving the quality of your UI tests, then you need to read this article.</div>
+	<div class="td-byline mb-4">
+		By <b>Jacek Marchwicki</b> |
+		<time datetime="2023-10-04" class="text-muted">Wednesday, October 04, 2023</time>
+	</div>
+	<header class="article-meta">
+		
+</header>
+	<p>As an experienced Android developer and tech leader, I&rsquo;m often asked about the best way to write UI tests. One of the most common recommendations is to use an abstraction library, such as Kakao. These libraries can make it easier to write tests by providing a higher-level API that hides the details of interacting with the UI.</p>
+<p>However, I believe that abstractions can be a double-edged sword. While they can make it easier to write tests, they can also make them harder to understand and maintain. In this blog post, I&rsquo;ll argue that abstractions should be used sparingly in UI testing, and I&rsquo;ll explain why.</p>
+<h2 id="the-problem-with-abstractions">The problem with abstractions</h2>
+<p>One of the biggest problems with abstractions is that they can make tests harder to understand. When you use an abstraction library, you&rsquo;re essentially hiding the details of how your test interacts with the UI. This can make it difficult to debug tests or to understand why they&rsquo;re failing.</p>
+<p>Another problem with abstractions is that they can make tests harder to maintain. As your app changes, you may need to update your abstractions to keep them up-to-date. If you don&rsquo;t do this, your tests may start to fail even though your app is still working correctly.</p>
+<h2 id="the-benefits-of-simplicity">The benefits of simplicity</h2>
+<p>In my experience, simple tests are always better than complex tests. Simple tests are easier to write, understand, and maintain. They&rsquo;re also less likely to be flaky.</p>
+<p>When it comes to UI testing, I recommend using the simplest possible approach that will still get the job done. This usually means writing tests that directly interact with the UI elements.</p>
+<h2 id="examples">Examples</h2>
+<p>Here are some examples of how to write simple UI tests:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#000">onView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">withId</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">R</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">id</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">price_item</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">.</span><span style="color:#000">check</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">matches</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">isDisplayed</span><span style="color:#000;font-weight:bold">()))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#000">onView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">withText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Standard Rate&#34;</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">.</span><span style="color:#000">check</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">matches</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">isDisplayed</span><span style="color:#000;font-weight:bold">()))</span>
+</span></span></code></pre></div><p>These tests are simple and easy to understand. They&rsquo;re also less likely to be flaky than tests that use an abstraction library.</p>
+<h2 id="business-perspective">Business perspective</h2>
+<p>From a business perspective, there are several benefits to using simple UI tests:</p>
+<ul>
+<li><strong>Increased confidence:</strong> Simple tests give you more confidence that your app will work correctly.</li>
+<li><strong>Reduced maintenance costs:</strong> Simple tests are easier to maintain, which can save you time and money.</li>
+<li><strong>Improved developer productivity:</strong> Simple tests make it easier for developers to write and debug tests, which can improve their productivity.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>I believe that abstractions should be used sparingly in UI testing. Simple tests are always better than complex tests, and they offer several business benefits.</p>
+<p>If you&rsquo;re considering using an abstraction library for UI testing, I urge you to carefully weigh the pros and cons. In most cases, you&rsquo;ll be better off sticking with simple tests.</p>
+
+	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+  <li>
+    <a href="/blog/how-to-improve-integration-tests-by-using-mock-apis-to-avoid-scrolling/" aria-label="Previous - How to improve integration tests by using mock APIs to avoid scrolling" class="btn btn-primary"><span class="me-1">←</span>Previous</a>
+  </li>
+  <li>
+    <a href="/blog/avoid-using-ids-in-espresso-tests/" aria-label="Next - Avoid using IDs in Espresso tests" class="btn btn-primary">Next<span class="ms-1">→</span></a>
+  </li>
+</ul>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/jacek-marchwicki/blog" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2023 Jacek Marchwicki All Rights Reserved</span>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.bfefba6b7ccbf88710915ea7a0df9461124cad8959623d18119929418a2da080.js" integrity="sha256-v&#43;&#43;6a3zL&#43;IcQkV6noN&#43;UYRJMrYlZYj0YEZkpQYotoIA=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+});
+</script>
+  </body>
+</html>
