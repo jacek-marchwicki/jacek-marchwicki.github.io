@@ -15,6 +15,115 @@
     
     
     <item>
+      <title>Blog: Analytical Metrics for Programmers: How NOT to Use Data to Improve Efficiency</title>
+      <link>/blog/analytical-metrics-for-programmers-how-not-to-use-data-to-improve-efficiency/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/analytical-metrics-for-programmers-how-not-to-use-data-to-improve-efficiency/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/analytical-metrics-for-programmers-how-not-to-use-data-to-improve-efficiency/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_3185051_640x0_resize_q75_catmullrom.jpg" width="640" height="960"/>]]>
+        
+        &lt;p&gt;The business world has long appreciated analytical events as a source of information about what users are doing to optimize the sales process.&lt;/p&gt;
+&lt;p&gt;We want the business to take into account the company&amp;rsquo;s revenue when making decisions about product changes, in order to provide resources for further team and product development, as well as appropriate compensation for us.&lt;/p&gt;
+&lt;p&gt;But do we, as development teams, use analytical tools to optimize our software delivery process?&lt;/p&gt;
+&lt;p&gt;Of course, the priority for every programmer should be to achieve product metrics, but typical metrics focused on business goals do not help us find potential improvements in software delivery.&lt;/p&gt;
+&lt;p&gt;Just like for the business, revenue is the most important metric, but without skillfully dividing this metric into smaller ones, we will not be able to achieve this fundamental goal.&lt;/p&gt;
+&lt;h2 id=&#34;dividing-metrics-into-smaller-ones&#34;&gt;Dividing metrics into smaller ones&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s assume that we run an online store that sells shoes. Of course, we want revenue to be high, but this metric does not help us find potential areas to focus on. It only tells us whether things are good or bad. We need to divide this metric into smaller metrics, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The number of people visiting our website,&lt;/li&gt;
+&lt;li&gt;The number of people adding products to their cart,&lt;/li&gt;
+&lt;li&gt;The number of actual purchases made by the store,&lt;/li&gt;
+&lt;li&gt;The biggest costs we encounter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Only a divided metric will allow us to make decisions about the appropriate actions to effectively work towards achieving the overarching revenue metric.&lt;/p&gt;
+&lt;p&gt;If we see that very few people are visiting our website at all, we know that we need to focus on acquiring customers, because there is no point in improving the efficiency of the purchase process if hardly anyone is accessing our website.&lt;/p&gt;
+&lt;div class=&#34;td-card card border me-4&#34;&gt;
+&lt;div class=&#34;card-body&#34;&gt;
+    &lt;h5 class=&#34;card-title&#34;&gt;
+        💡 Note&lt;/h5&gt;
+    &lt;p class=&#34;card-text&#34;&gt;
+        
+Metrics allow us to identify problems and take the most beneficial actions for the business.
+&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;improving-metrics&#34;&gt;Improving metrics&lt;/h2&gt;
+&lt;p&gt;Great, we have identified the problem - few people are entering our website. The business creates a team responsible for increasing this metric.&lt;/p&gt;
+&lt;p&gt;The team works, introduces advertising. The team notices that the phrases &amp;ldquo;Elegant shoes&amp;rdquo; and &amp;ldquo;suit shoes&amp;rdquo; are the most clicked on and promotes them. The metric increases by 500% year over year, they pop the champagne, celebrate, and bonuses increase!&lt;/p&gt;
+&lt;p&gt;But something is not right. Although the number of people visiting the website has increased 25 times in two years, the number of people adding products to their cart has not significantly increased. Something must be wrong with the website, right?&lt;/p&gt;
+&lt;p&gt;It turns out that the sales team did not realize that the store sells sports shoes, not elegant ones, so the ads were ineffective.&lt;/p&gt;
+&lt;div class=&#34;td-card card border me-4&#34;&gt;
+&lt;div class=&#34;card-body&#34;&gt;
+    &lt;h5 class=&#34;card-title&#34;&gt;
+        💡 Note&lt;/h5&gt;
+    &lt;p class=&#34;card-text&#34;&gt;
+        
+Metrics do not exempt us from the obligation to think and make the right decisions. Metrics only give us deep knowledge about the problem.
+&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;short-term-action&#34;&gt;Short-term action&lt;/h2&gt;
+&lt;p&gt;A new CEO comes to the company and fires the team that allowed such inefficiency.&lt;/p&gt;
+&lt;p&gt;They hire new employees who work efficiently. The new CEO puts a lot of pressure on the team, which immediately achieves spectacular results.&lt;/p&gt;
+&lt;p&gt;Revenue increased fivefold in a matter of months and doubled again by the end of the year.&lt;/p&gt;
+&lt;p&gt;However, the following year does not bring improvement, but rather a decline. Experienced employees, under constant pressure, begin to leave the company in large numbers.&lt;/p&gt;
+&lt;p&gt;The company&amp;rsquo;s earnings start to decline because the CEO did not take into account employee satisfaction, which led to poor financial results.&lt;/p&gt;
+&lt;div class=&#34;td-card card border me-4&#34;&gt;
+&lt;div class=&#34;card-body&#34;&gt;
+    &lt;h5 class=&#34;card-title&#34;&gt;
+        💡 Note&lt;/h5&gt;
+    &lt;p class=&#34;card-text&#34;&gt;
+        
+Metrics should not be considered individually, without taking into account other metrics, especially employee satisfaction.
+&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;long-term-action&#34;&gt;Long-term action&lt;/h2&gt;
+&lt;p&gt;The CEO finally looks at the satisfaction metric and takes care of a better balance between work and personal life.&lt;/p&gt;
+&lt;p&gt;They introduce a better work culture, resulting in increased satisfaction and a halt in the decline of revenue. They make additional improvements in other teams, which allows for 10% year-over-year growth.&lt;/p&gt;
+&lt;p&gt;However, they did not notice changes in society, which caused stagnation in subsequent years and then a sharp decline. Classic sports shoes started to become obsolete, and customers focused on barefoot-type shoes.&lt;/p&gt;
+&lt;div class=&#34;td-card card border me-4&#34;&gt;
+&lt;div class=&#34;card-body&#34;&gt;
+    &lt;h5 class=&#34;card-title&#34;&gt;
+        💡 Note&lt;/h5&gt;
+    &lt;p class=&#34;card-text&#34;&gt;
+        
+Metrics cannot be considered without completely ignoring expert knowledge. They complement this knowledge with hard data.
+&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;However, tracking market trends allowed the company to correct its course and raise itself up before it fell.&lt;/p&gt;
+&lt;h2 id=&#34;what-did-it-give-us&#34;&gt;What did it give us?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Did the company make mistakes?&lt;/strong&gt; Yes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Would the company have achieved these results without metrics?&lt;/strong&gt; I don&amp;rsquo;t think so.&lt;/p&gt;
+&lt;p&gt;However, it must be remembered that we should not blindly pursue high metric indicators.&lt;/p&gt;
+&lt;div class=&#34;td-card card border me-4&#34;&gt;
+&lt;div class=&#34;card-body&#34;&gt;
+    &lt;h5 class=&#34;card-title&#34;&gt;
+        💡 Note&lt;/h5&gt;
+    &lt;p class=&#34;card-text&#34;&gt;
+        
+Our goal is never just to improve the metric itself. Analytics should deepen our understanding of the problem, help identify issues, and allow us to take actions to improve the efficiency of our work. It also allows us to analyze whether our actions are yielding results.
+&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;what-about-programmers&#34;&gt;What about programmers?&lt;/h2&gt;
+&lt;p&gt;Think about what metrics we, as programmers, should have in order to improve the efficiency of our work, just like business teams do.&lt;/p&gt;
+&lt;p&gt;If you want to count the number of lines of code written in a month, I strongly advise against it ;)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: When QA slows down your team</title>
       <link>/blog/when-qa-slows-down-your-team/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
