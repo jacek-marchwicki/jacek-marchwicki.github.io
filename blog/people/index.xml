@@ -1,636 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Developer Blog - Jacek Marchwicki – People Related Articles</title>
+    <title>People Related Articles on Developer Blog - Jacek Marchwicki</title>
     <link>/blog/people/</link>
     <description>Recent content in People Related Articles on Developer Blog - Jacek Marchwicki</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    
-	  <atom:link href="/blog/people/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
+    <atom:link href="/blog/people/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog: Focusing external teams’ members to resolve business needs</title>
+      <title>Focusing external teams’ members to resolve business needs</title>
       <link>/blog/focusing-external-teams-members-to-resolve-business-needs/</link>
       <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/blog/focusing-external-teams-members-to-resolve-business-needs/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/focusing-external-teams-members-to-resolve-business-needs/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_942701_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
-        
-        &lt;h1 id=&#34;cooperation-with-external-teams-is-good&#34;&gt;Cooperation with external teams is good&lt;/h1&gt;
-&lt;p&gt;As we work with various companies to address their business needs, we often collaborate with their internal engineering teams or other external teams to help their business grow. While such collaborations can provide great opportunities for the final business, we must be aware that they are not always as smooth as we would like. Some teams or individuals may lack experience, which can make achieving business needs more difficult. Rather than complaining, we are committed to taking action.&lt;/p&gt;
-&lt;h1 id=&#34;focus-on-business-needs&#34;&gt;Focus on business needs&lt;/h1&gt;
-&lt;p&gt;At AppUnite, we hire new engineers for our company. However, we often encounter situations where these engineers become so focused on engineering and perfecting their code that they forget why they were hired in the first place. Every engineer is employed to meet business needs of our clients. We constantly need to remind, convince and communicate with our engineers that resolving business problems is the most important part of their work. We acknowledge that even though many years have passed, we are still at the beginning of the journey. When we collaborate with external teams, we recognize that many of the external teams are far behind our knowledge.&lt;/p&gt;
-&lt;h1 id=&#34;focus-misalignment-of-the-external-engineer&#34;&gt;Focus misalignment of the external engineer&lt;/h1&gt;
-&lt;p&gt;A while back, I joined a fairly large team of engineers (50+) working on a platform. My objective was to quickly complete a small experimental product for the team&amp;rsquo;s larger software project. Naturally, in such a large team, it&amp;rsquo;s not reasonable to expect everyone to fully understand that their goal is only to resolve business needs. The problem arose primarily with one person who joined the company later and who persistently hindered my work, preventing me from completing the project. Let&amp;rsquo;s call him Tom.&lt;/p&gt;
-&lt;p&gt;Code review is the process of examining and evaluating code changes made by a developer to ensure they meet quality standards and best practices. During this review process, only Tom constantly requested very small and unimportant improvements in the code that he claimed would lead to &amp;ldquo;better code.&amp;rdquo; These improvements were mainly subjective and never added any value to the product. Moreover, striving for perfect code in this specific case did not make sense because the product was only an experiment that needed to be validated in the upcoming months. All of these improvements might be for naught if the experiment results are not good enough. What is most problematic is that every such &amp;ldquo;improvement&amp;rdquo; caused potential financial losses due to delays.&lt;/p&gt;
-&lt;p&gt;Of course, I could go to Tom&amp;rsquo;s team leader to ask for help in fixing the problem. However, transferring problems to others is not how we prefer to cooperate. We also want to maintain good relationships between team members.&lt;/p&gt;
-&lt;h1 id=&#34;how-did-we-focus-external-team-members-to-resolve-business-needs&#34;&gt;How did we focus external team members to resolve business needs?&lt;/h1&gt;
-&lt;h2 id=&#34;step-1&#34;&gt;Step #1&lt;/h2&gt;
-&lt;p&gt;I started a one-on-one conversation with Tom to ask why he thought a given change should be made and what value the change brought to the product. Mostly, I heard that the code would be &amp;ldquo;cleaner&amp;rdquo;, which is a very subjective metric. Tom also shared why a given change might be better, giving examples from such books as &amp;ldquo;Clean Code&amp;rdquo; by Robert C. Martin, which is, by the way, a great book about coding. However, these books that focus on improving coding skills only talk about tools and not what we should do to deliver business needs. Books about coding skills don’t provide guidance on which solution to choose in specific business situations.&lt;/p&gt;
-&lt;p&gt;I attempted to distill the benefits of the proposed &amp;ldquo;better code&amp;rdquo; in terms of meeting business needs. I asked Tom several clarifying questions, such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Me: &amp;ldquo;Why do you think it is worth changing this?&amp;rdquo; Tom: &amp;ldquo;Because it will improve the code.&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Me: &amp;ldquo;Why do you think the proposed solution is better for the business?&amp;rdquo; Tom: &amp;ldquo;Because it would be easier to maintain.&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In some circumstances, the answer &amp;ldquo;it would be easier to maintain&amp;rdquo; could be reasonable. However, it does not make sense for a four-month experiment that may be scrapped after validation.&lt;/p&gt;
-&lt;p&gt;I even asked Tom, &amp;ldquo;When do you stop improving your code?&amp;rdquo; and he answered, &amp;ldquo;When neither I nor my reviewers can see any potential improvements to be made.&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;At first, I had a humorous thought: &amp;ldquo;You don&amp;rsquo;t want me to find potential improvements in your code, because I&amp;rsquo;ll comment on every line and make suggestions that will take weeks to implement. And once you&amp;rsquo;ve finished implementing them, I&amp;rsquo;ll find even more potential improvements.&amp;rdquo; Of course, I didn&amp;rsquo;t share this joke. After chatting with Tom for a while, I realized that he was committed to Software Craftsmanship and striving for perfection. I suggested that not all of his suggestions needed to be implemented, and why it was so.&lt;/p&gt;
-&lt;h2 id=&#34;step-2&#34;&gt;Step #2&lt;/h2&gt;
-&lt;p&gt;Although explaining things during 1-on-1 sessions helped a little, it wasn&amp;rsquo;t enough. Tom was a skilled coder and could be valuable for the team, but I needed to invest more in helping him understand that coding wasn&amp;rsquo;t the only important aspect of software engineering. Our goal is to have great engineers, not just good coders. At AppUnite, we challenge our engineers to be aware of the business impact of their work. To that end, I prepared a document with advice to help Tom understand the business aspect of code reviews. This approach also helped to some extent.&lt;/p&gt;
-&lt;h2 id=&#34;step-3&#34;&gt;Step #3&lt;/h2&gt;
-&lt;p&gt;The next step was to meet as a team and discuss the issue of everyone not being on the same page when it comes to performing a great Code Review. I shared the document that I prepared for Tom with advice for the rest of the team, so we could have a base for discussion. Based on this document, we identified what needed to be fixed and what was excessive in our Code Review process. During the meeting, we prepared a document of Team Agreements on how to approach the Code Review process and what values should be taken into account.&lt;/p&gt;
-&lt;p&gt;To avoid causing arguments among employees, I refrained everyone from blaming anyone personally. Instead, I focused on identifying the team&amp;rsquo;s problems and finding solutions. Our AppUnite value is &amp;ldquo;Be a team player. We succeed and fail as a team&amp;rdquo;.&lt;/p&gt;
-&lt;h2 id=&#34;step-4&#34;&gt;Step #4&lt;/h2&gt;
-&lt;p&gt;In the end, the actions taken helped the person become a better software engineer. I also spoke with his leader about setting personal goals to help him improve on a daily basis.&lt;/p&gt;
-&lt;h1 id=&#34;outcome&#34;&gt;Outcome&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;The product was delivered more quickly.&lt;/li&gt;
-&lt;li&gt;The whole team improved their behavior by better focusing on business problems.&lt;/li&gt;
-&lt;li&gt;The relationship between team members was kept in the best shape.&lt;/li&gt;
-&lt;li&gt;The guy developed his skills.&lt;/li&gt;
-&lt;li&gt;The guidelines for how engineers should approach code review became an article on our website titled &lt;a href=&#34;/blog/code-review-team-agreements/&#34;&gt;Code Review - Team Agreements&lt;/a&gt;. This allows us to teach engineers how to be more business-aware.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you are looking for a team that can work well with your team, resolve problems and meet business needs, please feel free to &lt;a href=&#34;https://appunite.com/briefs&#34;&gt;contact us&lt;/a&gt;. We will do our best to help!&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/focusing-external-teams-members-to-resolve-business-needs&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-      </description>
+      <description>The article discusses the importance of focusing on business needs when collaborating with external teams. The author shares an example where an external engineer&amp;rsquo;s focus on perfecting code was hindering progress, and describes the steps taken to align the engineer&amp;rsquo;s focus with the project&amp;rsquo;s business needs. The outcome was improved productivity, better team behavior, and guidelines for more business-aware practices.</description>
     </item>
-    
     <item>
-      <title>Blog: Improving App Stability: A Proactive Approach to Overcoming External Constraints</title>
+      <title>Improving App Stability: A Proactive Approach to Overcoming External Constraints</title>
       <link>/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints/featured-title_hu3d03a01dcc18bc5be0e67db3d8d209a6_2063608_640x0_resize_q75_catmullrom.jpg" width="640" height="800"/>]]>
-        
-        &lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Many technological companies focus on best practices but don&amp;rsquo;t consider the constraints they face. I&amp;rsquo;ve often heard that external factors are hard to overcome, such as backend developers complaining that backend servers are unstable, the team being too small, or the external team being unresponsive.&lt;/p&gt;
-&lt;p&gt;We read many articles about providing feedback that mentions how important it is to talk about these problems, and we should do that. But after the feedback, not everything will be fixed by others instantly. Some external factors are not as easy to solve, need time to be fixed, or are too expensive to change. For example, a company may have signed a three-year contract for backend servers, and it would be too expensive to change the provider. The product may still need to earn more money to allow the team to be scaled up. The external team we&amp;rsquo;re related to may have other blockers that cause them to work ineffectively. All those things should indeed be improved, but not all at once. The fact that others have something to improve shouldn&amp;rsquo;t stop us from achieving our business goals. I want to present a simple example to help you understand how we can achieve our business goal in a constrained world.&lt;/p&gt;
-&lt;h1 id=&#34;example-of-proactive-approach&#34;&gt;Example of Proactive Approach&lt;/h1&gt;
-&lt;p&gt;Recently, we were tasked with improving the stability of a mobile application for one of our clients while a separate team was responsible for the backend servers.&lt;/p&gt;
-&lt;p&gt;Upon taking on this project, it became clear that the previous software house responsible for the mobile app development had struggled to improve the app&amp;rsquo;s stability due to the poor backend stability that an external team was responsible for. While the production backend environments were stable, the development environment had numerous stability issues. Note that the production environment could not be used for most of the development due to reasonable security strategies. As a result, there were many days in a row where backend servers weren&amp;rsquo;t available for mobile developers.&lt;/p&gt;
-&lt;p&gt;As we got to know, the previous team noticed the client many times that the backend server stabilities caused their delays and problems.&lt;/p&gt;
-&lt;h1 id=&#34;clarifying-the-problem&#34;&gt;Clarifying the problem&lt;/h1&gt;
-&lt;p&gt;Firstly, we want to ensure that everyone is aware of how important the problem is. Just saying, &amp;ldquo;something is bad&amp;rdquo; or &amp;ldquo;slows us down&amp;rdquo; is not enough for businesses to make the right decisions. We want to be specific. We&amp;rsquo;ve prepared simple tools that could generate reports on how frequently those backend servers are down and how many hours a day the team is blocked from doing the actual work. Furthermore, we tried to be as precise as possible, so we could calculate how many developer hours were lost and how much money our client lost daily. This analytical approach helped us understand the importance of the problem. Moreover, other teams related to those backend servers were also blocked by those backend servers. Our reports led to a change in priorities for the backend server teams.&lt;/p&gt;
-&lt;h1 id=&#34;living-in-constraints&#34;&gt;Living in constraints&lt;/h1&gt;
-&lt;p&gt;After clarifying the problem, I could say, &amp;ldquo;they lived happily ever after,&amp;rdquo; but it&amp;rsquo;s not true in real-life scenarios. We still live in constraints, where some problems aren&amp;rsquo;t resolved in minutes by external factors. The backend team shifted their responsibilities, but tech debt couldn&amp;rsquo;t be fixed right away, and their team was also constrained by external software that couldn&amp;rsquo;t be replaced sooner than in a few years. We understand that improving the development environment would be a complex task, and our business goal is to improve the app&amp;rsquo;s stability within the constraints that we&amp;rsquo;re living in.&lt;/p&gt;
-&lt;h1 id=&#34;overcoming-constraints&#34;&gt;Overcoming constraints&lt;/h1&gt;
-&lt;h2 id=&#34;stage-1&#34;&gt;Stage 1&lt;/h2&gt;
-&lt;p&gt;To ensure app stability and identify the source of any errors, we introduced a test set that could be run in integration or end-to-end mode. If a test failed with the real backend but succeeded with a fake backend implementation, we could be sure that the problem could be reported to the correct team.&lt;/p&gt;
-&lt;h2 id=&#34;stage-2&#34;&gt;Stage 2&lt;/h2&gt;
-&lt;p&gt;To provide detailed information to the backend team and help them identify problems faster, we created automatic reports that included information on failed scenarios, requests made, and responses given by the backend.&lt;/p&gt;
-&lt;h2 id=&#34;stage-3&#34;&gt;Stage 3&lt;/h2&gt;
-&lt;p&gt;To ensure that data returned by the backend is always correct, we added additional validation to backend server responses. Any failure response was reported with detailed information for further investigation, which helped identify more problems, including those in the production environment.&lt;/p&gt;
-&lt;h2 id=&#34;stage-4&#34;&gt;Stage 4&lt;/h2&gt;
-&lt;p&gt;To expedite the resolution of critical backend problems, we agreed to move some of the backend server logic to the mobile app. This helped improve the API stability and enabled faster fixes.&lt;/p&gt;
-&lt;h2 id=&#34;stage-5&#34;&gt;Stage 5&lt;/h2&gt;
-&lt;p&gt;To minimize the impact of ongoing backend development work on our app development, we set up fake servers on our side. This allowed us to continue working on the app even when the backend was down.&lt;/p&gt;
-&lt;h1 id=&#34;outcome&#34;&gt;Outcome&lt;/h1&gt;
-&lt;p&gt;Some may argue that investing more in backend development would have been the better course of action, but the team had trouble employing new developers. Improving the app&amp;rsquo;s stability was our goal, and we achieved it by taking proactive steps to address problems within the constraints that existed in our work. By collaborating with our client and adopting a creative approach, we improved user satisfaction with the product and increased the app&amp;rsquo;s star rating from 2.3 to 4.4.&lt;/p&gt;
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;Our approach demonstrated the importance of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;giving feedback to resolve external constraints&lt;/li&gt;
-&lt;li&gt;using analytical data to help stakeholders understand the importance of the problem&lt;/li&gt;
-&lt;li&gt;accepting constraints and trying to find workarounds&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;By following these steps, you&amp;rsquo;ll be able to deliver results that meet your business needs. If you&amp;rsquo;re looking for a team that resolves problems instead of merely complaining, &lt;a href=&#34;https://appunite.com/briefs&#34;&gt;feel free to contact us&lt;/a&gt;. We&amp;rsquo;ll do our best to help!&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/improving-app-stability-a-proactive-approach-to-overcoming-external-constraints&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-      </description>
+      <description>This article is about taking a proactive approach to improving app stability by addressing external constraints that can hinder development efforts. The author emphasizes the importance of specificity in identifying problems and using analytical tools to calculate the impact of those problems on business goals. The article provides a real-life example of how a team improved app stability within the constraints of external factors, such as an unstable backend server, by taking a creative and collaborative approach to problem-solving.</description>
     </item>
-    
     <item>
-      <title>Blog: Code Review - Team Agreements</title>
+      <title>Code Review - Team Agreements</title>
       <link>/blog/code-review-team-agreements/</link>
       <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/blog/code-review-team-agreements/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/code-review-team-agreements/featured-title_hub6f1959e67645bdac8866f17e477a22e_2009595_640x0_resize_q75_catmullrom.jpg" width="640" height="427"/>]]>
-        
-        &lt;p&gt;I’d like your team to work as efficiently as possible and review can be of great help in this. It allows you to find errors and potential problems at the very early stage of the development. What’s more, it enables developers to share knowledge. On the other hand, it can be a real pain when it slows down the development process. What’s most important, however, is the impact code review has on business, as business is what allows us to do what we do best - create great software.&lt;/p&gt;
-&lt;p&gt;Therefore, I’d like to take a closer look at the business benefits of correcting code (after review):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If the code is flawed, we won’t introduce the bug into the system - we eliminate potential business loss.&lt;/li&gt;
-&lt;li&gt;If we improve the readability of very bad code, we can be sure that after someone else (or the same person) takes it over, they won’t introduce more bugs and will apply the change quicker - we minimize the costs of labor and eliminate potential business loss.&lt;/li&gt;
-&lt;li&gt;We get the chance to look for bugs and fix them sooner, when it is easier than after, let’s say, a month - we minimize labor costs.&lt;/li&gt;
-&lt;li&gt;Developers learn new approaches to software development, which may lead to faster delivery - beneficial for the business in the long term.&lt;/li&gt;
-&lt;li&gt;Mitigating so-called Bus Factor - minimizes business risks.&lt;/li&gt;
-&lt;li&gt;We can avoid making the same mistakes over and over - we eliminate potential business loss.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;On the other hand, negative business consequences of correcting code could be as follows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The developer that creates new code needs to switch to bug fixing - certain added labor costs.&lt;/li&gt;
-&lt;li&gt;The developer that creates the code needs to implement the fix. Applying the change alone takes some time and the fix itself might not necessarily bring any material benefits - added costs of the fix.&lt;/li&gt;
-&lt;li&gt;The developer, when implementing a fix, needs to rerun the app and perform regression tests. This can be time-consuming - possible business losses.&lt;/li&gt;
-&lt;li&gt;New bugs might be introduced while fixing the existing ones - possible business losses.&lt;/li&gt;
-&lt;li&gt;The developer needs to run CI build, wait for the results and, in the case of unstable development environments, it may turn out that they need to wait for the server to respond - added costs of labor and running CI.&lt;/li&gt;
-&lt;li&gt;The reviewers must take another look at the fix, even if it’s a minor change - they need to switch the context from the current task to review proofing and back - added labor costs.&lt;/li&gt;
-&lt;li&gt;Delay in delivery - risk of delay in implementing the change.&lt;/li&gt;
-&lt;li&gt;We might get stuck in a vicious circle of constant fixing - there’s a business risk that the product will never be launched.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These negative consequences are not as trivial as they may seem. A tiny fix, e.g. “changing the name of the method” does not take 5 minutes, as many tend to think, but even hours of work (switching the context, the need for retesting and regression, waiting for CI, waiting for review, reviewer needing to take yet another look at the code etc.).&lt;/p&gt;
-&lt;p&gt;Our obligation as employees is taking into account what’s most beneficial from the business perspective and optimizing the review process is no exception.&lt;/p&gt;
-&lt;p&gt;This is why I’d like to share with you a list of things that your team might find worth implementing in the code review process:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;When you prepare a PR, make sure that the reviewer gets to know the business requirements behind your change. When you do review, make sure that you understand the business requirements behind the changes you&amp;rsquo;re reviewing.&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Reject a change only if the PR contains a major bug or something else that may cause serious problems in the future.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Minor inconsistencies within the PR should be tagged as “suggestion” so that the owner knows that they can, but don’t have to apply a given change (&lt;a href=&#34;https://conventionalcomments.org/&#34;&gt;conventional comments&lt;/a&gt;).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Own opinions regarding the code should be tagged as “opinion” - this way, you can share your thoughts without forcing their implementation, respecting the right of others to have their own views.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If we only add suggestions to a given PR, we need to approve it, so that the PR owner can decide whether it’s worth applying the changes from the business perspective.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Suggestions that do not get implemented are still valuable as learning material - they make us pay more attention to our mistakes going forward.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;It’s important to understand that not implementing a suggestion is not a bad thing. It may make sense from a business standpoint, if it eliminates some of the negative consequences of code review mentioned above.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Keep in mind that we don’t have to agree with every little note. Bugs should have the highest priority.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;During code review, assume good intentions of the PR author and comment author. However, if there is a major disagreement, remember that ultimately, the code is not owned by the PR author or comment author - it is owned by the team. And that’s precisely why you should discuss such differences of opinion as a team - in order not to waste time on this specific matter in the future.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Learn from your colleagues’ experience. If a colleague makes a comment about your work, make use of their experience and try to understand their suggestions and opinions, even if they don’t match your own. This is particularly important if you’re still learning, and the colleague already has a lot of experience. If you’re a newbie and you still don’t understand many things, it’s worth getting on board with the suggestions and opinions of the experienced colleague.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A bug does not have to be a blocker. The product team may understand and accept it as a temporary or permanent limitation. I’d like to add that such limitations should be documented. And if they are supposed to be fixed in the future, it should be scheduled.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;During review, ask questions tagged as “questions”. It’s better to ask “Did you test this or that?” instead of having a bug pop up in production. If you get a basic question like that, do not get offended. It might be obvious to you, but it’s probably better that the asker makes sure that everything is covered. Even the best of us sometimes forget things.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The quality of the code is important - no doubts about that - but do not strive for perfection. Ultimately, the app user wants the code to work, not look beautiful. What’s crucial is just for the code not to slow down development in the future.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The fact that the author of the change has approval for merging it does not mean that they have to merge it. They can still make improvements - bear in mind, however, their negative consequences mentioned above.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If your PR is not completed or needs to be revisited for some reason or another, mark it, so that others know what is ready for review and what is not. You can do it by changing the PR into a draft.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When you create a pull request, you should have confidence in your change. It should be tested and working. If you’re dealing with a new subject area or you’re not sure how exactly to test something, mark it in the PR to get help.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you think that your solution is shaky or you need help, prepare a draft PR as soon as possible and ask someone for an initial review to get assistance right away. You can also treat the PR as an asynchronous version of pair programming.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Code review can also be used for proposing changes, like I described in Proposing architectural changes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I hope that the above tips will help you and your team establish the best possible rules for code review. It’s best to put them down as Team Agreements/Working Agreements. You can also link this article directly in your Team Agreements.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Check out these AppUnite’s articles on review too:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://appunite.com/blog/is-code-review-harmful&#34;&gt;Is code review harfmul?&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://appunite.com/blog/code-review-best-practices&#34;&gt;Code review best practices.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/code-review-team-agreements&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-      </description>
+      <description>Countless words have been written on why code review is good for the code of the app. But if during code review you focus solely on code, you’re doing it wrong.</description>
     </item>
-    
     <item>
-      <title>Blog: Optimizing Cooperation</title>
+      <title>Optimizing Cooperation</title>
       <link>/blog/optimizing-cooperation/</link>
       <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/blog/optimizing-cooperation/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/optimizing-cooperation/featured-title_hub0191c4dc973570f3b55c37836574ab6_1642638_640x0_resize_q75_catmullrom.jpg" width="640" height="853"/>]]>
-        
-        &lt;p&gt;As developers, we often get frustrated with non-coding factors such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The fact that we have to wait for others to finish their tasks before we can move on with ours.&lt;/li&gt;
-&lt;li&gt;The fact that Business keeps asking questions about what has been done or what is delivered to our clients.&lt;/li&gt;
-&lt;li&gt;QAs reporting bugs, but not providing enough information for their successful location and resolution,&lt;/li&gt;
-&lt;li&gt;External services being poorly designed and faulty, which causes our app to behave incorrectly.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;As developers, we tend to focus on improving our coding skills to finish tasks and deliver our share of the work as quickly as possible. But once we go higher than the intern level, coding becomes only a small part of our job, which is why we should focus on finding solutions to the problems related to cooperation with others.&lt;/p&gt;
-&lt;p&gt;We ourselves should be able and willing to fix our problems, managers surely have their own. If you feel frustrated by something, it’s a sign that you should take action. I’d like to show you that you have the power to make your company more efficient.&lt;/p&gt;
-&lt;h1 id=&#34;lets-take-a-look-at-some-examples&#34;&gt;Let’s take a look at some examples&lt;/h1&gt;
-&lt;p&gt;You don’t need to go through all of the following case studies. They just go to show that there is always a way for you to improve teamwork:&lt;/p&gt;
-&lt;p&gt;** You’re frustrated that the QA reports bugs, but doesn’t provide enough information for them to be found and resolved.**&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;You can simply ask the QA to provide more information every time they fill a ticket. Explain to them that video recording of the reproduction will save your time and answer the questions you tend to ask them over and over. Suggest a video recording solution that is easy to use. This is a win-win - they won’t be bombarded with questions and you’ll get the information you need right away. But don’t be greedy, don’t overwhelm them.&lt;/li&gt;
-&lt;li&gt;Help QAs learn how to use a proxy that records requests and responses so they can share the log with back-end developers without bothering the front end.&lt;/li&gt;
-&lt;li&gt;Provide a tool within your app that can make reporting bugs by QAs easier while ensuring that all the information needed (logs, request history, information on the logged-in user, current settings, etc.) is there.&lt;/li&gt;
-&lt;li&gt;Improve logging mechanism to enable extracting back-end logs related to a given crash by user ID that is always provided by a QA in a bug ticket.&lt;/li&gt;
-&lt;li&gt;You can also create a bug report template.&lt;/li&gt;
-&lt;li&gt;You might want to consider putting more effort in testing the app in the early stages so that it becomes more stable.&lt;/li&gt;
-&lt;li&gt;Take into account using your analytics events and getting analytics traces for a given bug session.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;** Business keeps asking questions about what has been done or what is delivered to our clients.**&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;First of all, you can ask yourself and them what they need such information for.&lt;/li&gt;
-&lt;li&gt;If, for example, JIRA is out of sync and tasks are not well described, Business might not be able to understand what is going on. Maybe it’s time to improve task management.&lt;/li&gt;
-&lt;li&gt;Maybe it’s time for you to prepare release notes for Business.&lt;/li&gt;
-&lt;li&gt;Organize a weekly demo meeting for the client to show them what has been done. If you prefer more async work, you can record videos and post them on Slack.&lt;/li&gt;
-&lt;li&gt;It might be worth automating something. There are great tools out there to help you with this (e.g. &lt;a href=&#34;https://github.com/marketplace/actions/jira-release-notes&#34;&gt;jira-release-notes&lt;/a&gt;, &lt;a href=&#34;https://github.com/marketplace/actions/jira-changelog&#34;&gt;jira-changelog&lt;/a&gt;, &lt;a href=&#34;https://github.com/marketplace/actions/slack-notify&#34;&gt;slack-notify&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;It might be worth walking the Business team through JIRA and teaching them how to get the necessary information by themselves.&lt;/li&gt;
-&lt;li&gt;The Business team may be unfamiliar with the technical stuff. In such a case, you should take time to describe the technical part of the process to them.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Code review takes a lot of time.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Consider creating smaller PRs so that the reviewers’ work is easier.&lt;/li&gt;
-&lt;li&gt;Try to describe your PR better so that the reviewer needs less time to understand what you’ve done.&lt;/li&gt;
-&lt;li&gt;Ask for teammates’ review directly.&lt;/li&gt;
-&lt;li&gt;Help others create notifications for incoming reviews.&lt;/li&gt;
-&lt;li&gt;Help your teammates understand why it’s important to review the code quickly.&lt;/li&gt;
-&lt;li&gt;Give positive feedback when someone reviews your code.&lt;/li&gt;
-&lt;li&gt;Create a small script that counts reviews during the retro and recognizes people who do review.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;We keep getting requirements that are very hard to meet.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Ask for changing the requirements.&lt;/li&gt;
-&lt;li&gt;Take some of the time assigned to the current tasks and devote it to cooperation with Business/UX/UI teams that work on future projects. This way, you might convince them to adjust the requirements to what&amp;rsquo;s faster and easier to deliver.&lt;/li&gt;
-&lt;li&gt;Ask if you can join the conceptual process of the Business team.&lt;/li&gt;
-&lt;li&gt;Implement a good test suite so that changes are easier to implement.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;The back-end team implemented an API that is hard to use (a.k.a. the front-end team keeps asking for changes in the already implemented API)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Always have front- and back-end developers working together on designing the API. Enforce the rule that API needs to be discussed with all the API consumers at the same time (e.g. front-end, mobile Android, mobile iOS, etc.).&lt;/li&gt;
-&lt;li&gt;Document the new API (or API change) somewhere and get sign-off from the back- and front-end teams before implementing it.&lt;/li&gt;
-&lt;li&gt;Start working on the point of contact (API documentation) before implementing your own code. Fence your garden before planting the trees.&lt;/li&gt;
-&lt;li&gt;Document the API in Swagger, store it on Git, and do cross-platform PRs whenever you change something.&lt;/li&gt;
-&lt;li&gt;If the API was implemented incorrectly, organize a retro to understand what has been done wrong and what can be improved next time.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;The analytics team keeps asking what clicking a certain button triggers.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Create good documentation together with the analytics team, so they won’t need to bother you.&lt;/li&gt;
-&lt;li&gt;Set the rules for who is responsible for creating and updating the analytics document - the person in charge can be either a developer or an analyst.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Front-end developers keep asking how endpoints work and make incorrect queries.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Create documentation for the API.&lt;/li&gt;
-&lt;li&gt;Validate requests: instead of returning 5xx error, provide descriptive information on what has gone wrong.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Our teammates constantly forget about the localization.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Create a checklist to be followed before filling a PR.&lt;/li&gt;
-&lt;li&gt;Ensure that the QA verifies the localization.&lt;/li&gt;
-&lt;li&gt;Add a &lt;a href=&#34;https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository&#34;&gt;pull-request github template&lt;/a&gt; with the checklist mentioned above (&lt;a href=&#34;https://github.com/flutter/flutter/blob/master/.github/PULL_REQUEST_TEMPLATE.md&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Use a github action that verifies if the checklist points are checked (e.g. &lt;a href=&#34;https://github.com/marketplace/actions/require-checklist&#34;&gt;Require Checklist · Actions · GitHub Marketplace&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Set up a lint rule that will verify whether everything’s translated.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;The front-end team can’t start their work because the back end hasn’t finished their part.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What you can do:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Start by documenting the API with the back- and front-end teams so that the front end can begin their work. Focus also on example responses. &lt;a href=&#34;https://swagger.io/&#34;&gt;Swagger&lt;/a&gt; is a good starting point for API documentation.&lt;/li&gt;
-&lt;li&gt;Ask the back-end team for fake responses instead of real-life ones.&lt;/li&gt;
-&lt;li&gt;You yourself can create fakes for the front-end team using a proxy (e.g., mitmproxy) or create mocks in the code.&lt;/li&gt;
-&lt;li&gt;Do TDD (test-driven development) and implement tests using mock API.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;Those are not invented examples, those are things that I’ve dealt with in the past when I was employed as a developer. We usually assume that we can’t change something. I hope that my case studies made you realize that you can always take initiative and change your project for the better.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/optimizing-cooperation&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-      </description>
+      <description>For developers, non-coding factors that are not directly related to their work are often a source of frustration. I’d like to show you that you have the power to make your company more efficient.</description>
     </item>
-    
     <item>
-      <title>Blog: Proposing architectural changes</title>
+      <title>Proposing architectural changes</title>
       <link>/blog/proposing-architectural-changes/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>/blog/proposing-architectural-changes/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/proposing-architectural-changes/featured-title_hu9971227f742e035beb96d5a7bf213881_4759552_640x0_resize_q75_catmullrom.jpg" width="640" height="929"/>]]>
-        
-        &lt;p&gt;We all know that introducing a change in a team that numbers more than several developers is always challenging. However, if you follow the advice I present below, you can make things much easier for yourself. You should ensure that everyone understands what is going to be changed, why and how. You need to ensure that the change won’t be a burden for others. And, last but not least, you’d like everyone to be excited about the change. I’m going to explain our process for introducing architectural both minor and major changes.&lt;/p&gt;
-&lt;p&gt;What kind of changes are we talking about? Here are some examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Refactoring the app from MVC to MVVM,&lt;/li&gt;
-&lt;li&gt;Finding a better library for displaying maps,&lt;/li&gt;
-&lt;li&gt;Changing the database,&lt;/li&gt;
-&lt;li&gt;Changing the file structure in git,&lt;/li&gt;
-&lt;li&gt;Improving test coverage,&lt;/li&gt;
-&lt;li&gt;Finding if a given framework feature is going to be a solution to the problems your team is facing,&lt;/li&gt;
-&lt;li&gt;Checking if an innovative idea can be implemented,&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;before-you-start&#34;&gt;Before you start&lt;/h1&gt;
-&lt;p&gt;Before you start researching a subject, you should take around 15 minutes to go over your reasons for the change and the expected result of the research. Creating documentation would be the essential output of your work, but you may also consider creating a Proof of Concept to ensure that the proposed solution is doable.&lt;/p&gt;
-&lt;h1 id=&#34;planning&#34;&gt;Planning&lt;/h1&gt;
-&lt;p&gt;The next stage of preparation is where your team takes over and schedules appropriate research. Your task is to describe the reasons for researching your idea and the expected results of such groundwork.&lt;/p&gt;
-&lt;p&gt;You should also estimate the amount of time necessary to complete the research.&lt;/p&gt;
-&lt;p&gt;What we do is this: we create tickets in our task management software that we call “SPIKEs“. We estimate and schedule them during sprint planning - the same way as with every other feature. The difference is that what we get at the end of such a SPIKE is documentation rather than a feature. Bear in mind that we’re talking about ideas, and those can be wrong. The output may be a document that describes why something was a bad idea.&lt;/p&gt;
-&lt;h1 id=&#34;where-to-document&#34;&gt;Where to document&lt;/h1&gt;
-&lt;p&gt;We document our proposals as RFC (Request For Comments) documents in the git repository of the project, but it’s not the only way. You can use Google Docs, Notion, Confluence, Git Repository or a different place, just keep in mind the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Review&lt;/strong&gt; - the tool that you are going to use should allow all team members to review the change. This means commenting, adding suggestions and opinions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Collaboration&lt;/strong&gt; - it is common that a SPIKE needs to be carried out by more than one person. It’s great if your tool supports that.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Archiving&lt;/strong&gt; - even after the change is accepted, it’s good to keep the document as a reference for the current team and for future employees. Such an accepted document is frequently called Architecture Decision Record (ADR).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Possibility of creating templates&lt;/strong&gt; - it will be easier for the team to propose changes, if they have a template for suggesting them. That way, people can raise and solve any important issues. It’s good if your tool allows for creating such a template.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;what-to-document&#34;&gt;What to document&lt;/h1&gt;
-&lt;p&gt;When creating an RFC document, you should consider documenting the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Start date&lt;/strong&gt; - information when you have started working on the documentation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Motive&lt;/strong&gt; - you need to think about the benefit from the product perspective; if there are no such benefits, then the changes are unnecessary.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Description of the proposed solution&lt;/strong&gt; - even though the main goal of the task is to create documentation, consider developing a PoC (Proof of concept), so the document is not only theoretical, but implementable. If the scope of the RFC is very limited, you can include in it the change itself.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Drawbacks&lt;/strong&gt; - try to find as many problems with the solution as you can, then list them.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Drawbacks of alternative ideas&lt;/strong&gt; - try to find alternative solutions, then list them together with their drawbacks, too. Also, consider what will happen if you keep things as they are (without introducing the change).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links to external documentation&lt;/strong&gt; - usually, your team is not as familiar with the solution as you are. Consider adding links to useful documentation to help your colleagues understand what you are proposing.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Can it be implemented in small steps?&lt;/strong&gt; - consider whether you can migrate in steps rather than in one giant leap. Introducing a change should not disrupt product development, that’s counter-productive. Substantial changes can be tricky in terms of resolving conflicts. It is almost always safer to introduce them step by step, unless they are truly minor fixes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Effort necessary to implement the change&lt;/strong&gt; - consider how much time you’ll need to introduce the change, to maintain it and to train the team as appropriate.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Needless to say, it’s best if the template is accessible for everyone, so that anyone can take initiative.&lt;/p&gt;
-&lt;h1 id=&#34;reviewing&#34;&gt;Reviewing&lt;/h1&gt;
-&lt;p&gt;Once we have the document clarifying why and how we’re going to introduce the change, it’s important to share it and collect feedback.&lt;/p&gt;
-&lt;p&gt;It’s entirely up to you whether you share the document asynchronously or hold a conference to present it. What’s important is to get feedback.
-You might not like what others have to say about your idea, but try to be open to suggestions and even people rejecting it. Be humble. Everyone has a different background and expertise - that’s why each of us brings something valuable to the table.&lt;/p&gt;
-&lt;p&gt;Product/business team should usually be informed about the benefits and be included in the decision-making process.&lt;/p&gt;
-&lt;p&gt;After you get initial feedback, your team needs to decide whether the change is worth introducing. You might postpone the decision because, for example, now is not the right time to implement the solution. The team doesn&amp;rsquo;t have to be unanimous, but if the majority decides that the approach in question is worthwhile, you ultimately need to get everyone on board. Some people might have to compromise. After all, you are a team, ‘each to their own’ attitude won’t cut it. Once the document is approved, everyone needs to follow the decision.&lt;/p&gt;
-&lt;h1 id=&#34;introducing-the-change&#34;&gt;Introducing the change&lt;/h1&gt;
-&lt;p&gt;Once everyone is on board, you should plan the implementation. After the documentation is created, people can make use of it and introduce the change following the usual process: split, prioritize, implement.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/proposing-architectural-changes&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-      </description>
+      <description>It’s not easy to introduce changes in a team that numbers more than just a few developers. You should ensure that everyone understands what is going to be changed, why and how. I’d like to guide you on how you can make this process as painless as possible.</description>
     </item>
-    
     <item>
-      <title>Blog: The Problem of Knowledge Sharing</title>
+      <title>The Problem of Knowledge Sharing</title>
       <link>/blog/the-problem-of-knowledge-sharing/</link>
       <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>/blog/the-problem-of-knowledge-sharing/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/the-problem-of-knowledge-sharing/featured-title_huca0cb330c90d8b25d3d6924d67466d86_1060687_640x0_resize_q75_catmullrom.jpg" width="640" height="480"/>]]>
-        
-        &lt;p&gt;The rules of knowledge sharing are similar to those of a marketplace, where both sides must be willing to buy or sell at the same time. For knowledge sharing to occur, someone who has knowledge is required - let’s call them a knowledge donor. On the other side, we need someone who wants to acquire this knowledge - a knowledge recipient, if you will. Of course, we can imagine a situation in which someone learns by themselves, through experience. I don&amp;rsquo;t want to cover this aspect of knowledge acquisition, and while it is equally important, I will ignore it in this article.&lt;/p&gt;
-&lt;p&gt;The presence of a donor and a recipient is a prerequisite for knowledge sharing, but it’s not the only one. For most people, it is obvious that the donor must have knowledge to share and must be willing to share it. On the other hand, the recipient must be in need of this specific knowledge and must be willing to acquire it from the donor.&lt;/p&gt;
-&lt;p&gt;This can be illustrated as follows:&lt;/p&gt;
-
-
-
-
-
-&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/the-problem-of-knowledge-sharing/knowledge-exchange-en.svg&#34; width=&#34;600&#34; height=&#34;460&#34; alt=&#34;Diagram of knowledge sharing flow&#34;&gt;
-	
-	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;Diagram of knowledge sharing flow&lt;/p&gt;
-	&lt;/div&gt;
-	
-&lt;/div&gt;
-&lt;p&gt;In a business context, things are obviously more complex, as there are no clear boundaries between the individual roles and the learner is also a teacher. Interactions between employees introduce additional fluctuations, too. You could say that the diagram above is pretty basic, and I could illustrate my idea using the example of writing and reading of articles or holding conferences for teams. Believe me, it would only further cloud the simple concept of knowledge sharing. Besides, my simple diagram encompasses all these complex situations.&lt;/p&gt;
-&lt;p&gt;For example, it shows that an experienced employee might well be willing to share their knowledge, but if an inexperienced intern believes they have all the answers and refuses to learn from an old fart, there will be no exchange (the donor has knowledge, the donor wants to share it, the recipient needs this knowledge, but the recipient does not want to acquire it).&lt;/p&gt;
-&lt;p&gt;Another example: an experienced employee wants to learn and takes part in a conference to fulfill this ambition, yet the level of the knowledge shared at the event is too low or the subject area inadequate (the donor - the speaker - has knowledge, the donor wants to share it, the recipient wants to acquire this knowledge, but the recipient doesn’t need it).&lt;/p&gt;
-&lt;p&gt;For knowledge exchange to be possible and effective, we need to get as close to a “yes” as possible for each factor. What’s worth noting is that it’s not a binary system - each factor refers to a certain spectrum and it is up to the organization, leaders, supervisors and employees to influence their position within it.&lt;/p&gt;
-&lt;p&gt;Sometimes employees might not want to share their knowledge or might not want to acquire it. For example, employees may think that they don’t have time for knowledge sharing or that it’s not expected from them. (Actions needed to improve levels 2 and 3.)&lt;/p&gt;
-&lt;p&gt;Donors may have skills to share, but no knowledge on how to pass them on. (Actions needed to improve level 2.)&lt;/p&gt;
-&lt;p&gt;On the other hand, donors might wrongly believe that they have all the answers, while in reality they still have a lot to learn from other employees. (Actions needed to improve level 3.)&lt;/p&gt;
-&lt;p&gt;I’d like to point out that even a utopian exchange between employees has its limits, as knowledge sharing in itself restricts level 4 - eventually, everyone will learn from others everything there was to learn. In such a case, it is necessary to act on improving level 1.&lt;/p&gt;
-&lt;p&gt;The goal of this article is not to offer ready-to-implement solutions, but to offer a different angle. Considering which level it’d be best to work on could really pay off. I believe that the perspective I’ve presented here might help you find tailored solutions more effectively than a ready-made fix.&lt;/p&gt;
-&lt;p&gt;Your homework - decide which level needs action the most in your organization and… act!&lt;/p&gt;
-&lt;p&gt;This article was originally published at &lt;a href=&#34;https://appunite.com/blog/the-problem-of-knowledge-sharing&#34;&gt;AppUnite.com&lt;/a&gt;.&lt;/p&gt;
-
-      </description>
+      <description>Many good articles mention the fact that modern business is based on knowledge sharing. Countless organizations implement systems that are supposed to make it easier. I’d like to follow this trend and show you my own, slightly different take on knowledge sharing, to help you optimize solutions within your environment.</description>
     </item>
-    
     <item>
-      <title>Blog: Don&#39;t be fooled by knowledge shared in this self-development article</title>
+      <title>Don&#39;t be fooled by knowledge shared in this self-development article</title>
       <link>/blog/dont-be-fooled-by-knowledge-shared-in-this-self-development-article/</link>
       <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>/blog/dont-be-fooled-by-knowledge-shared-in-this-self-development-article/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/dont-be-fooled-by-knowledge-shared-in-this-self-development-article/featured-title_hu64a54b75296d52d5d13954800adab976_8479918_640x0_resize_q75_catmullrom.jpg" width="640" height="960"/>]]>
-        
-        &lt;p&gt;You have started reading this article, but you shouldn’t trust the knowledge that I’m sharing with you. When you read an article, you don’t know who the person that has written it really is. Of course, you can read that I have almost 10 years of experience in leading developers, but how do you know whether my leadership was good or bad? You can read that I&amp;rsquo;ve been a developer for more than 15 years, but what if all I’ve developed is crap? How would you know? You could say that you’ve seen my other articles and I might go around saying that all my content is valuable, whereas in reality, there is no evidence to support such a claim.&lt;/p&gt;
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/dont-be-fooled-by-knowledge-shared-in-this-self-development-article/featured-title_hu64a54b75296d52d5d13954800adab976_8479918_600x350_fill_q75_catmullrom_center.jpg&#34; width=&#34;600&#34; height=&#34;350&#34;  alt=&#34;Image shows notebook with &amp;#34;I must not tell lies&amp;#34; sentence written many times&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-Image shows notebook with &#34;I must not tell lies&#34; sentence written many times&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo by [Annie Spratt](https://unsplash.com/@anniespratt) on [Unsplash](https://unsplash.com/photos/5QlhhDd7I-I)&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Of course you might trust the seemingly credible individuals who have written books, which seems quite an accomplishment in itself, considering the effort necessary to create that much content and the competitiveness of the publishing market. But still, some caution is advisable. Let’s not forget the story of James Ray, a very popular motivational speaker and book author who was later convicted of causing three deaths through negligent homicide resulting from his teachings. &lt;em&gt;(Lacey)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;People who write articles may not feel accountable for the negative consequences of their writing. This responsibility lies solely within the reader. &lt;em&gt;(McKay and McKay)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;You might also come across articles that are created only for sales purposes. They usually make reference to the same, well-known cases and are aimed at building the publisher&amp;rsquo;s word stats in search engines. Those can try to fool you to increase revenue. &lt;em&gt;(Thompson)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;When reading articles, it’s good to switch on critical thinking, meaning verifying what a given article says, comparing it to what you know and then verifying your current knowledge against what you’ve read. You should also try to apply the ideas and concepts you read about to your circumstances, your work, your life and your values.&lt;/p&gt;
-&lt;p&gt;Scientific publications are usually well-grounded sources of information that should always be your first choice, but it&amp;rsquo;s still worthwhile to verify where and by whom they were published. Keep in mind that scientific publications are required to have confidence level of at least 95%, which means that 5% of information contained in them may still be false. The most trusted resources are meta-research papers. However, they are rare and they too aren’t set in stone because the state of the art is changing over time. &lt;em&gt;(Ioannidis)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Another good idea is to read articles containing opinions conflicting with your own. Otherwise you might be susceptible to confirmation bias, where you will read only such articles that confirm your wrong thinking. &lt;em&gt;(Nickerson)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Remember that ideas are worthless - execution is key &lt;em&gt;(Masicampo and Baumeister)&lt;/em&gt;. Articles can spark new ideas, new approaches to test in your own environment. They can also draw your attention to new aspects of the problem which may allow verifying the outcome of specific actions and deciding whether the change was good or bad. They can help you build the knowledge necessary for further exploration of a given issue, as well as broaden your horizons in a more general way, so that even if you can&amp;rsquo;t apply new ideas and solutions right away, they might come in handy eventually.&lt;/p&gt;
-&lt;p&gt;If you are interested more in self-development topics and want to read more about it, here&amp;rsquo;s a list of articles and books that inspired me to write this article.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ioannidis, John P. A. “Why Most Published Research Findings Are False.” PLoS Medicine, vol. 2, no. 8, 2005, p. 0696. &lt;a href=&#34;https://doi.org/10.1371%2Fjournal.pmed.0020124&#34;&gt;https://doi.org/10.1371%2Fjournal.pmed.0020124&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Lacey, Marc. “New Age Guru Guilty in Sweat Lodge Deaths.” The New York Times, 22 June 2011, &lt;a href=&#34;https://www.nytimes.com/2011/06/23/us/23sweat.html&#34;&gt;https://www.nytimes.com/2011/06/23/us/23sweat.html&lt;/a&gt;. Accessed 31 Aug 2021.&lt;/li&gt;
-&lt;li&gt;Masicampo, E. J., and Roy F. Baumeister. “Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals.” Journal of Personality and Social Psychology, vol. 101, no. 4, 2011, pp. 667–683.&lt;/li&gt;
-&lt;li&gt;McKay, Brett, and Kate McKay. “Beyond “Sissy” Resilience: On Becoming Antifragile.” The Art of Manliness, 10 April 2020, &lt;a href=&#34;https://www.artofmanliness.com/articles/beyond-sissy-resilience-on-becoming-antifragile/&#34;&gt;https://www.artofmanliness.com/articles/beyond-sissy-resilience-on-becoming-antifragile/&lt;/a&gt;. Accessed 31 Aug 2021.&lt;/li&gt;
-&lt;li&gt;Nickerson, Raymond S. Confirmation Bias: A Ubiquitous Phenomenon in Many Guises. &lt;a href=&#34;https://doi.org/10.1037/1089-2680.2.2.175&#34;&gt;https://doi.org/10.1037/1089-2680.2.2.175&lt;/a&gt;, 1998.&lt;/li&gt;
-&lt;li&gt;Thompson, Dennis F. “Understanding Financial Conflicts of Interest List of authors.” New England journal of medicine, vol. 329, no. 8, 1993, pp. 573-576.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
+      <description>You shouldn&amp;rsquo;t trust this article and you shouldn&amp;rsquo;t trust me either. But you should still read this article if you don’t want to be lied to.</description>
     </item>
-    
     <item>
-      <title>Blog: How to introduce yourself to a new team</title>
+      <title>How to introduce yourself to a new team</title>
       <link>/blog/how-to-introduce-yourself-to-a-new-team/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>/blog/how-to-introduce-yourself-to-a-new-team/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/how-to-introduce-yourself-to-a-new-team/featured-title_hu0203e03345a1a499aeaec6c5972499b7_7805487_640x0_resize_q75_catmullrom.jpg" width="640" height="960"/>]]>
-        
-        &lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
-&lt;p&gt;It is important to note that people who you meet during the hiring process make only a fraction of employees you’re going to work with. This is why the first impression you make after joining the team is almost as crucial as the recruitment process. Even if you aren’t a very experienced developer, it is important to have a good starting point joining your new team. I&amp;rsquo;d like to share my findings that you might find helpful. Keep in mind that all these tips can also be applied when you switch teams within the company or meet people joining your team.&lt;/p&gt;
-&lt;h1 id=&#34;importance-of-the-first-impression&#34;&gt;Importance of the first impression&lt;/h1&gt;
-&lt;p&gt;At the starting point (joining the team) you have a very low number of trust points. People don’t know you, so all you can do is tell them how good you are. But before I’ll explain how to do this most effectively, I have to warn you: please be careful and don’t overshoot the mark. If you say that you are better than you really are, they are going to find you out very soon and it certainly won’t be pretty.
-The following non-scientific chart shows how trust to you changes over time after you join the team.&lt;/p&gt;
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 495px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/how-to-introduce-yourself-to-a-new-team/chart_hu09c7e40e0b91c82b668107dc2eb1998b_39579_600x300_fit_catmullrom_3.png&#34; width=&#34;485&#34; height=&#34;300&#34;  alt=&#34;Chart representing how trust changes over time&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-Chart representing how trust changes over time
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Yellow line - If you introduce yourself as better than you are (telling lies), the team will quickly realize that you have tricked them. They will lose trust they had in you in the beginning. And it will require a huge effort to regain it.&lt;/li&gt;
-&lt;li&gt;Blue line - If you don’t introduce yourself correctly, you will gain trust, but it’ll take a lot of time and energy to prove your value.&lt;/li&gt;
-&lt;li&gt;Red line - To gain as much trust as possible, you need to make a proper introduction. It will provide you with a certain level of trust at the outset, which you will be able to increase over time.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;how-to-introduce-yourself&#34;&gt;How to introduce yourself?&lt;/h1&gt;
-&lt;p&gt;Usually, when you’re being introduced to the team, you are asked to say a few words about yourself. If you are a person who doesn’t like public speaking, you can leverage a moment when you’re joining a chat channel to send a simple ‘hello’ message to everyone. The best thing would be to use both opportunities. I’d say that the first time you meet your new colleagues is the final stage of the interview process. Make the best of it.&lt;/p&gt;
-&lt;h1 id=&#34;what-can-you-say-about-yourself&#34;&gt;What can you say about yourself?&lt;/h1&gt;
-&lt;p&gt;It’s important to take some time and prepare your “Hello World” message.
-You should think about what you would like to know about a person joining your team. Then just add these ideas to your ‘hello’ message. I’ll give you a few suggestions, but only you know which of these suit your team, your personality and your expertise.&lt;/p&gt;
-&lt;h1 id=&#34;being-a-gentleman-or-a-lady&#34;&gt;Being a gentleman (or a lady)&lt;/h1&gt;
-&lt;p&gt;But before talking about yourself, a gentleman would say something nice about his interlocutor. You might not know too much about your team, but you should always find something. You might already know the product that you’re going to develop - then you can say something nice about this product. During the recruitment process, your manager might have mentioned something valuable about your team - you can rephrase their words. Of course you can Google, too. If you’re invited to a chat channel, you can look through history to find something interesting. You might be already invited to GIT, Jira, designs etc. In the worst case scenario you can just use some generic slogan.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;“Hi guys! I&amp;rsquo;m happy to work with you. I hope to learn a lot from you.”&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;“Hi guys! Your manager said very nice things about you and about the quality of the product that you’re creating! I wouldn’t take them at their words, but seeing the quality of conversations that you have on Slack, I’m more than delighted to join your team.”&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;“Hi! I’m very pleased that I can join you guys, the product you’re creating is awesome!”&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;the-team-comes-first-you-come-second&#34;&gt;The team comes first, you come second&lt;/h1&gt;
-&lt;p&gt;Don’t say what you’d like to say, say what the team would like to hear. Instead of just listing the items of your professional experience, you should say why it might be useful for the team.
-If you only say how good you are, people will think that you have a big ego and will consider you a risk to their social group. If you offer help, people will think that you’re a kind of person who supports their social group.
-Show that you’re willing to help.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Don’t say: &lt;em&gt;“I have huge experience with analytics”&lt;/em&gt;&lt;br&gt;
-Better: &lt;em&gt;“If you have any problems related to analytics, I already have some experience in that field”&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Don’t say: &lt;em&gt;“I know Python, Dart, PHP”&lt;/em&gt;, knowing that you’ll be writing Java software&lt;br&gt;
-Better: &lt;em&gt;“I can help you write useful dev-tools because I’ve developed apps in Python, Dart and PHP”&lt;/em&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Say: &lt;em&gt;“I’m always eager to help others, answer questions and do code-review.”&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;never-complain-about-the-team&#34;&gt;Never complain about the team&lt;/h1&gt;
-&lt;p&gt;Never ever suggest that the team that you’ve joined did something wrong. You weren’t with the team when they made their decisions so you are not the one to judge them.
-You wouldn’t want to be judged by someone who has just joined the team and knows nothing about your app complexity, would you? Even if the team know all too well that they did something wrong, they don’t want you to point this to them. Also, it’s risky to say something bad about your “previous” team, as one of your teammates might have been that team&amp;rsquo;s member in the past.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Don’t say: &lt;em&gt;“This is spaghetti architecture. I’d like to improve it with the following changes: &amp;hellip;”&lt;/em&gt;&lt;br&gt;
-Better: &lt;em&gt;“I’ve been involved in updating different apps’ architecture before. If such a thing is planned for our team, I‘d be more than willing to help”&lt;/em&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Don’t say: &lt;em&gt;“As an expert, I was employed to help you get rid of tons of bugs that you’ve made”&lt;/em&gt;&lt;br&gt;
-Better: &lt;em&gt;“I’ve been employed to help you guys improve app stability, and I’m willing to do my job. But it won’t be easy because your app stability is much better than in the case of apps that I’ve been improving so far ;)”&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;dont-be-too-modest&#34;&gt;Don’t be too modest&lt;/h1&gt;
-&lt;p&gt;First, don’t lie about yourself (sorry for the constant reminding), but don’t be too modest - others also want to know where your strengths lie so that the team can assign some responsibilities to you and take some burden off their shoulders. Don’t pretend that you know everything. You can also point to some of your weaker sides in which the team can help you.
-It’s always better to focus on facts rather than your opinions.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;em&gt;“I’d like to start taking over some of your tasks as soon as possible and to make this happen, I&amp;rsquo;d like to share with you a few things about me: I have 8 years of commercial experience developing Android applications. I had to set app architectures, implement analytics tracking, end-to-end testing frameworks, CI/CD&amp;hellip; and REST, but I have never had to use GraphQL which I need to learn.”&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;em&gt;“I have never used Nozbe before, but I have extensive experience in working with SCRUM methodology and different tools like Jira, Asana and ClickUp, which I have been using to improve my previous teams’ performance. I’d be more than willing to use this knowledge after I get used to the Nozbe software.&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Don’t say: &lt;em&gt;“I’m an experienced developer.”&lt;/em&gt;&lt;br&gt;
-Better: &lt;em&gt;“I have 12 years of commercial experience.”&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;show-that-you-are-a-human-not-a-machine&#34;&gt;Show that you are a human, not a machine&lt;/h1&gt;
-&lt;p&gt;Add some empathy to your message: try smiling when talking or add some emojis to your message. Say something not obvious about yourself. Of course you need to consider how your message will be received but don’t worry too much about style unless you’re a copywriter :)&lt;/p&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;“I’m not the best climber, but if there is someone who would like to start climbing, I’m ready to share my passion for rope.”&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;“I’m a no-lifer so in my free time I read a lot of books, mainly about teamwork. So if you know such books that are worth recommending, please do so. But because I have kids, it’s better if they are audiobooks ;)”&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;tldr&#34;&gt;TL;DR;&lt;/h1&gt;
-&lt;p&gt;This is an example of a message that you can use to say ‘hello’ to your new colleagues.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hi guys! Your manager said very nice things about you and about the quality of the product that you’re creating! I wouldn’t take them at their words, but seeing the quality of the conversations that you have on Slack, I’m more than delighted to join the team.&lt;/p&gt;
-&lt;p&gt;While developing in the previous team, I’ve gained pretty extensive knowledge about server endpoints, app behavior, and about how other teams work in our company and I’d be happy to share this knowledge with you. We’ve changed a buggy app received from an external team to something that works pretty well, even though we would receive a huge number of 500 server errors from backend systems. I know that you’re facing the same server stability issues. I would like to work with you guys to get even better quality for the new app!&lt;/p&gt;
-&lt;p&gt;I’d like to start taking some of your tasks over as soon as possible and, to make this happen, I’d like to share with you a few things about me: I have 8 years of commercial experience developing Android applications. I had to set app architectures, implement analytics tracking, end-to-end testing frameworks, CI/CD, video calls, chats and REST, of course, but I have never had an opportunity to use GraphQL, which I need to learn.
-I have never used Nozbe before, but I have extensive experience in working with SCRUM methodology and different tools like Jira, Asana and ClickUp, which I washave been using to improve my previous teams’ performance. I’d be more than willing to use this knowledge after I get used to the Nozbe software.&lt;/p&gt;
-&lt;p&gt;I’m a no-lifer so in my free time I read a lot of books, mainly about teamwork. So if you know such books that are worth recommending, please do so. But because I have kids, it&amp;rsquo;s better if they are audiobooks ;)
-Btw. If you hear rumors that I have developed apps in PHP, please, don’t bully me, my psychiatrist says it’s not good for my mental health ;)&lt;/p&gt;
-&lt;p&gt;Thanks @Arnold, @Bernadette, @Frank and @Josh for your warm welcome&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;final-words&#34;&gt;Final words&lt;/h1&gt;
-&lt;p&gt;One final trick. If you can ask someone to say something about you. It is always better if others talk about you than if you talk about yourself. I.e. Your recruiter can introduce you to the team by saying, “Jacek has 12 years of experience in the field and he’s passed all of our coding tests with great results”. You can always ask for such an introduction.&lt;/p&gt;
-&lt;p&gt;Btw. Don’t you trust me more now, after you’ve read all these true examples about me?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Originally published at &lt;a href=&#34;https://www.appunite.com/blog/how-to-introduce-yourself-to-new-team&#34;&gt;https://www.appunite.com/blog/how-to-introduce-yourself-to-new-team&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-      </description>
+      <description>When you join a new team, you usually want to show that you’re a valuable person to work with. You probably want to get settled in the team quickly, show what you&amp;rsquo;re made of, make new acquaintances and get something meaningful to do as soon as possible.</description>
     </item>
-    
     <item>
-      <title>Blog: My Story@Appunite</title>
+      <title>My Story@Appunite</title>
       <link>/blog/my-story@appunite/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/blog/my-story@appunite/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/my-story@appunite/featured-title_hu7ed633ecbc6f3836647882676bf782ff_4857484_640x0_resize_q75_catmullrom.jpg" width="640" height="320"/>]]>
-        
-        &lt;p&gt;Our client was so content with our iOS development that he asked Karol (CEO and one of AppUnite’s co-founders) to develop the same app for Android. Karol refused because AppUnite hadn’t had experience developing Android apps. Actually, 2 years before I’d worked with Android and by then was completely besotted by it. But experience and love didn’t mean “production-ready”. This didn’t discourage the client, he knew that we are good developers and we have good project management strategies so he insisted. Karol refused, explaining to the client the risk of not delivering good quality product because of developing an app for the new platform. The client knew that in his iOS app, we had implemented features that hadn’t been on the market at the time, so he knew that the risk was smaller than looking for other company. Karol asked me if I want to start developing the same app for Android. I said in Polish “kto nie ryzykuje, ten nie pije szampana” (this Polish proverb means, in free translation: who doesn’t risk, doesn’t drink champagne). Karol talked to the client and ensured that he was willing to take the risk.&lt;/p&gt;
-&lt;p&gt;The client was sure.&lt;/p&gt;
-&lt;p&gt;Our friendly designer read Android Design Guidelines and with my help adjusted the designs.. They were approved. The schedule was set and development of app has started.&lt;br&gt;
-Keep in mind that these were ancient times for Android (minimal supported Android version: 1.5, newest Android version was 3.0).&lt;/p&gt;
-&lt;p&gt;We had to face many problems.&lt;/p&gt;
-&lt;p&gt;There was no good library for fetching images from the Internet that met our speed standards (yes, there were no Picasso or Glide libraries). I needed a whole week only to present images to users.&lt;br&gt;
-At the time, we had a stunning iOS library (called AUKit) for fetching data from the network, caching them and displaying them to a user. There was no such library for Android. We had to implement our own.&lt;br&gt;
-And the real disaster… The app’s main feature was sharing video content. Sharing videos between Android devices, and iOS devices was no problem — the issue was to share content between iOS and Android. Today, it’s a common practice to use a server as a converter for different video formats between iOS and Android. But our client need was to use serverless solution.&lt;br&gt;
-We needed FFmpeg library to convert video files on the device. The problem was that FFmpeg library wasn’t yet adjusted to compile for Android. We had to do it. Then, we needed to create a wrapper between C language in which FFmpeg is written, and Java in which the app was written. And of course, these weren’t times when you could just type a question into Google and find a solution. These were times when you had to read Android Operating System source code to find tips. This caused delays, but we managed nonetheless..&lt;/p&gt;
-&lt;p&gt;We did this!&lt;/p&gt;
-&lt;p&gt;And the best part was that development and tests were overdue only by a week. The customer was satisfied and we were even more.&lt;/p&gt;
-&lt;p&gt;I think this is a problem of many software houses — they don’t want to risk.&lt;/p&gt;
-&lt;p&gt;If you want to implement great software, you need to use better and better technology, you need to take a risk. Albert Einstein said, “Insanity is doing the same thing over and over again and expecting different results”.&lt;/p&gt;
-&lt;p&gt;In these 7 years, light years in computer science, so many new
-developers joined AppUnite but I’m convinced that we’re still the same
-company, the company that still wants to use new technology, the company
-that still wants to ensure that the client’s aware of the risk.&lt;/p&gt;
-
-      </description>
+      <description>It was some time ago (2011), a year after I joined AppUnite as the first employee. At the time, I’ve just developed third iOS app (yes, this is no typo — iOS app :) ).</description>
     </item>
-    
   </channel>
 </rss>
